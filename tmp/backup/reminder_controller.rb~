@@ -1,0 +1,39 @@
+class Api::ReminderController < ApplicationController
+  skip_before_filter  :verify_authenticity_token
+
+  def get_todays_reminders 
+    #@reminders = Reminder.include(:children).where(consumer_id: params[:consumer_id]).not(parent_id: nil)
+    @reminders = ScheduledReminder.include(:drug).where(:run_at => Date.today.at_beginning_of_day..Date.today.at_end_of_day)
+  end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+end

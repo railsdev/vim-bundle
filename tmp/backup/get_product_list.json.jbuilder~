@@ -1,0 +1,16 @@
+if @product
+  json.response_code "200"
+  json.response_message ""
+  json.body do
+    json.result "success"
+    json.product @product do |product|
+      json.id product.id
+      json.name product.product_name_short
+      json.strengh product.product_attribute.strength
+    end
+  end
+else
+  json.response_code "1000"
+  json.response_message "failure"
+  json.result "product not found"
+end

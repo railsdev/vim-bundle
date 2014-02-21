@@ -1,0 +1,181 @@
+
+<div class="mrg10-B text-right">
+  <strong class="fs12">Compliance of </strong><label id="current_month" style="margin: 0px 100px 0px 20px;"><%= @time.strftime("%B %Y")%></label>	
+  <a href="javascript:;" title="Download Summary" class="comm-btn2"><span class="icon ico-download mrg5-R"></span> <span class="txt">Download Summary</span></a>
+</div>					
+
+
+<table class="tbl-typ1 narrow width100 mrg10-B" cellpadding="0" cellspacing="0">
+
+  <!-- First Row Tbale Headings Start -->
+  <tr class="tbl-th">
+
+    <td class=""><%= image_tag "spacer.png", :alt => "" %></td>
+
+    <td class="td-img"><%= image_tag "spacer.png", :alt => "", :width =>"50", :height => "1" %></td>
+    <td class="td-name">Name  <span class="icon ico-up-arrow mrg3-L"></span></td>
+    <td class="td-compliance">Compliance  <span class="icon ico-up-arrow mrg3-L"></span></td>
+    <td class=""><%= link_to image_tag("bullet2.png", :alt => "", :width =>"8"),"javascript:void(0)",{:class => 'prev_month', 'data-time' => @time, :path => prev_month_consumer_compliances_path } %></td>
+    <!-- loop 1 -->
+    <% (@time.day.to_i..@time.end_of_month.day.to_i).each do |t| %>
+      <% date = DateTime.new(@time.year, @time.month, t) %>
+      <td class="<%= date.strftime("%a").downcase %>"><div><%= date.day %></div> <span class="fs9"><%= date.strftime("%a").first %></span></td>	
+    <% end %> 
+    <!-- end of loop 1 -->
+    <td>
+      <%= link_to image_tag("bullet3.png", :alt => "", :width =>"8"),"javascript:void(0)",{:class => 'next_month', 'data-time' => @time, :path => next_month_consumer_compliances_path } %>
+    </td>
+  </tr>
+  <!-- First Row Table Headings End -->
+  <!-- consumer loop  -->
+  <% @consumers.each do |consumer| %>
+    <!-- Data row -->
+    <tr class="tbl-data">
+      <td class=""><a href="" class="maintable-js"><span class="icon ico-arrow"></span></a></td>							
+      <td class="td-img"><div class="image img-icon">
+          <%= image_tag "noimg40x40.jpg", :alt => "" %>
+      </div></td>
+      <td class="text-top td-name">
+        <div class="fs14 mrg10-B"><%= "#{consumer.first_name} #{consumer.last_name}" %></div>
+        <span class="fs11"><%=  "#{consumer.phone_number}" %></span>
+      </td>
+      <td class="td-compliance"><%= consumer.avg_compliance %>%</td>								
+      <td class=""><%= image_tag "spacer.png", :alt => "", :width =>"8" %></td>
+      <!-- loop 2 -->
+      <% (@time.day.to_i..@time.end_of_month.day.to_i).each do |t| %>
+        <% date = DateTime.new(@time.year, @time.month, t) %>
+        <td class="bluebg <%= date.strftime("%a").downcase %>">
+          <% compliances_today = todays_avg_compliances consumer, date %>
+          <% if compliances_today.count > 0 %>
+            <% if compliances_today && !compliances_today.blank? && compliances_today.exists?(:status => ["skipped", "pending"] ) %>
+              <%= image_tag "bullet5.png", :alt => "", :class => "tip-taken" %>
+              <div class="tooltip">										
+                <div><strong>Not Taken</strong></div>
+              </div>
+            <% else %> <!-- else of compliance today if -->
+              <%= image_tag "bullet4.png", :alt => "", :class => "tip-taken" %>
+              <div class="tooltip">										
+                <div><strong>Missed</strong></div>
+              </div>	
+            <% end %> <!-- end of compliance today if -->
+          <% else %> <!-- else of count if -->
+            <%= image_tag "bullet8.png", :alt => "", :class => "tip-taken" %>
+            <div class="tooltip">										
+              <div><strong>Missed</strong></div>
+            </div>
+          <% end %> <!-- end of count if -->
+        </td>	
+      <% end %> 
+      <!-- end of loop 2 -->
+      <td ><%= image_tag "spacer.png", :alt => "", :width =>"8" %></td>
+    </tr>
+    <!-- consumer medication loop -->
+
+
+    <tr class="medications">
+      <td colspan="37" class="pd0">
+        <table class="width100 subtable subtable-js" cellpadding="0" cellspacing="0" data-no-turbolink>
+
+          <% consumer.consumer_medications.includes(:reminders).each do |cm| %>
+
+
+            <% if has_reminders? consumer, cm %>
+              <!-- daily reminder check if  -->
+              <% if has_daily_reminders? cm %>
+                <!-- loop 3 starts -->
+                <% count = 0 %>
+                <% children_count = cm.reminders.active.first.children.count %>
+                <% cm.reminders.active.first.children.each do |d| %>
+                  <tr  class="<%= count < 1 ? "tbl-data subtd" : "tbl-data" -%>">
+                    <!-- count if started -->
+                    <% if count == 0 %>
+                      <td rowspan="<%= children_count -%>" class=""><%= image_tag "design-image/spacer.png", :alt => "", :width =>"12" %></td>							
+                      <td rowspan="<%= children_count -%>" class="td-img"><div class="image img-icon"><%= image_tag "design-image/ico-img3.jpg", :alt => "", :width =>"8" %></div></td>
+                      <td rowspan="<%= children_count -%>" class="td-name"> <%= count %>
+                      <div class="fs14 mrg10-B"><%= cm.consumer_drug.drug_name_long %> <span class="fs10"><%= cm.dose_quantity %></span></div>
+                      <span class="fs14"></span>
+                    </td>
+                    <td rowspan="<%= children_count -%>" class="td-compliance"><%= cm.get_consumer_compliances(consumer.id, cm.id) ? cm.get_consumer_compliances(consumer.id, cm.id).ceil : 0 %> %</td>								
+                    <td rowspan="<%= children_count -%>" class=""><%= image_tag "spacer.png", :alt => "", :width =>"7" %></td>
+                  <% end %>
+                  <!-- count if ended -->
+
+                  <!-- loop 4 -->
+                  <% (@time.day.to_i..@time.end_of_month.day.to_i).each do |t| %>
+                    <% date = DateTime.new(@time.year, @time.month, t) %>
+                    <td class="bluebg <%= date.strftime("%a").downcase %>">
+                      <% compliances_today = todays_compliance(consumer, cm, date) %>
+                      <!-- start compliance today count if -->
+                      <% if is_compliance_status? compliances_today[count], COMPLIANCE_STATUS_SKIPPED %>
+                        <%= image_tag "bullet5.png", :alt => "", :class => "tip-taken" %>
+
+                      <% elsif is_compliance_status? compliances_today[count], COMPLIANCE_STATUS_TAKEN %> <!-- elseif of compliance today count if -->
+                        <%= image_tag "bullet4.png", :alt => "", :class => "tip-taken" %>
+
+                      <% else %> <!-- else of compliance today count if -->
+                        <%= image_tag "bullet8.png", :alt => "", :class => "tip-taken" %>
+                      <% end %> <!-- else of compliance today count if -->
+                    </td>	
+                  <% end %>
+                  <!-- end of loop 4 -->
+                  <td <%= count < 1 ? 'rowspan="2"' : '' %> class="this"><%= image_tag "spacer.png", :alt => "", :width =>"8" %></td>
+
+
+                </tr>
+                <% count += 1 %>
+              <% end %>
+              <!-- end of loop 3 -->
+            <% else %>
+
+              <tr class="tbl-data subtd">
+                <!-- count if started -->
+
+                <td rowspan="1" class=""><%= image_tag "spacer.png", :alt => "", :width =>"12" %></td>							
+                <td rowspan="1" class="td-img"><div class="image img-icon"><%= image_tag "design-image/ico-img3.jpg", :alt => "", :width =>"8" %></div></td>
+                <td rowspan="1" class="td-name">
+                  <div class="fs14 mrg10-B"><%= cm.consumer_drug.drug_name_long if cm.consumer_drug %> <span class="fs10"><%= cm.dose_quantity %></span></div>
+                  <span class="fs14"><%= cm.dose_quantity %> Dose/Day</span>
+                </td>
+                <td rowspan="1" class="td-compliance"><%= cm.get_consumer_compliances(consumer.id, cm.id) ? cm.get_consumer_compliances(consumer.id, cm.id).ceil : 0 %>%</td>								
+                <td rowspan="1" class=""><%= image_tag "spacer.png", :alt => "", :width =>"7" %></td>
+                <!-- count if ended -->
+
+                <!-- loop 4 -->
+                <% (@time.day.to_i..@time.end_of_month.day.to_i).each do |t| %>
+                  <% date = DateTime.new(@time.year, @time.month, t) %>
+                  <td class="bluebg <%= date.strftime("%a").downcase %>">
+                    <% compliances_today = todays_compliance(consumer, cm, date) %>
+                    <!-- start compliance today count if -->
+                    <% if is_compliance_status? compliances_today, COMPLIANCE_STATUS_SKIPPED %>
+                      <%= image_tag "bullet5.png", :alt => "", :class => "tip-taken" %>
+
+                    <% elsif is_compliance_status? compliances_today, COMPLIANCE_STATUS_TAKEN %> <!-- elseif of compliance today count if -->
+                      <%= image_tag "bullet4.png", :alt => "", :class => "tip-taken" %>
+
+                    <% else %> <!-- else of compliance today count if -->
+                      <%= image_tag "bullet8.png", :alt => "", :class => "tip-taken" %>
+                    <% end %> <!-- else of compliance today count if -->
+                  </td>	
+                <% end %>
+                <!-- end of loop 4 -->
+                <td rowspan="1"><%= image_tag "spacer.png", :alt => "", :width =>"7" %></td>
+
+
+              </tr>
+
+
+            <% end %>
+            <!-- daily reminder check if  -->
+          <% end %>
+          <!-- end of has_reminder? if -->
+        <% end%>
+        <!-- end of consumer medication loop -->				
+      </table>
+    </td>
+  </tr>	
+
+
+<% end %>	<!-- end of consumer loop -->					
+
+</table>
+

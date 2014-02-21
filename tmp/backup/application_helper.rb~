@@ -1,0 +1,38 @@
+module ApplicationHelper
+
+  def flash_class(level)
+    case level
+    when :notice then "info_msg"
+    when :success then "succ_msg"
+    when :error then "err_msg"
+    when :alert then "info_msg"
+    end
+  end
+
+  def converted_date _date
+    _date.strftime("%d %b %y")
+  end
+
+  def logo _path
+    link_to '<img src="/assets/provider/images/logo-pillphone.png" alt="Pillphone Logo" />'.html_safe, _path, :title => "Welcome to pillphone"
+  end
+
+  def title(pg_title)
+    content_for :title, pg_title.to_s
+  end
+
+  def product_image_tag(product, size="40x40")
+    html = '' 
+    if product.product_image.present? && product.product_image.image_name.present?
+      html = image_tag('/product_image/'+ product.product_image.image_name, :size => size)
+    else
+      html = image_tag("/assets/no_drug.jpg",:size => size)
+    end
+    html
+  end
+
+  def content_management_select
+    select("", "language", [["English", "english"], ["Spanish", "spanish"]], { include_blank: false, selected: params[:language] },:data => { :remote => true, :url => url_for(:controller => controller.controller_name,:action => action_name) },:class => "lang-select frm-txt mrg20-R")
+  end
+
+end

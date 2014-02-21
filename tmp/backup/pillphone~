@@ -1,0 +1,40 @@
+<VirtualHost *:80>
+
+
+  ServerName dev.pillphone.com
+  DocumentRoot /home/saurabh/workspace/pillphone/public 
+  <Directory /home/saurabh/workspace/pillphone/public>
+    AllowOverride all
+    Allow from all
+    Options -MultiViews
+  </Directory>
+
+  RewriteEngine On
+
+  <Proxy balancer://thinservers>
+      BalancerMember http://127.0.0.1:3000
+  </Proxy>
+
+#  Alias /drug_images /home/saurabh/workspace/pillphone_assets/drug_images
+#  <Directory /home/saurabh/workspace/pillphone_assets/drug_images>
+#    Order allow,deny 
+#    Allow from all
+#  </Directory>
+
+  RewriteCond /home/saurabh/workspace/pillphone_assets/drug_images/%{REQUEST_FILENAME} !-f 
+  RewriteRule ^/drug_images/(.*)$ /home/saurabh/workspace/pillphone_assets%{REQUEST_URI} [L]
+
+  RewriteCond %{DOCUMENT_ROOT}/%{REQUEST_FILENAME} !-f
+  RewriteRule ^/(.*)$ balancer://thinservers%{REQUEST_URI} [P,QSA,L]
+  ProxyPass / balancer://thinservers/
+  ProxyPassReverse / balancer://thinservers/
+  ProxyPreserveHost on
+
+
+  # Custom log file locations
+  ErrorLog  /home/saurabh/workspace/log/error.log
+  CustomLog /home/saurabh/workspace/log/access.log combined  
+
+
+</VirtualHost>
+

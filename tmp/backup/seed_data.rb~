@@ -1,0 +1,8 @@
+
+Consumer.all.each do |c|
+
+  Drug.take(20).each do |d|
+    cm = ConsumerMedication.create(consumer: c, consumer_drug: d)
+    10.times { ConsumerCompliance.create(consumer: c, consumer_medication: cm, reminder_triggered_at: Time.at(rand (((Time.now) - 1.month).to_i)..(Time.now).to_i), status: ['pending', 'taken','skipped'].sample) }
+  end
+end

@@ -1,0 +1,21 @@
+# == Schema Information
+#
+# Table name: drug_images
+#
+#  id              :integer          not null, primary key
+#  drug_id         :integer
+#  image_name      :string(255)
+#  is_active       :string(255)
+#  image_file_name :string(255)
+#  created_at      :datetime
+#  updated_at      :datetime
+#
+
+drug_images_001:
+  id: 1
+  drug_id: 4
+  image_name: 1.1-Login.jpg
+  is_active: 1
+  image_file_name: test.jpg
+  created_date: 2014-01-14 0:0:0
+  updated_date: 2014-01-14 0:0:0

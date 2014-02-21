@@ -1,0 +1,16 @@
+
+if @reminders.present? && @reminders.all? {|x| x.errors.empty? } 
+	json.response_code response.status
+	json.response_message "Reminder updated successfully!"
+	json.body {
+		json.result "Success"
+		json.reminder @reminders.first.as_json(request: request)
+	}
+else
+	json.response_code "400"
+	json.response_message "Sorry cannot update the reminder."
+	json.body {
+		json.result @reminders.present? ? @reminders.select{|x| !x.errors.empty? }.first.errors.messages : "Something went really wrong!"
+	}
+end
+

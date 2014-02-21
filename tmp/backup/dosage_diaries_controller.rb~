@@ -1,0 +1,77 @@
+# Created by: Bharat Bhushan
+# Functionality for dosage diary, care taker gets dosage diary of consumer.
+# care taker get the list of all dosage diary and can remove also dosagediary
+class Api::DosageDiariesController < ApplicationController
+
+  skip_before_filter  :verify_authenticity_token
+
+  #care taker can access doasge diary of that consumer whome he is giving care
+  def get_dosage_diary
+    @consumer_medications  = current_consumer.consumer_compliances
+                                             .where(:reminder_triggered_at => (Date.today.at_beginning_of_week)..(Date.today.at_end_of_week) )
+                                             .includes(:active_consumer_medication => [:consumer_drug])
+                                             .group_by(&:active_consumer_medication)
+
+    @consumer_medications  = @consumer_medications.keys.map{|x| x.compliances = @consumer_medications[x];x}
+    @consumer_compliances  = current_consumer.consumer_medications.with_avg_compliance
+    if @consumer_compliances
+      @consumer_medications.map{|x| x.avg_compliance = @consumer_compliances.find{|y| y.id == x.id }.try(:avg_count) }
+    end
+  end
+
+  def get_dosage_diary_by_date
+    date = params[:date].to_datetime
+    @consumer_medications  = current_consumer.consumer_compliances
+                                             .where(:reminder_triggered_at => (date.at_beginning_of_day)..(date.at_end_of_day) )
+                                             .includes(:active_consumer_medication => [:consumer_drug])
+                                             .group_by(&:active_consumer_medication)
+
+    @consumer_medications  = @consumer_medications.keys.map{|x| x.compliances = @consumer_medications[x];x} 
+    binding.pry
+    @consumer_compliances  = current_consumer.consumer_medications.with_avg_compliance
+    if @consumer_compliances
+      @consumer_medications.map{|x| x.avg_compliance = @consumer_compliances.find{|y| y.id == x.id }.try(:avg_count) }
+    end
+    render action: :get_dosage_diary
+  end
+
+  #care taker can check  dosage diary  list of all consumers whome he is taking care of
+  #in care taker instead of care_taker_id we will pass current_consumer
+  def dosage_diary_list
+    @consumer_dosage_diary = CareGiver.where(care_taker_id: current_consumer.id)
+  end
+
+  #Care taker can remove dosage diary of the consumer whome he is taking care
+  def dosage_diary_remove_user
+    @removed_consumer = CareGiver.where(consumer_id:  params[:consumer_id] , care_taker_id: current_consumer.id).take
+    @removed_consumer.destroy if @removed_consumer.present?
+  end
+
+  def dosage_diary
+    @time = DateTime.new(DateTime.now.year, DateTime.now.month).to_time
+    # @provider = Provider.find(params[:provider_id])
+    @consumer = Consumer.find(params[:consumer_id])
+    @consumer_medications = @consumer.consumer_medications.joins(:reminders)
+    # @consumer_compliances = @consumer.consumer_compliances.includes(consumer_medication: [:consumer_drug]).page(params[:page]).per(10)
+  end
+
+  def prev_month
+    @consumer = Consumer.find(params[:consumer_id])
+    @consumer_medications = @consumer.consumer_medications.joins(:reminders)
+    time = params[:time].to_time
+    # binding.pry
+    @time = time - 1.month
+
+    # render :partial => 'compliance_table'
+  end
+
+  def next_month
+    @consumer = Consumer.find(params[:consumer_id])
+    @consumer_medications = @consumer.consumer_medications.joins(:reminders).page(params[:page]).per(10)
+    time = params[:time].to_time
+    # binding.pry
+    @time = time + 1.month
+
+    # render :partial => 'compliance_table'
+  end
+end

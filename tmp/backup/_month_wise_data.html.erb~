@@ -1,0 +1,10 @@
+<table class="tbl-typ1 width100">
+	<% @drugs.each do |drug| %>
+	<tr class="tbl-data">
+		<td class="title"><%= drug.drug_name_short %></td>
+		<td class="compliance width15"><%= drug.avg_count.to_f.to_s+"%" %></td>	
+		<td class="user width15"><%= drug.consumers_count %></td>
+	</tr>
+	<% end %>
+</table> 
+<%= paginate @drugs, :params => {:controller => "statistics", :action => "paginate_compliance_medication",:month => @paginate_date[:month]},:remote => true %>

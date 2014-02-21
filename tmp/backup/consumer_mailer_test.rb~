@@ -1,0 +1,14 @@
+require "test_helper"
+
+describe ConsumerMailer do
+	it "send_request" do
+		mail = ConsumerMailer.send_request "to@example.org"
+		mail.subject.must_equal "You are invited to test our new Pillphone App in beta"
+		mail.to.must_equal ["to@example.org"]
+		mail.from.must_equal ["infodiaspark@gmail.com"]
+		# mail.body.has_content? "You are invited to test our new Pillphone App in beta"
+	end
+	# it "must be a real test" do
+	# 	flunk "Need real tests"
+	# end
+end

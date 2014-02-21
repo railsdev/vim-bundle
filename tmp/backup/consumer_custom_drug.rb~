@@ -1,0 +1,22 @@
+# == Schema Information
+#
+# Table name: consumer_custom_drugs
+#
+#  id              :integer          not null, primary key
+#  drug_name_short :string(255)
+#  description     :text
+#  consumer_id     :integer
+#  created_at      :datetime
+#  updated_at      :datetime
+#  image           :string(255)
+#  provider_id     :integer
+#
+
+class ConsumerCustomDrug < ActiveRecord::Base
+	has_many :consumer_medications, as: :consumer_drug, dependent: :destroy
+	has_many :consumers, through: :consumer_medications, as: :consumer_drug, inverse_of: :consumer_drug
+	has_many :consumer_compliances,through: :consumer_medications
+
+	# IMAGE ATTACHMENT 
+	mount_uploader :image, AttatchmentUploader
+end

@@ -1,0 +1,6 @@
+class ChangeNameColumnsInDrugs < ActiveRecord::Migration
+  def change
+    #rename_column :drugs, :name, :drug_name_long
+    # add_column    :drugs, :drug_name_short, :string
+  end
+end

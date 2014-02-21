@@ -1,0 +1,5 @@
+class AddColumnDeltaToProvider < ActiveRecord::Migration
+  def change
+  	# add_column :providers, :delta, :boolean, :default => true, :null => false
+  end
+end

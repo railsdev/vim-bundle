@@ -1,0 +1,27 @@
+if @consumer_drug.present?
+	json.response_code "200"
+	json.response_message ""
+	json.body{
+		json.result "Success"
+		json.drug_id @consumer_drug.id
+		json.consumer_medication_id @medication.id
+		json.name @consumer_drug.drug_name_short
+		json.drug_type @consumer_drug.consumer_medications.first.consumer_drug_type
+	}
+elsif @consumer_custom_drug.present?
+	json.response_code "200"
+	json.response_message ""
+	json.body{
+		json.result "Success"
+		json.drug_id @consumer_custom_drug.id
+		json.consumer_medication_id @medication.id
+		json.name @consumer_custom_drug.drug_name_short
+		json.drug_type @consumer_custom_drug.consumer_medications.first.consumer_drug_type
+	}
+else
+	json.response_code "400"
+	json.response_message ""
+	json.body {
+		json.result "Failure"
+	}
+end

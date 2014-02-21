@@ -1,0 +1,10 @@
+class ChangeCompliancesFields < ActiveRecord::Migration
+  def change
+  	change_table :consumer_compliances do |t|
+      #t.change :date_time, :datetime
+      #t.change :status, :string
+      #t.rename :date_time, :reminder_triggered_at
+      #t.rename :time_taken, :reminder_responded_at
+    end
+  end
+end

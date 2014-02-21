@@ -1,0 +1,13 @@
+if @terms_and_conditions.present?
+	json.response_code "200"
+	json.response_message ""
+	json.body {
+		json.terms_and_conditions @terms_and_conditions
+	}
+else
+	json.response_code "400"
+	json.response_message ""
+	json.body {
+		json.result "Failure"
+	}
+end

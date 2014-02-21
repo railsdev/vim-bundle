@@ -1,0 +1,15 @@
+
+if @reminders.present?
+	json.response_code response.status
+	json.response_message "All Reminders"
+	json.body {
+		json.result "ok"
+		json.reminder @reminders
+	}
+else
+	json.response_code "400"
+	json.response_message "Error"
+	json.body {
+		json.result "Something went really wrong!"
+	}
+end

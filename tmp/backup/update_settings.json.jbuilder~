@@ -1,0 +1,21 @@
+if @consumer_settings.present?
+	json.response_code "200"
+	json.response_message ""
+	json.body {
+		json.result "Success"
+		json.user_id @consumer_settings.consumer_id
+		json.settings{
+			json.snooze_duration @consumer_settings.snooze_duration
+			json.reminder @consumer_settings.reminder
+			json.message @consumer_settings.message
+			json.language @consumer_settings.language
+			json.time_zone @consumer_settings.time_zone
+		}
+	}
+else
+	json.response_code "400"
+	json.response_message ""
+	json.body {
+		json.result "Failure"
+	}
+end

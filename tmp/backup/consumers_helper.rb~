@@ -1,0 +1,66 @@
+module Providers::ConsumersHelper
+
+	def this_partial(fq_type)
+		case fq_type
+
+			when REMINDER_FREQUENCY_DAILY
+				return 'providers/consumers/reminders/edit_daily_reminder_fields'
+
+			when REMINDER_FREQUENCY_WEEKLY
+				return 'providers/consumers/reminders/edit_weekly_reminder_fields'
+
+			when REMINDER_FREQUENCY_MONTHLY
+				return 'providers/consumers/reminders/edit_monthly_reminder_fields'
+
+			when REMINDER_FREQUENCY_YEARLY
+				return 'providers/consumers/reminders/edit_yearly_reminder_fields'
+
+			when REMINDER_FREQUENCY_EVERY_X_HOURS
+				return 'providers/consumers/reminders/edit_x_hours_reminder_fields'
+
+			when REMINDER_FREQUENCY_EVERY_X_DAYS
+				return 'providers/consumers/reminders/edit_x_days_reminder_fields'
+
+			when REMINDER_FREQUENCY_EVERY_X_WEEKS
+				return 'providers/consumers/reminders/edit_x_weeks_reminder_fields'
+
+			when REMINDER_FREQUENCY_EVERY_X_MONTHS
+				return 'providers/consumers/reminders/edit_x_months_reminder_fields'
+
+			when REMINDER_FREQUENCY_EVERY_X_YEARS
+				return 'providers/consumers/reminders/edit_x_years_reminder_fields'
+
+			when REMINDER_FREQUENCY_AS_NEEDED
+				return 'providers/consumers/reminders/edit_daily_reminder_fields'
+		end
+	end
+
+	def add_custom_drug
+		consumer_custom_product = ConsumerCustomProduct.new
+		# f = ActionView::Helpers::FormBuilder.new("add_custom_drug", consumer_custom_drug, "consumer_custom_drug", options = {}, nil)
+		fields = fields_for("add_custom_product", consumer_custom_product) do |builder|
+			render "consumer_custom_product", :f => builder
+		end
+		link_to_function("Add Custom Medication", "add_fields(this, \"#{escape_javascript(fields)}\")")
+	end
+
+	def get_fq_days(parent_reminder)
+		fq_days = []
+		parent_reminder.children.all.each{ |r| fq_days << r.fq_day } 
+		return fq_days
+	end
+
+	def get_fq_months(parent_reminder)
+		fq_months = []
+		parent_reminder.children.all.each{ |r| fq_months << r.fq_month } 
+		return fq_months
+	end
+
+	def sortable(column, title)
+    	title ||= column.titleize
+    	direction = (column == params[:sort] && params[:direction] == "desc") ? "asc" : "desc"
+    	link_to title, :sort => column, :direction => direction
+  	end
+
+
+end

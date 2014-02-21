@@ -1,0 +1,6102 @@
+# == Schema Information
+#
+# Table name: products
+#
+#  id              :integer          not null, primary key
+#  product_name_long  :string(255)
+#  product_name_short :string(255)
+#  generic_name    :string(255)
+#  is_active       :string(255)
+#  added_from      :boolean
+#  product_link    :string(255)
+#  fda_form_id     :integer
+#  created_at      :datetime
+#  updated_at      :datetime
+#
+
+products_001:
+  id: 4
+  product_name_long: Crystodigin 0.05mg Tablet
+  product_name_short: 'Crystodigin '
+  generic_name: Digitoxin
+  is_active: '0'
+  added_from: 1
+products_002:
+  id: 5
+  product_name_long: Crystodigin 0.1mg Tablet
+  product_name_short: 'Crystodigin '
+  generic_name: Digitoxin
+  is_active: '0'
+products_003:
+  id: 7
+  product_name_long: Cafcit 20mg/ml Solution for Injection
+  product_name_short: 'Cafcit '
+  generic_name: Caffeine Citrate
+  is_active: '0'
+products_004:
+  id: 19
+  product_name_long: Alka-Mints 850mg Chewable Tablet
+  product_name_short: 'Alka-Mints '
+  generic_name: Calcium Carbonate
+  is_active: '0'
+products_005:
+  id: 30
+  product_name_long: Hextend 6% Solution for Injection
+  product_name_short: 'Hextend '
+  generic_name: Calcium, Chloride, Dextrose, Hetastarch, Lactate, Magnesium, Potassium,
+    Sodium
+  is_active: '0'
+products_006:
+  id: 33
+  product_name_long: Robitussin Pediatric Cough 7.5mg/5ml Solution
+  product_name_short: 'Robitussin Pediatric Cough '
+  generic_name: Dextromethorphan Hydrobromide
+  is_active: '0'
+products_007:
+  id: 62
+  product_name_long: Melatonex 3mg-10mg Extended-Release Tablet
+  product_name_short: 'Melatonex '
+  generic_name: Melatonin, Pyridoxine (Vitamin B6)
+  is_active: '1'
+products_008:
+  id: 85
+  product_name_long: Zyvox 400mg/200ml Solution for Injection
+  product_name_short: 'Zyvox '
+  generic_name: Linezolid
+  is_active: '0'
+products_009:
+  id: 86
+  product_name_long: Zyvox 400mg Tablet
+  product_name_short: 'Zyvox '
+  generic_name: Linezolid
+  is_active: '0'
+products_010:
+  id: 88
+  product_name_long: Humalog Mix 50/50 Suspension for Injection
+  product_name_short: 'Humalog Mix '
+  generic_name: Insulin Lispro, Insulin Lispro Protamine (NPL)
+  is_active: '1'
+products_011:
+  id: 89
+  product_name_long: Humalog Mix 50/50 Suspension for Injection
+  product_name_short: 'Humalog Mix '
+  generic_name: Insulin Lispro, Insulin Lispro Protamine (NPL)
+  is_active: '0'
+products_012:
+  id: 90
+  product_name_long: Humalog Mix 75/25 Suspension for Injection
+  product_name_short: 'Humalog Mix '
+  generic_name: Insulin Lispro, Insulin Lispro Protamine (NPL)
+  is_active: '0'
+products_013:
+  id: 92
+  product_name_long: Visudyne 15mg Powder for Injection
+  product_name_short: 'Visudyne '
+  generic_name: Verteporfin
+  is_active: '0'
+products_014:
+  id: 93
+  product_name_long: Hepsera 10mg Tablet
+  product_name_short: 'Hepsera '
+  generic_name: Adefovir Dipivoxil
+  is_active: '1'
+products_015:
+  id: 94
+  product_name_long: Bexxar Dosimetric Packaging Tositumomab 14mg/ml Solution for Injection
+  product_name_short: 'Bexxar Dosimetric Packaging Tositumomab '
+  generic_name: Tositumomab (Murine)
+  is_active: '0'
+products_016:
+  id: 107
+  product_name_long: Flumist 2004-2005 Formula Nasal Spray
+  product_name_short: 'Flumist '
+  generic_name: Influenza Virus Attenuated Live Trivalent Vaccine (Types A and B)
+    (Avian)
+  is_active: '0'
+products_017:
+  id: 108
+  product_name_long: Tysabri 300mg/15ml Solution for Injection
+  product_name_short: 'Tysabri '
+  generic_name: Natalizumab (Murine)
+  is_active: '1'
+products_018:
+  id: 117
+  product_name_long: Betaxon 0.5% Ophthalmic Suspension
+  product_name_short: 'Betaxon '
+  generic_name: Levobetaxolol Hydrochloride
+  is_active: '0'
+products_019:
+  id: 123
+  product_name_long: Fabrazyme 35mg Powder for Injection
+  product_name_short: 'Fabrazyme '
+  generic_name: Agalsidase Beta (Hamster)
+  is_active: '1'
+products_020:
+  id: 124
+  product_name_long: Baci-Rx 5,000,000units Topical Powder
+  product_name_short: 'Baci-Rx '
+  generic_name: Bacitracin Powder, Micronized
+  is_active: '0'
+products_021:
+  id: 125
+  product_name_long: Feiba VH Immuno Powder for Injection
+  product_name_short: Feiba VH Immuno Powder for Injection
+  generic_name: Anti-Inhibitor Coagulant Complex (Human)
+  is_active: '0'
+products_022:
+  id: 126
+  product_name_long: Iveegam 5g Powder for Injection
+  product_name_short: 'Iveegam '
+  generic_name: Immune Globulin (Human)
+  is_active: '0'
+products_023:
+  id: 127
+  product_name_long: Oncaspar 750unit/ml Solution for Injection
+  product_name_short: 'Oncaspar '
+  generic_name: Pegaspargase
+  is_active: '0'
+products_024:
+  id: 128
+  product_name_long: Abreva 10% Topical Cream
+  product_name_short: 'Abreva '
+  generic_name: Docosanol
+  is_active: '0'
+products_025:
+  id: 131
+  product_name_long: Visicol 1.5g Tablet
+  product_name_short: 'Visicol '
+  generic_name: Sodium Phosphate, Dibasic, Sodium Phosphate, Monobasic
+  is_active: '0'
+products_026:
+  id: 132
+  product_name_long: Dermazene 1%-1% Topical Cream
+  product_name_short: 'Dermazene '
+  generic_name: Hydrocortisone, Iodoquinol
+  is_active: '1'
+products_027:
+  id: 134
+  product_name_long: Ortho Evra Transdermal Patch
+  product_name_short: Ortho Evra Transdermal Patch
+  generic_name: Norelgestromin, Ethinyl Estradiol
+  is_active: '0'
+products_028:
+  id: 135
+  product_name_long: Ketek 400mg Tablet
+  product_name_short: 'Ketek '
+  generic_name: Telithromycin
+  is_active: '1'
+products_029:
+  id: 136
+  product_name_long: Kytril 1mg Tablet
+  product_name_short: 'Kytril '
+  generic_name: Granisetron Hydrochloride
+  is_active: '0'
+products_030:
+  id: 137
+  product_name_long: Kytril 1mg/ml Solution for Injection
+  product_name_short: 'Kytril '
+  generic_name: Granisetron Hydrochloride
+  is_active: '0'
+products_031:
+  id: 140
+  product_name_long: Xolair 150mg Powder for Injection
+  product_name_short: 'Xolair '
+  generic_name: Omalizumab (Hamster)
+  is_active: '1'
+products_032:
+  id: 142
+  product_name_long: Ventolin HFA 90mcg/actuation Inhalation Aerosol
+  product_name_short: 'Ventolin HFA '
+  generic_name: Albuterol
+  is_active: '0'
+products_033:
+  id: 144
+  product_name_long: Levall 5.0 Solution
+  product_name_short: 'Levall '
+  generic_name: Guaifenesin, Hydrocodone Bitartrate, Phenylephrine Hydrochloride
+  is_active: '0'
+products_034:
+  id: 152
+  product_name_long: Moisture Eyes 0.3%-1% Lubricating Ophthalmic Solution
+  product_name_short: 'Moisture Eyes '
+  generic_name: Glycerin, Propylene Glycol
+  is_active: '1'
+products_035:
+  id: 171
+  product_name_long: Phenobarbital 20mg/5ml Solution
+  product_name_short: 'Phenobarbital '
+  generic_name: Phenobarbital
+  is_active: '0'
+products_036:
+  id: 172
+  product_name_long: Aureomycin 1% Ophthalmic Ointment
+  product_name_short: 'Aureomycin '
+  generic_name: Chlortetracycline Hydrochloride
+  is_active: '0'
+products_037:
+  id: 173
+  product_name_long: Caverject 10mcg/ml Solution for Injection
+  product_name_short: 'Caverject '
+  generic_name: Alprostadil
+  is_active: '0'
+products_038:
+  id: 175
+  product_name_long: Dynapen 500mg Capsule
+  product_name_short: 'Dynapen '
+  generic_name: Dicloxacillin Sodium
+  is_active: '0'
+products_039:
+  id: 176
+  product_name_long: Dynapen 125mg Capsule
+  product_name_short: 'Dynapen '
+  generic_name: Dicloxacillin Sodium
+  is_active: '0'
+products_040:
+  id: 177
+  product_name_long: Dynapen 250mg Capsule
+  product_name_short: 'Dynapen '
+  generic_name: Dicloxacillin Sodium
+  is_active: '0'
+products_041:
+  id: 178
+  product_name_long: Baycol 0.4mg Tablet
+  product_name_short: 'Baycol '
+  generic_name: Cerivastatin Sodium
+  is_active: '0'
+products_042:
+  id: 179
+  product_name_long: Brethaire 0.2mg/actuation Inhalation Aerosol
+  product_name_short: 'Brethaire '
+  generic_name: Terbutaline Sulfate
+  is_active: '0'
+products_043:
+  id: 182
+  product_name_long: Ru-Tuss DE 600mg-120mg Extended-Release Tablet
+  product_name_short: 'Ru-Tuss DE '
+  generic_name: Guaifenesin, Pseudoephedrine Hydrochloride
+  is_active: '0'
+products_044:
+  id: 183
+  product_name_long: E-Mycin 250mg Delayed-Release Tablet
+  product_name_short: 'E-Mycin '
+  generic_name: Erythromycin
+  is_active: '0'
+products_045:
+  id: 184
+  product_name_long: E-Mycin 333mg Delayed-Release Tablet
+  product_name_short: 'E-Mycin '
+  generic_name: Erythromycin
+  is_active: '0'
+products_046:
+  id: 187
+  product_name_long: Sinequan 150mg Capsule
+  product_name_short: 'Sinequan '
+  generic_name: Doxepin Hydrochloride
+  is_active: '0'
+products_047:
+  id: 188
+  product_name_long: Prednisone 25mg Tablet
+  product_name_short: 'Prednisone '
+  generic_name: Prednisone
+  is_active: '0'
+products_048:
+  id: 190
+  product_name_long: Seba 5% Topical Gel
+  product_name_short: 'Seba '
+  generic_name: Benzoyl Peroxide
+  is_active: '0'
+products_049:
+  id: 191
+  product_name_long: Cetamide 10% Ophthalmic Ointment
+  product_name_short: 'Cetamide '
+  generic_name: Sulfacetamide Sodium
+  is_active: '0'
+products_050:
+  id: 192
+  product_name_long: Renese 4mg Tablet
+  product_name_short: 'Renese '
+  generic_name: Polythiazide
+  is_active: '0'
+products_051:
+  id: 193
+  product_name_long: Demi-Regroton 25mg-0.125mg Tablet
+  product_name_short: 'Demi-Regroton '
+  generic_name: Chlorthalidone, Reserpine
+  is_active: '0'
+products_052:
+  id: 194
+  product_name_long: Acthar 40unit Powder for Injection
+  product_name_short: 'Acthar '
+  generic_name: Corticotropin (Porcine)
+  is_active: '0'
+products_053:
+  id: 195
+  product_name_long: Bellergal-S 0.2mg-0.6mg-40mg Tablet
+  product_name_short: 'Bellergal-S '
+  generic_name: Belladonna Alkaloids, Ergotamine Tartrate, Phenobarbital
+  is_active: '0'
+products_054:
+  id: 196
+  product_name_long: Tavist 0.5mg/5ml Syrup
+  product_name_short: 'Tavist '
+  generic_name: Clemastine Fumarate
+  is_active: '0'
+products_055:
+  id: 197
+  product_name_long: Ludiomil 25mg Tablet
+  product_name_short: 'Ludiomil '
+  generic_name: Maprotiline Hydrochloride
+  is_active: '0'
+products_056:
+  id: 198
+  product_name_long: Optimyd 0.5%-10% Ophthalmic Solution
+  product_name_short: 'Optimyd '
+  generic_name: Sulfacetamide Sodium, Prednisolone Sodium Phosphate
+  is_active: '0'
+products_057:
+  id: 199
+  product_name_long: Quinora 300mg Tablet
+  product_name_short: 'Quinora '
+  generic_name: Quinidine Sulfate
+  is_active: '0'
+products_058:
+  id: 200
+  product_name_long: Etrafon-A 10mg-4mg Tablet
+  product_name_short: 'Etrafon-A '
+  generic_name: Amitriptyline Hydrochloride, Perphenazine
+  is_active: '0'
+products_059:
+  id: 201
+  product_name_long: Theo-Dur Sprinkle 125mg Capsule
+  product_name_short: 'Theo-Dur Sprinkle '
+  generic_name: Theophylline
+  is_active: '0'
+products_060:
+  id: 202
+  product_name_long: Theovent LA 125mg Extended-Release Capsule
+  product_name_short: 'Theovent LA '
+  generic_name: Theophylline, Anhydrous
+  is_active: '0'
+products_061:
+  id: 203
+  product_name_long: Theo-Dur Sprinkle 200mg Capsule
+  product_name_short: 'Theo-Dur Sprinkle '
+  generic_name: Theophylline
+  is_active: '0'
+products_062:
+  id: 204
+  product_name_long: Theovent LA 250mg Extended-Release Capsule
+  product_name_short: 'Theovent LA '
+  generic_name: Theophylline, Anhydrous
+  is_active: '0'
+products_063:
+  id: 205
+  product_name_long: Valisone 0.01% Topical Cream
+  product_name_short: 'Valisone '
+  generic_name: Betamethasone Valerate
+  is_active: '0'
+products_064:
+  id: 206
+  product_name_long: Intron A 3million unit Multidose Pen Solution for Injection
+  product_name_short: 'Intron A '
+  generic_name: Interferon Alfa-2b
+  is_active: '0'
+products_065:
+  id: 207
+  product_name_long: Intron A 5million unit Multidose Pen Solution for Injection
+  product_name_short: 'Intron A '
+  generic_name: Interferon Alfa-2b
+  is_active: '0'
+products_066:
+  id: 208
+  product_name_long: Thera-Flur 1.1% Topical Gel Drops
+  product_name_short: 'Thera-Flur '
+  generic_name: Sodium Fluoride
+  is_active: '0'
+products_067:
+  id: 209
+  product_name_long: Phos-Flur 0.02% Dental Rinse (Cherry)
+  product_name_short: 'Phos-Flur '
+  generic_name: Sodium Fluoride
+  is_active: '0'
+products_068:
+  id: 210
+  product_name_long: Codimal LA 8mg-120mg Extended-Release Capsule
+  product_name_short: 'Codimal LA '
+  generic_name: Chlorpheniramine Maleate, Pseudoephedrine Hydrochloride
+  is_active: '0'
+products_069:
+  id: 211
+  product_name_long: Physostigmine Sulfate 0.25% Ophthalmic Ointment
+  product_name_short: 'Physostigmine Sulfate '
+  generic_name: Physostigmine Sulfate
+  is_active: '0'
+products_070:
+  id: 212
+  product_name_long: Proloprim 100mg Tablet
+  product_name_short: 'Proloprim '
+  generic_name: Trimethoprim
+  is_active: '0'
+products_071:
+  id: 213
+  product_name_long: Viroptic 1% Ophthalmic Solution
+  product_name_short: 'Viroptic '
+  generic_name: Trifluridine
+  is_active: '0'
+products_072:
+  id: 214
+  product_name_long: Efudex 2% Topical Solution
+  product_name_short: 'Efudex '
+  generic_name: Fluorouracil
+  is_active: '0'
+products_073:
+  id: 215
+  product_name_long: Kaon-CL 6.7mEq Extended-Release Tablet
+  product_name_short: 'Kaon-CL '
+  generic_name: Potassium Chloride
+  is_active: '0'
+products_074:
+  id: 216
+  product_name_long: Cetacort 0.25% Topical Lotion
+  product_name_short: 'Cetacort '
+  generic_name: Hydrocortisone
+  is_active: '0'
+products_075:
+  id: 217
+  product_name_long: Nutracort 1% Topical Cream
+  product_name_short: 'Nutracort '
+  generic_name: Hydrocortisone
+  is_active: '0'
+products_076:
+  id: 219
+  product_name_long: Aristocort HP 0.5% Topical Ointment
+  product_name_short: 'Aristocort HP '
+  generic_name: Triamcinolone Acetonide
+  is_active: '0'
+products_077:
+  id: 220
+  product_name_long: Aristocort 2mg Tablet
+  product_name_short: 'Aristocort '
+  generic_name: Triamcinolone
+  is_active: '0'
+products_078:
+  id: 221
+  product_name_long: Aristo-Pak 4mg Tablet
+  product_name_short: 'Aristo-Pak '
+  generic_name: Triamcinolone
+  is_active: '0'
+products_079:
+  id: 222
+  product_name_long: Aristocort 8mg Tablet
+  product_name_short: 'Aristocort '
+  generic_name: Triamcinolone
+  is_active: '0'
+products_080:
+  id: 224
+  product_name_long: Pancof XP 100mg-3mg-15mg/5ml Solution
+  product_name_short: 'Pancof XP '
+  generic_name: Guaifenesin, Hydrocodone Bitartrate, Pseudoephedrine Hydrochloride
+  is_active: '0'
+products_081:
+  id: 225
+  product_name_long: Brompheniramine Maleate/Pseudoephedrine Hydrochloride 6mg-60mg Capsule
+  product_name_short: 'Brompheniramine Maleate/Pseudoephedrine Hydrochloride '
+  generic_name: Brompheniramine Maleate, Pseudoephedrine Hydrochloride
+  is_active: '0'
+products_082:
+  id: 226
+  product_name_long: Ilotycin 0.5% Ophthalmic Ointment
+  product_name_short: 'Ilotycin '
+  generic_name: Erythromycin
+  is_active: '0'
+products_083:
+  id: 227
+  product_name_long: Keflex 250mg/5ml Powder for Suspension
+  product_name_short: 'Keflex '
+  generic_name: Cephalexin Monohydrate
+  is_active: '0'
+products_084:
+  id: 228
+  product_name_long: Glyburide 2.5mg Tablet
+  product_name_short: 'Glyburide '
+  generic_name: Glyburide
+  is_active: '0'
+products_085:
+  id: 229
+  product_name_long: Fungoid and HC 2%-0.5% Topical Cream
+  product_name_short: 'Fungoid and HC '
+  generic_name: Hydrocortisone, Miconazole Nitrate
+  is_active: '0'
+products_086:
+  id: 230
+  product_name_long: Naphcon Forte 0.1% Ophthalmic Solution
+  product_name_short: 'Naphcon Forte '
+  generic_name: Naphazoline Hydrochloride
+  is_active: '0'
+products_087:
+  id: 231
+  product_name_long: Isopto Carpine 0.25% Ophthalmic Solution
+  product_name_short: 'Isopto Carpine '
+  generic_name: Pilocarpine Hydrochloride
+  is_active: '0'
+products_088:
+  id: 232
+  product_name_long: Isopto Carpine 0.5% Ophthalmic Solution
+  product_name_short: 'Isopto Carpine '
+  generic_name: Pilocarpine Hydrochloride
+  is_active: '0'
+products_089:
+  id: 233
+  product_name_long: Isopto Carpine 3% Ophthalmic Solution
+  product_name_short: 'Isopto Carpine '
+  generic_name: Pilocarpine Hydrochloride
+  is_active: '0'
+products_090:
+  id: 234
+  product_name_long: Adsorbocarpine 2% Ophthalmic Solution
+  product_name_short: 'Adsorbocarpine '
+  generic_name: Pilocarpine Hydrochloride
+  is_active: '0'
+products_091:
+  id: 235
+  product_name_long: Adsorbocarpine 4% Ophthalmic Solution
+  product_name_short: 'Adsorbocarpine '
+  generic_name: Pilocarpine Hydrochloride
+  is_active: '0'
+products_092:
+  id: 236
+  product_name_long: Isopto Atropine 0.5% Ophthalmic Solution
+  product_name_short: 'Isopto Atropine '
+  generic_name: Atropine Sulfate
+  is_active: '0'
+products_093:
+  id: 237
+  product_name_long: P3-E1 1%-3% Ophthalmic Solution
+  product_name_short: P
+  generic_name: Pilocarpine Hydrochloride, Epinephrine Bitartrate
+  is_active: '0'
+products_094:
+  id: 238
+  product_name_long: Gordochom 3%-25% Topical Solution
+  product_name_short: 'Gordochom '
+  generic_name: Chloroxylenol, Undecylenic Acid
+  is_active: '1'
+products_095:
+  id: 239
+  product_name_long: Erex 5.4mg Tablet
+  product_name_short: 'Erex '
+  generic_name: Yohimbine Hydrochloride
+  is_active: '1'
+products_096:
+  id: 242
+  product_name_long: Rev-Eyes 0.5% Ophthalmic Solution
+  product_name_short: 'Rev-Eyes '
+  generic_name: Dapiprazole Hydrochloride
+  is_active: '0'
+products_097:
+  id: 245
+  product_name_long: Theo-Bid Duracaps 260mg Capsule
+  product_name_short: 'Theo-Bid Duracaps '
+  generic_name: Theophylline, Anhydrous
+  is_active: '0'
+products_098:
+  id: 247
+  product_name_long: Quineprox 200mg Tablet
+  product_name_short: 'Quineprox '
+  generic_name: Hydroxychloroquine Sulfate
+  is_active: '0'
+products_099:
+  id: 249
+  product_name_long: Dexacort PH 84mcg Turbinaire Inhalant
+  product_name_short: 'Dexacort PH '
+  generic_name: Dexamethasone Sodium Phosphate
+  is_active: '0'
+products_100:
+  id: 250
+  product_name_long: Dexacort 84mcg Turbinaire Inhalant
+  product_name_short: 'Dexacort '
+  generic_name: Dexamethasone Sodium Phosphate
+  is_active: '0'
+products_101:
+  id: 251
+  product_name_long: Salutensin Demi 25mg-0.125mg Tablet
+  product_name_short: 'Salutensin Demi '
+  generic_name: Hydroflumethiazide, Reserpine
+  is_active: '0'
+products_102:
+  id: 253
+  product_name_long: Neptazane 25mg Tablet
+  product_name_short: 'Neptazane '
+  generic_name: Methazolamide
+  is_active: '0'
+products_103:
+  id: 254
+  product_name_long: Enteric Coated Naproxen 375mg Tablet
+  product_name_short: 'Enteric Coated Naproxen '
+  generic_name: Naproxen
+  is_active: '0'
+products_104:
+  id: 255
+  product_name_long: Flura-Drops 0.25mg/drop Drops
+  product_name_short: 'Flura-Drops '
+  generic_name: Sodium Fluoride
+  is_active: '1'
+products_105:
+  id: 256
+  product_name_long: Leukine 500mcg Powder for Injection
+  product_name_short: 'Leukine '
+  generic_name: Sargramostim
+  is_active: '0'
+products_106:
+  id: 257
+  product_name_long: E-Pilo-1 1% Ophthalmic Solution
+  product_name_short: E-Pilo-
+  generic_name: Pilocarpine Hydrochloride, Epinephrine Bitartrate
+  is_active: '0'
+products_107:
+  id: 258
+  product_name_long: Rondec 2mg-15mg/ml Drops
+  product_name_short: 'Rondec '
+  generic_name: Carbinoxamine Maleate, Pseudoephedrine Hydrochloride
+  is_active: '0'
+products_108:
+  id: 259
+  product_name_long: Theroxide 10% Lotion
+  product_name_short: 'Theroxide '
+  generic_name: Benzoyl Peroxide
+  is_active: '0'
+products_109:
+  id: 260
+  product_name_long: Zonalon 5% Topical Cream
+  product_name_short: 'Zonalon '
+  generic_name: Doxepin Hydrochloride
+  is_active: '0'
+products_110:
+  id: 272
+  product_name_long: NuvaRing Vaginal Ring
+  product_name_short: NuvaRing Vaginal Ring
+  generic_name: Ethinyl Estradiol, Etonogestrel
+  is_active: '1'
+products_111:
+  id: 274
+  product_name_long: Dimetapp Pediatric Decongestant 7.5mg/0.8ml Drops
+  product_name_short: 'Dimetapp Pediatric Decongestant '
+  generic_name: Pseudoephedrine Hydrochloride
+  is_active: '0'
+products_112:
+  id: 277
+  product_name_long: Eligard 7.5mg Suspension for Injection
+  product_name_short: 'Eligard '
+  generic_name: Leuprolide Acetate
+  is_active: '1'
+products_113:
+  id: 279
+  product_name_long: Tigan 300mg Capsule
+  product_name_short: 'Tigan '
+  generic_name: Trimethobenzamide Hydrochloride
+  is_active: '1'
+products_114:
+  id: 280
+  product_name_long: Intron A 10million unit Multidose Pen Solution for Injection
+  product_name_short: 'Intron A '
+  generic_name: Interferon Alfa-2b
+  is_active: '0'
+products_115:
+  id: 285
+  product_name_long: Anbesol 10% Topical Anesthetic Dental Gel (Cool Mint)
+  product_name_short: 'Anbesol '
+  generic_name: Benzocaine
+  is_active: '1'
+products_116:
+  id: 291
+  product_name_long: Tylenol Extra Strength 500mg/15ml Liquid (Cherry)
+  product_name_short: 'Tylenol Extra Strength '
+  generic_name: Acetaminophen
+  is_active: '1'
+products_117:
+  id: 311
+  product_name_long: Tylenol Women's Menstrual Relief 500mg-25mg Caplet
+  product_name_short: 'Tylenol Women''s Menstrual Relief '
+  generic_name: Acetaminophen, Pamabrom
+  is_active: '1'
+products_118:
+  id: 312
+  product_name_long: Humulin N Pre-Filled Pen 100unit/ml Suspension for Injection
+  product_name_short: 'Humulin N Pre-Filled Pen '
+  generic_name: Insulin Suspension Isophane (NPH) (Recombinant)
+  is_active: '1'
+products_119:
+  id: 313
+  product_name_long: Kionex 454g Powder for Suspension
+  product_name_short: 'Kionex '
+  generic_name: Sodium Polystyrene Sulfonate
+  is_active: '1'
+products_120:
+  id: 317
+  product_name_long: Prenatal Plus Tablet
+  product_name_short: Prenatal Plus Tablet
+  generic_name: Ascorbic Acid (Vitamin C), Beta-Carotene (Vitamin A), Calcium, Cholecalciferol,
+    Copper, Cyanocobalamin (Vitamin B12), Dl-Alpha Tocopheryl Acetate (Vitamin E),
+    Ferrous Fumarate, Folic Acid (Vitamin B9), Niacinamide, Pyridoxine (Vitamin B6),
+    Riboflavin (Vit
+  is_active: '0'
+products_121:
+  id: 318
+  product_name_long: Rynatan 9mg-25mg Tablet
+  product_name_short: 'Rynatan '
+  generic_name: Chlorpheniramine Tannate, Phenylephrine Tannate
+  is_active: '0'
+products_122:
+  id: 319
+  product_name_long: Silver Sulfadiazine 1% Topical Cream
+  product_name_short: 'Silver Sulfadiazine '
+  generic_name: Silver Sulfadiazine
+  is_active: '1'
+products_123:
+  id: 320
+  product_name_long: Timoptic Ocumeter 0.5% Ophthalmic Solution
+  product_name_short: 'Timoptic Ocumeter '
+  generic_name: Timolol Maleate
+  is_active: '0'
+products_124:
+  id: 323
+  product_name_long: Triamterene/Hydrochlorothiazide 37.5mg-25mg Tablet
+  product_name_short: 'Triamterene/Hydrochlorothiazide '
+  generic_name: Triamterene, Hydrochlorothiazide
+  is_active: '1'
+products_125:
+  id: 324
+  product_name_long: Uni-Thera M Advanced Tablet
+  product_name_short: Uni-Thera M Advanced Tablet
+  generic_name: Ascorbic Acid (Vitamin C), Beta-Carotene (Vitamin A), Biotin, Boron,
+    Calcium Phosphate, Chloride, Chromium, Cupric Oxide, Cyanocobalamin (Vitamin B12),
+    Dl-Alpha Tocopheryl Acetate (Vitamin E), Ergocalciferol, Ferrous Fumarate, Folic
+    Acid (Vitamin B9), Mag
+  is_active: '0'
+products_126:
+  id: 325
+  product_name_long: Verapamil Hydrochloride 40mg Tablet
+  product_name_short: 'Verapamil Hydrochloride '
+  generic_name: Verapamil Hydrochloride
+  is_active: '1'
+products_127:
+  id: 326
+  product_name_long: Fludrocortisone Acetate 0.1mg Tablet
+  product_name_short: 'Fludrocortisone Acetate '
+  generic_name: Fludrocortisone Acetate
+  is_active: '1'
+products_128:
+  id: 329
+  product_name_long: Alora 0.025mg/24hr Transdermal System
+  product_name_short: 'Alora '
+  generic_name: Estradiol
+  is_active: '1'
+products_129:
+  id: 330
+  product_name_long: Duet by Stuartnatal Tablet
+  product_name_short: Duet by Stuartnatal Tablet
+  generic_name: Ascorbic Acid (Vitamin C), Beta-Carotene (Vitamin A), Calcium Carbonate,
+    Cholecalciferol, Cupric Oxide, Cyanocobalamin (Vitamin B12), Dl-Alpha Tocopheryl
+    Acetate (Vitamin E), Ferrous bis-glycinate chelate, Folic Acid (Vitamin B9), Magnesium
+    Oxide, Niacina
+  is_active: '0'
+products_130:
+  id: 331
+  product_name_long: Duet by Stuartnatal Chewable Tablet
+  product_name_short: Duet by Stuartnatal Chewable Tablet
+  generic_name: Ascorbic Acid (Vitamin C), Beta-Carotene (Vitamin A), Calcium Carbonate,
+    Cholecalciferol, Cupric Oxide, Cyanocobalamin (Vitamin B12), Dl-Alpha Tocopheryl
+    Acetate (Vitamin E), Ferrous bis-glycinate chelate, Folic Acid (Vitamin B9), Magnesium
+    Oxide, Niacina
+  is_active: '0'
+products_131:
+  id: 332
+  product_name_long: Bravelle 75units Powder for Injection
+  product_name_short: 'Bravelle '
+  generic_name: Urofollitropin (FSH)
+  is_active: '1'
+products_132:
+  id: 333
+  product_name_long: Paxil CR 25mg Tablet
+  product_name_short: 'Paxil CR '
+  generic_name: Paroxetine Hydrochloride
+  is_active: '0'
+products_133:
+  id: 334
+  product_name_long: Fluoxetine Hydrochloride 10mg Capsule
+  product_name_short: 'Fluoxetine Hydrochloride '
+  generic_name: Fluoxetine Hydrochloride
+  is_active: '0'
+products_134:
+  id: 335
+  product_name_long: Fluoxetine Hydrochloride 20mg Capsule
+  product_name_short: 'Fluoxetine Hydrochloride '
+  generic_name: Fluoxetine Hydrochloride
+  is_active: '0'
+products_135:
+  id: 336
+  product_name_long: Fluoxetine Hydrochloride 20mg/5ml Solution
+  product_name_short: 'Fluoxetine Hydrochloride '
+  generic_name: Fluoxetine Hydrochloride
+  is_active: '0'
+products_136:
+  id: 337
+  product_name_long: Depakote ER 250mg Extended-Release Tablet
+  product_name_short: 'Depakote ER '
+  generic_name: Divalproex Sodium
+  is_active: '1'
+products_137:
+  id: 338
+  product_name_long: Levo-T 50mcg Tablet
+  product_name_short: 'Levo-T '
+  generic_name: Levothyroxine Sodium
+  is_active: '0'
+products_138:
+  id: 339
+  product_name_long: Levo-T 88mcg Tablet
+  product_name_short: 'Levo-T '
+  generic_name: Levothyroxine Sodium
+  is_active: '0'
+products_139:
+  id: 340
+  product_name_long: Levo-T 112mcg Tablet
+  product_name_short: 'Levo-T '
+  generic_name: Levothyroxine Sodium
+  is_active: '0'
+products_140:
+  id: 341
+  product_name_long: Levo-T 175mcg Tablet
+  product_name_short: 'Levo-T '
+  generic_name: Levothyroxine Sodium
+  is_active: '0'
+products_141:
+  id: 342
+  product_name_long: Levo-T 200mcg Tablet
+  product_name_short: 'Levo-T '
+  generic_name: Levothyroxine Sodium
+  is_active: '0'
+products_142:
+  id: 343
+  product_name_long: Advil Cold and Sinus 200mg-30mg Liqui-Gel Capsule
+  product_name_short: 'Advil Cold and Sinus '
+  generic_name: Ibuprofen, Pseudoephedrine Hydrochloride
+  is_active: '1'
+products_143:
+  id: 344
+  product_name_long: Geodon 20mg Powder for Injection
+  product_name_short: 'Geodon '
+  generic_name: Ziprasidone Mesylate
+  is_active: '1'
+products_144:
+  id: 345
+  product_name_long: Cenestin 0.3mg Tablet
+  product_name_short: 'Cenestin '
+  generic_name: Synthetic Conjugated Estrogens (A)
+  is_active: '1'
+products_145:
+  id: 346
+  product_name_long: Lisinopril/Hydrochlorothiazide 10mg-12.5mg Tablet
+  product_name_short: 'Lisinopril/Hydrochlorothiazide '
+  generic_name: Lisinopril, Hydrochlorothiazide
+  is_active: '1'
+products_146:
+  id: 347
+  product_name_long: Amphetamine/Dextroamphetamine Salts 10mg Tablet
+  product_name_short: 'Amphetamine/Dextroamphetamine Salts '
+  generic_name: Amphetamine Aspartate, Amphetamine Sulfate, Dextroamphetamine Saccharate,
+    Dextroamphetamine Sulfate
+  is_active: '1'
+products_147:
+  id: 348
+  product_name_long: Silver Nitrate 0.5% Topical Solution
+  product_name_short: 'Silver Nitrate '
+  generic_name: Silver Nitrate
+  is_active: '0'
+products_148:
+  id: 349
+  product_name_long: Mucinex 600mg Extended-Release Tablet
+  product_name_short: 'Mucinex '
+  generic_name: Guaifenesin
+  is_active: '0'
+products_149:
+  id: 352
+  product_name_long: Ferro-Sequels 50mg Extended-Release Tablet
+  product_name_short: 'Ferro-Sequels '
+  generic_name: Ferrous Fumarate
+  is_active: '1'
+products_150:
+  id: 353
+  product_name_long: Bromadrine TR 12mg-120mg Capsule
+  product_name_short: 'Bromadrine TR '
+  generic_name: Brompheniramine Hydrochloride, Pseudoephedrine Hydrochloride
+  is_active: '0'
+products_151:
+  id: 355
+  product_name_long: Aranesp (Polysorbate) 25mcg/ml Solution for Injection
+  product_name_short: 'Aranesp (Polysorbate) '
+  generic_name: Darbepoetin Alfa
+  is_active: '1'
+products_152:
+  id: 356
+  product_name_long: Aranesp (Polysorbate) 200mcg/ml Solution for Injection
+  product_name_short: 'Aranesp (Polysorbate) '
+  generic_name: Darbepoetin Alfa
+  is_active: '1'
+products_153:
+  id: 357
+  product_name_long: Aranesp (Polysorbate) 40mcg/ml Solution for Injection
+  product_name_short: 'Aranesp (Polysorbate) '
+  generic_name: Darbepoetin Alfa
+  is_active: '1'
+products_154:
+  id: 358
+  product_name_long: Aranesp (Polysorbate) 60mcg/ml Solution for Injection
+  product_name_short: 'Aranesp (Polysorbate) '
+  generic_name: Darbepoetin Alfa
+  is_active: '1'
+products_155:
+  id: 359
+  product_name_long: Aranesp (Polysorbate) 100mcg/ml Solution for Injection
+  product_name_short: 'Aranesp (Polysorbate) '
+  generic_name: Darbepoetin Alfa
+  is_active: '1'
+products_156:
+  id: 360
+  product_name_long: Desonide 0.05% Topical Ointment
+  product_name_short: 'Desonide '
+  generic_name: Desonide
+  is_active: '0'
+products_157:
+  id: 361
+  product_name_long: Desonide 0.05% Topical Lotion
+  product_name_short: 'Desonide '
+  generic_name: Desonide
+  is_active: '1'
+products_158:
+  id: 362
+  product_name_long: Nizatidine 150mg Capsule
+  product_name_short: 'Nizatidine '
+  generic_name: Nizatidine
+  is_active: '0'
+products_159:
+  id: 363
+  product_name_long: Nizatidine 300mg Capsule
+  product_name_short: 'Nizatidine '
+  generic_name: Nizatidine
+  is_active: '0'
+products_160:
+  id: 364
+  product_name_long: Misoprostol 100mcg Tablet
+  product_name_short: 'Misoprostol '
+  generic_name: Misoprostol
+  is_active: '1'
+products_161:
+  id: 365
+  product_name_long: Misoprostol 200mcg Tablet
+  product_name_short: 'Misoprostol '
+  generic_name: Misoprostol
+  is_active: '1'
+products_162:
+  id: 366
+  product_name_long: Lisinopril 10mg Tablet
+  product_name_short: 'Lisinopril '
+  generic_name: Lisinopril
+  is_active: '1'
+products_163:
+  id: 367
+  product_name_long: Lisinopril 2.5mg Tablet
+  product_name_short: 'Lisinopril '
+  generic_name: Lisinopril
+  is_active: '1'
+products_164:
+  id: 368
+  product_name_long: Lisinopril 20mg Tablet
+  product_name_short: 'Lisinopril '
+  generic_name: Lisinopril
+  is_active: '1'
+products_165:
+  id: 369
+  product_name_long: Lisinopril 30mg Tablet
+  product_name_short: 'Lisinopril '
+  generic_name: Lisinopril
+  is_active: '1'
+products_166:
+  id: 370
+  product_name_long: Lisinopril 40mg Tablet
+  product_name_short: 'Lisinopril '
+  generic_name: Lisinopril
+  is_active: '1'
+products_167:
+  id: 371
+  product_name_long: Lisinopril 5mg Tablet
+  product_name_short: 'Lisinopril '
+  generic_name: Lisinopril
+  is_active: '1'
+products_168:
+  id: 372
+  product_name_long: AccuHist LA Extended-Release Tablet
+  product_name_short: AccuHist LA Extended-Release Tablet
+  generic_name: Atropine Sulfate, Chlorpheniramine Maleate, Hyoscyamine Sulfate, Phenylephrine
+    Hydrochloride, Scopolamine Hydrobromide
+  is_active: '0'
+products_169:
+  id: 373
+  product_name_long: AccuHist 1mg-15mg/ml Pediatric Solution
+  product_name_short: 'AccuHist '
+  generic_name: Brompheniramine Maleate, Pseudoephedrine Hydrochloride
+  is_active: '0'
+products_170:
+  id: 374
+  product_name_long: AccuHist DM Pediatric Syrup
+  product_name_short: AccuHist DM Pediatric Syrup
+  generic_name: Brompheniramine Maleate, Dextromethorphan Hydrobromide, Guaifenesin,
+    Pseudoephedrine Hydrochloride
+  is_active: '0'
+products_171:
+  id: 375
+  product_name_long: Endal 300mg-20mg Extended-Release Tablet
+  product_name_short: 'Endal '
+  generic_name: Guaifenesin, Phenylephrine Hydrochloride
+  is_active: '0'
+products_172:
+  id: 376
+  product_name_long: Endal HD 2mg-2mg-7.5mg/5ml Solution
+  product_name_short: 'Endal HD '
+  generic_name: Chlorpheniramine Maleate, Hydrocodone Bitartrate, Phenylephrine Hydrochloride
+  is_active: '0'
+products_173:
+  id: 377
+  product_name_long: Endal Expectorant 12.5mg-4mg-125mg/5ml Solution
+  product_name_short: 'Endal Expectorant '
+  generic_name: Codeine Phosphate, Guaifenesin, Phenylephrine Hydrochloride
+  is_active: '0'
+products_174:
+  id: 391
+  product_name_long: Eloxatin 50mg Powder for Injection
+  product_name_short: 'Eloxatin '
+  generic_name: Oxaliplatin
+  is_active: '0'
+products_175:
+  id: 392
+  product_name_long: Eloxatin 100mg Powder for Injection
+  product_name_short: 'Eloxatin '
+  generic_name: Oxaliplatin
+  is_active: '0'
+products_176:
+  id: 406
+  product_name_long: Sinutuss DM Tablet
+  product_name_short: Sinutuss DM Tablet
+  generic_name: Dextromethorphan Hydrobromide, Guaifenesin, Phenylephrine Hydrochloride
+  is_active: '0'
+products_177:
+  id: 411
+  product_name_long: Zanaflex 2mg Capsule
+  product_name_short: 'Zanaflex '
+  generic_name: Tizanidine Hydrochloride
+  is_active: '0'
+products_178:
+  id: 412
+  product_name_long: Zanaflex 4mg Capsule
+  product_name_short: 'Zanaflex '
+  generic_name: Tizanidine Hydrochloride
+  is_active: '0'
+products_179:
+  id: 413
+  product_name_long: Zanaflex 6mg Capsule
+  product_name_short: 'Zanaflex '
+  generic_name: Tizanidine Hydrochloride
+  is_active: '0'
+products_180:
+  id: 414
+  product_name_long: Nandrolone Decanoate 200mg/ml in Oil for Injection
+  product_name_short: 'Nandrolone Decanoate '
+  generic_name: Nandrolone Decanoate
+  is_active: '0'
+products_181:
+  id: 415
+  product_name_long: Elitek 1.5mg Powder for Injection
+  product_name_short: 'Elitek '
+  generic_name: Rasburicase
+  is_active: '1'
+products_182:
+  id: 416
+  product_name_long: Placidyl 500mg Capsule
+  product_name_short: 'Placidyl '
+  generic_name: Ethchlorvynol
+  is_active: '0'
+products_183:
+  id: 417
+  product_name_long: Placidyl 750mg Capsule
+  product_name_short: 'Placidyl '
+  generic_name: Ethchlorvynol
+  is_active: '0'
+products_184:
+  id: 418
+  product_name_long: Lexapro 5mg Tablet
+  product_name_short: 'Lexapro '
+  generic_name: Escitalopram
+  is_active: '1'
+products_185:
+  id: 419
+  product_name_long: Lexapro 10mg Tablet
+  product_name_short: 'Lexapro '
+  generic_name: Escitalopram
+  is_active: '1'
+products_186:
+  id: 420
+  product_name_long: Lexapro 20mg Tablet
+  product_name_short: 'Lexapro '
+  generic_name: Escitalopram
+  is_active: '1'
+products_187:
+  id: 421
+  product_name_long: Levitra 5mg Tablet
+  product_name_short: 'Levitra '
+  generic_name: Vardenafil Hydrochloride
+  is_active: '0'
+products_188:
+  id: 422
+  product_name_long: Xopenex Pediatric 0.31mg/3ml Solution for Inhalation
+  product_name_short: 'Xopenex Pediatric '
+  generic_name: Levalbuterol Hydrochloride
+  is_active: '1'
+products_189:
+  id: 423
+  product_name_long: Nitro-Dur 0.1mg/hr Transdermal Patch
+  product_name_short: 'Nitro-Dur '
+  generic_name: Nitroglycerin
+  is_active: '1'
+products_190:
+  id: 424
+  product_name_long: Nitro-Dur 0.4mg/hr Transdermal Patch
+  product_name_short: 'Nitro-Dur '
+  generic_name: Nitroglycerin
+  is_active: '1'
+products_191:
+  id: 425
+  product_name_long: Cardizem CD 120mg Extended-Release Capsule
+  product_name_short: 'Cardizem CD '
+  generic_name: Diltiazem Hydrochloride
+  is_active: '0'
+products_192:
+  id: 426
+  product_name_long: Cardizem CD 240mg Extended-Release Capsule
+  product_name_short: 'Cardizem CD '
+  generic_name: Diltiazem Hydrochloride
+  is_active: '0'
+products_193:
+  id: 427
+  product_name_long: Cardizem CD 300mg Extended-Release Capsule
+  product_name_short: 'Cardizem CD '
+  generic_name: Diltiazem Hydrochloride
+  is_active: '0'
+products_194:
+  id: 428
+  product_name_long: Cardizem SR 120mg Sustained-Release Capsule
+  product_name_short: 'Cardizem SR '
+  generic_name: Diltiazem Hydrochloride
+  is_active: '0'
+products_195:
+  id: 429
+  product_name_long: Nordette 28-Day Tablet
+  product_name_short: 'Nordette '
+  generic_name: Inert;Levonorgestrel, Ethinyl Estradiol
+  is_active: '0'
+products_196:
+  id: 430
+  product_name_long: Zovirax 200mg Capsule
+  product_name_short: 'Zovirax '
+  generic_name: Acyclovir
+  is_active: '0'
+products_197:
+  id: 431
+  product_name_long: Zovirax 400mg Tablet
+  product_name_short: 'Zovirax '
+  generic_name: Acyclovir
+  is_active: '0'
+products_198:
+  id: 432
+  product_name_long: Zovirax 800mg Tablet
+  product_name_short: 'Zovirax '
+  generic_name: Acyclovir
+  is_active: '0'
+products_199:
+  id: 433
+  product_name_long: Normodyne 200mg Tablet
+  product_name_short: 'Normodyne '
+  generic_name: Labetalol Hydrochloride
+  is_active: '0'
+products_200:
+  id: 434
+  product_name_long: Lexxel 5mg-5mg Extended-Release Tablet
+  product_name_short: 'Lexxel '
+  generic_name: Enalapril Maleate, Felodipine
+  is_active: '0'
+products_201:
+  id: 435
+  product_name_long: Tenoretic 50 Tablet
+  product_name_short: 'Tenoretic '
+  generic_name: Atenolol, Chlorthalidone
+  is_active: '1'
+products_202:
+  id: 436
+  product_name_long: Anafranil 25mg Capsule
+  product_name_short: 'Anafranil '
+  generic_name: Clomipramine Hydrochloride
+  is_active: '1'
+products_203:
+  id: 437
+  product_name_long: Pamelor 10mg Capsule
+  product_name_short: 'Pamelor '
+  generic_name: Nortriptyline Hydrochloride
+  is_active: '1'
+products_204:
+  id: 438
+  product_name_long: Pamelor 25mg Capsule
+  product_name_short: 'Pamelor '
+  generic_name: Nortriptyline Hydrochloride
+  is_active: '1'
+products_205:
+  id: 439
+  product_name_long: Pamelor 50mg Capsule
+  product_name_short: 'Pamelor '
+  generic_name: Nortriptyline Hydrochloride
+  is_active: '1'
+products_206:
+  id: 440
+  product_name_long: Rescriptor 100mg Tablet
+  product_name_short: 'Rescriptor '
+  generic_name: Delavirdine Mesylate
+  is_active: '0'
+products_207:
+  id: 441
+  product_name_long: Benicar 20mg Tablet
+  product_name_short: 'Benicar '
+  generic_name: Olmesartan Medoxomil
+  is_active: '1'
+products_208:
+  id: 442
+  product_name_long: Benicar 40mg Tablet
+  product_name_short: 'Benicar '
+  generic_name: Olmesartan Medoxomil
+  is_active: '1'
+products_209:
+  id: 443
+  product_name_long: Buspirone Hydrochloride 10mg Tablet
+  product_name_short: 'Buspirone Hydrochloride '
+  generic_name: Buspirone Hydrochloride
+  is_active: '1'
+products_210:
+  id: 444
+  product_name_long: Buspirone Hydrochloride 15mg Tablet
+  product_name_short: 'Buspirone Hydrochloride '
+  generic_name: Buspirone Hydrochloride
+  is_active: '1'
+products_211:
+  id: 445
+  product_name_long: Buspirone Hydrochloride 5mg Tablet
+  product_name_short: 'Buspirone Hydrochloride '
+  generic_name: Buspirone Hydrochloride
+  is_active: '1'
+products_212:
+  id: 446
+  product_name_long: Denavir 1% Topical Cream
+  product_name_short: 'Denavir '
+  generic_name: Penciclovir Sodium
+  is_active: '0'
+products_213:
+  id: 447
+  product_name_long: Entex PSE 600mg-120mg Extended-Release Tablet
+  product_name_short: 'Entex PSE '
+  generic_name: Guaifenesin, Pseudoephedrine Hydrochloride
+  is_active: '0'
+products_214:
+  id: 448
+  product_name_long: Estradiol 0.5mg Tablet
+  product_name_short: 'Estradiol '
+  generic_name: Estradiol
+  is_active: '1'
+products_215:
+  id: 449
+  product_name_long: Estradiol 2mg Tablet
+  product_name_short: 'Estradiol '
+  generic_name: Estradiol
+  is_active: '1'
+products_216:
+  id: 450
+  product_name_long: Fluoxetine Hydrochloride 40mg Capsule
+  product_name_short: 'Fluoxetine Hydrochloride '
+  generic_name: Fluoxetine Hydrochloride
+  is_active: '1'
+products_217:
+  id: 451
+  product_name_long: Frova 2.5mg Tablet
+  product_name_short: 'Frova '
+  generic_name: Frovatriptan
+  is_active: '0'
+products_218:
+  id: 452
+  product_name_long: Lorabid 200mg/5ml Powder for Suspension
+  product_name_short: 'Lorabid '
+  generic_name: Loracarbef
+  is_active: '0'
+products_219:
+  id: 453
+  product_name_long: Lasix 20mg Tablet
+  product_name_short: 'Lasix '
+  generic_name: Furosemide
+  is_active: '1'
+products_220:
+  id: 454
+  product_name_long: Cardizem CD 180mg Extended-Release Capsule
+  product_name_short: 'Cardizem CD '
+  generic_name: Diltiazem Hydrochloride
+  is_active: '0'
+products_221:
+  id: 455
+  product_name_long: Methylprednisolone 4mg Tablet
+  product_name_short: 'Methylprednisolone '
+  generic_name: Methylprednisolone
+  is_active: '0'
+products_222:
+  id: 456
+  product_name_long: Podofilox 0.5% Topical Solution
+  product_name_short: 'Podofilox '
+  generic_name: Podofilox
+  is_active: '1'
+products_223:
+  id: 457
+  product_name_long: Prochlorperazine 25mg Rectal Suppository
+  product_name_short: 'Prochlorperazine '
+  generic_name: Prochlorperazine
+  is_active: '0'
+products_224:
+  id: 458
+  product_name_long: Ranitidine Hydrochloride 150mg Tablet
+  product_name_short: 'Ranitidine Hydrochloride '
+  generic_name: Ranitidine Hydrochloride
+  is_active: '1'
+products_225:
+  id: 459
+  product_name_long: Ranitidine Hydrochloride 300mg Tablet
+  product_name_short: 'Ranitidine Hydrochloride '
+  generic_name: Ranitidine Hydrochloride
+  is_active: '1'
+products_226:
+  id: 460
+  product_name_long: Rimactane 300mg Capsule
+  product_name_short: 'Rimactane '
+  generic_name: Rifampin
+  is_active: '0'
+products_227:
+  id: 461
+  product_name_long: Sulfazine EC 500mg Delayed-Release Tablet
+  product_name_short: 'Sulfazine EC '
+  generic_name: Sulfasalazine
+  is_active: '1'
+products_228:
+  id: 462
+  product_name_long: Tretinoin 0.01% Topical Gel
+  product_name_short: 'Tretinoin '
+  generic_name: Tretinoin
+  is_active: '0'
+products_229:
+  id: 463
+  product_name_long: Verapamil Hydrochloride 120mg Tablet
+  product_name_short: 'Verapamil Hydrochloride '
+  generic_name: Verapamil Hydrochloride
+  is_active: '1'
+products_230:
+  id: 464
+  product_name_long: Verapamil Hydrochloride 80mg Tablet
+  product_name_short: 'Verapamil Hydrochloride '
+  generic_name: Verapamil Hydrochloride
+  is_active: '1'
+products_231:
+  id: 465
+  product_name_long: Zetacet 10%-5% Topical Suspension
+  product_name_short: 'Zetacet '
+  generic_name: 'Sulfacetamide Sodium, Sulfur, pharmaceutical '
+  is_active: '0'
+products_232:
+  id: 466
+  product_name_long: Calcium 600 with Vitamin D Tablet
+  product_name_short: 'Calcium '
+  generic_name: Calcium Carbonate, Vitamin D
+  is_active: '1'
+products_233:
+  id: 469
+  product_name_long: Chlorex-A 4mg-20-mg-40mg Tablet
+  product_name_short: 'Chlorex-A '
+  generic_name: Chlorpheniramine Maleate, Phenylephrine Hydrochloride, Phenyltoloxamine
+    Citrate
+  is_active: '1'
+products_234:
+  id: 472
+  product_name_long: Ferrogels Forte Capsule
+  product_name_short: Ferrogels Forte Capsule
+  generic_name: Ascorbic Acid (Vitamin C), Cyanocobalamin (Vitamin B12), Folic Acid
+    (Vitamin B9), Iron
+  is_active: '0'
+products_235:
+  id: 473
+  product_name_long: GFN 600/PSE 60/DM 30 Extended-Release Tablet
+  product_name_short: 'GFN '
+  generic_name: Dextromethorphan Hydrobromide, Guaifenesin, Pseudoephedrine Hydrochloride
+  is_active: '1'
+products_236:
+  id: 474
+  product_name_long: Hematinic with Folic Acid 324mg-1mg Tablet
+  product_name_short: 'Hematinic with Folic Acid '
+  generic_name: Ferrous Fumarate, Folic Acid (Vitamin B9)
+  is_active: '1'
+products_237:
+  id: 475
+  product_name_long: Hydron CP 2mg-5mg-10mg/5ml Solution
+  product_name_short: 'Hydron CP '
+  generic_name: Chlorpheniramine Maleate, Hydrocodone Bitartrate, Phenylephrine Hydrochloride
+  is_active: '1'
+products_238:
+  id: 476
+  product_name_long: Hydron EX 2.5mg-120mg/5ml Solution
+  product_name_short: 'Hydron EX '
+  generic_name: Hydrocodone Bitartrate, Potassium Guaiacolsulfonate
+  is_active: '1'
+products_239:
+  id: 487
+  product_name_long: Sorbitol 70% Solution
+  product_name_short: 'Sorbitol '
+  generic_name: Sorbitol
+  is_active: '1'
+products_240:
+  id: 488
+  product_name_long: Tannic-12 S 30mg-4mg/5ml Suspension
+  product_name_short: Tannic-
+  generic_name: Carbetapentane Tannate, Chlorpheniramine Tannate
+  is_active: '1'
+products_241:
+  id: 490
+  product_name_long: Vitamin C 500mg Tablet
+  product_name_short: 'Vitamin C '
+  generic_name: Ascorbic Acid (Vitamin C)
+  is_active: '1'
+products_242:
+  id: 497
+  product_name_long: Inspra 25mg Tablet
+  product_name_short: 'Inspra '
+  generic_name: Eplerenone
+  is_active: '1'
+products_243:
+  id: 498
+  product_name_long: Inspra 50mg Tablet
+  product_name_short: 'Inspra '
+  generic_name: Eplerenone
+  is_active: '1'
+products_244:
+  id: 499
+  product_name_long: Cymbalta 20mg Delayed-Release Capsule
+  product_name_short: 'Cymbalta '
+  generic_name: Duloxetine
+  is_active: '1'
+products_245:
+  id: 500
+  product_name_long: Wellbutrin XL 150mg Extended-Release Tablet
+  product_name_short: 'Wellbutrin XL '
+  generic_name: Bupropion Hydrochloride
+  is_active: '0'
+products_246:
+  id: 501
+  product_name_long: Seasonale Tablet
+  product_name_short: Seasonale Tablet
+  generic_name: Inert;Levonorgestrel, Ethinyl Estradiol
+  is_active: '0'
+products_247:
+  id: 503
+  product_name_long: Enalapril Maleate/Hydrochlorothiazide 5mg-12.5mg Tablet
+  product_name_short: 'Enalapril Maleate/Hydrochlorothiazide '
+  generic_name: Enalapril Maleate, Hydrochlorothiazide
+  is_active: '0'
+products_248:
+  id: 504
+  product_name_long: Enalapril Maleate/Hydrochlorothiazide 10mg-25mg Tablet
+  product_name_short: 'Enalapril Maleate/Hydrochlorothiazide '
+  generic_name: Enalapril Maleate, Hydrochlorothiazide
+  is_active: '0'
+products_249:
+  id: 505
+  product_name_long: Flecainide Acetate 100mg Tablet
+  product_name_short: 'Flecainide Acetate '
+  generic_name: Flecainide Acetate
+  is_active: '0'
+products_250:
+  id: 506
+  product_name_long: Flecainide Acetate 150mg Tablet
+  product_name_short: 'Flecainide Acetate '
+  generic_name: Flecainide Acetate
+  is_active: '0'
+products_251:
+  id: 507
+  product_name_long: Fluoxetine Hydrochloride 10mg Capsule
+  product_name_short: 'Fluoxetine Hydrochloride '
+  generic_name: Fluoxetine Hydrochloride
+  is_active: '0'
+products_252:
+  id: 508
+  product_name_long: Metformin Hydrochloride 850mg Tablet
+  product_name_short: 'Metformin Hydrochloride '
+  generic_name: Metformin Hydrochloride
+  is_active: '0'
+products_253:
+  id: 509
+  product_name_long: Metformin Hydrochloride 1000mg Tablet
+  product_name_short: 'Metformin Hydrochloride '
+  generic_name: Metformin Hydrochloride
+  is_active: '0'
+products_254:
+  id: 514
+  product_name_long: Carbetapentane Tannate/Chlorpheniramine Tannate 60mg-5mg Tablet
+  product_name_short: 'Carbetapentane Tannate/Chlorpheniramine Tannate '
+  generic_name: Carbetapentane Tannate, Chlorpheniramine Tannate
+  is_active: '0'
+products_255:
+  id: 516
+  product_name_long: Ferrous Gluconate 225mg Tablet
+  product_name_short: 'Ferrous Gluconate '
+  generic_name: Ferrous Gluconate
+  is_active: '0'
+products_256:
+  id: 517
+  product_name_long: Fortabs 325mg-50mg-40mg Tablet
+  product_name_short: 'Fortabs '
+  generic_name: Butalbital, Aspirin, Caffeine
+  is_active: '0'
+products_257:
+  id: 519
+  product_name_long: Guaifenesin 1000mg Extended-Release Tablet
+  product_name_short: 'Guaifenesin '
+  generic_name: Guaifenesin
+  is_active: '0'
+products_258:
+  id: 520
+  product_name_long: Dextromethorphan Hydrobromide/Guaifenesin 60mg-1000mg Extended-Release
+    Tablet
+  product_name_short: 'Dextromethorphan Hydrobromide/Guaifenesin '
+  generic_name: Dextromethorphan Hydrobromide, Guaifenesin
+  is_active: '0'
+products_259:
+  id: 521
+  product_name_long: Carbinoxamine Maleate/Hydrocodone Bitartrate/Pseudoephedrine Hydrochloride
+    5mg-30mg-2mg/5ml Syrup
+  product_name_short: 'Carbinoxamine Maleate/Hydrocodone Bitartrate/Pseudoephedrine Hydrochloride '
+  generic_name: Carbinoxamine Maleate, Hydrocodone Bitartrate, Pseudoephedrine Hydrochloride
+  is_active: '0'
+products_260:
+  id: 522
+  product_name_long: Methylprednisolone 4mg Tablet
+  product_name_short: 'Methylprednisolone '
+  generic_name: Methylprednisolone
+  is_active: '0'
+products_261:
+  id: 523
+  product_name_long: Metoprolol Tartrate 50mg Tablet
+  product_name_short: 'Metoprolol Tartrate '
+  generic_name: Metoprolol Tartrate
+  is_active: '0'
+products_262:
+  id: 524
+  product_name_long: Carbinoxamine Maleate/Pseudoephedrine Hydrochloride 2mg-15mg/5ml
+    Solution
+  product_name_short: 'Carbinoxamine Maleate/Pseudoephedrine Hydrochloride '
+  generic_name: Carbinoxamine Maleate, Pseudoephedrine Hydrochloride
+  is_active: '0'
+products_263:
+  id: 525
+  product_name_long: Trionate 30mg-4mg/5ml Suspension
+  product_name_short: 'Trionate '
+  generic_name: Carbetapentane Tannate, Chlorpheniramine Tannate
+  is_active: '0'
+products_264:
+  id: 526
+  product_name_long: Quad Tann Pediatric Suspension
+  product_name_short: Quad Tann Pediatric Suspension
+  generic_name: Carbetapentane Tannate, Chlorpheniramine Tannate, Ephedrine Tannate,
+    Phenylephrine Tannate
+  is_active: '0'
+products_265:
+  id: 527
+  product_name_long: Eligard 22.5mg Suspension for Injection
+  product_name_short: 'Eligard '
+  generic_name: Leuprolide Acetate
+  is_active: '1'
+products_266:
+  id: 528
+  product_name_long: ReFacto 2000units Powder for Injection
+  product_name_short: 'ReFacto '
+  generic_name: "Antihemophilic Factor, B-Domain Deleted"
+  is_active: '0'
+products_267:
+  id: 529
+  product_name_long: Estrasorb 0.25% Transdermal Emulsion
+  product_name_short: 'Estrasorb '
+  generic_name: Estradiol
+  is_active: '0'
+products_268:
+  id: 530
+  product_name_long: Uroxatral 10mg Extended-Release Tablet
+  product_name_short: 'Uroxatral '
+  generic_name: Alfuzosin
+  is_active: '0'
+products_269:
+  id: 537
+  product_name_long: Clotrimazole/Betamethasone Dipropionate 1%-0.05% Topical Cream
+  product_name_short: 'Clotrimazole/Betamethasone Dipropionate '
+  generic_name: Clotrimazole, Betamethasone Dipropionate
+  is_active: '0'
+products_270:
+  id: 538
+  product_name_long: Meperidine Hydrochloride 50mg Tablet
+  product_name_short: 'Meperidine Hydrochloride '
+  generic_name: Meperidine Hydrochloride
+  is_active: '1'
+products_271:
+  id: 539
+  product_name_long: Meperidine Hydrochloride 100mg Tablet
+  product_name_short: 'Meperidine Hydrochloride '
+  generic_name: Meperidine Hydrochloride
+  is_active: '1'
+products_272:
+  id: 540
+  product_name_long: Rimantadine Hydrochloride 100mg Tablet
+  product_name_short: 'Rimantadine Hydrochloride '
+  generic_name: Rimantadine Hydrochloride
+  is_active: '1'
+products_273:
+  id: 541
+  product_name_long: Novolog Mix 70/30 Penfill 100unit/ml Suspension for Injection
+  product_name_short: 'Novolog Mix '
+  generic_name: Insulin Aspart (Recombinant), Insulin Aspart Protamine (Recombinant)
+  is_active: '0'
+products_274:
+  id: 542
+  product_name_long: Novolog Mix Flexpen Prefilled Syringe 70/30 100unit/ml Suspension
+    for Injection
+  product_name_short: 'Novolog Mix Flexpen Prefilled Syringe '
+  generic_name: Insulin Aspart (Recombinant), Insulin Aspart Protamine (Recombinant)
+  is_active: '1'
+products_275:
+  id: 543
+  product_name_long: Captopril 12.5mg Tablet
+  product_name_short: 'Captopril '
+  generic_name: Captopril
+  is_active: '0'
+products_276:
+  id: 544
+  product_name_long: Cholestyramine 4g Powder for Suspension
+  product_name_short: 'Cholestyramine '
+  generic_name: Cholestyramine
+  is_active: '0'
+products_277:
+  id: 545
+  product_name_long: Cholestyramine 4g Powder for Suspension
+  product_name_short: 'Cholestyramine '
+  generic_name: Cholestyramine
+  is_active: '0'
+products_278:
+  id: 546
+  product_name_long: Cimetidine 400mg Tablet
+  product_name_short: 'Cimetidine '
+  generic_name: Cimetidine
+  is_active: '0'
+products_279:
+  id: 547
+  product_name_long: Nifediac CC 90mg Extended-Release Tablet
+  product_name_short: 'Nifediac CC '
+  generic_name: Nifedipine
+  is_active: '0'
+products_280:
+  id: 548
+  product_name_long: Pexeva 10mg Tablet
+  product_name_short: 'Pexeva '
+  generic_name: Paroxetine Mesylate
+  is_active: '0'
+products_281:
+  id: 549
+  product_name_long: Pexeva 20mg Tablet
+  product_name_short: 'Pexeva '
+  generic_name: Paroxetine Mesylate
+  is_active: '0'
+products_282:
+  id: 550
+  product_name_long: Pexeva 30mg Tablet
+  product_name_short: 'Pexeva '
+  generic_name: Paroxetine Mesylate
+  is_active: '0'
+products_283:
+  id: 551
+  product_name_long: Pexeva 40mg Tablet
+  product_name_short: 'Pexeva '
+  generic_name: Paroxetine Mesylate
+  is_active: '0'
+products_284:
+  id: 552
+  product_name_long: Phenazopyridine Hydrochloride/Sulfamethoxazole/Trimethoprim 200mg-800mg-160mg
+    Tablet
+  product_name_short: 'Phenazopyridine Hydrochloride/Sulfamethoxazole/Trimethoprim '
+  generic_name: Phenazopyridine Hydrochloride, Sulfamethoxazole, Trimethoprim
+  is_active: '0'
+products_285:
+  id: 554
+  product_name_long: SecreFlo 16mcg Powder for Injection
+  product_name_short: 'SecreFlo '
+  generic_name: Secretin, (Synthetic, Porcine)
+  is_active: '0'
+products_286:
+  id: 555
+  product_name_long: Cefuroxime Sodium 750mg Powder and Dextrose 4.1% for Injection (Duplex)
+  product_name_short: 'Cefuroxime Sodium '
+  generic_name: Cefuroxime Sodium
+  is_active: '1'
+products_287:
+  id: 556
+  product_name_long: Cefuroxime Sodium 1.5g Powder and Dextrose 2.9% for Injection (Duplex)
+  product_name_short: 'Cefuroxime Sodium '
+  generic_name: Cefuroxime Sodium
+  is_active: '1'
+products_288:
+  id: 557
+  product_name_long: Prednisolone 15mg/5ml Solution
+  product_name_short: 'Prednisolone '
+  generic_name: Prednisolone
+  is_active: '0'
+products_289:
+  id: 560
+  product_name_long: Sclerosol 5g Intrapleural Aerosol
+  product_name_short: 'Sclerosol '
+  generic_name: Talc
+  is_active: '1'
+products_290:
+  id: 561
+  product_name_long: Etodolac 200mg Capsule
+  product_name_short: 'Etodolac '
+  generic_name: Etodolac
+  is_active: '0'
+products_291:
+  id: 562
+  product_name_long: Etodolac 300mg Capsule
+  product_name_short: 'Etodolac '
+  generic_name: Etodolac
+  is_active: '0'
+products_292:
+  id: 563
+  product_name_long: Etodolac 400mg Tablet
+  product_name_short: 'Etodolac '
+  generic_name: Etodolac
+  is_active: '0'
+products_293:
+  id: 564
+  product_name_long: Spiriva HandiHaler 18mcg Powder for Inhalation
+  product_name_short: 'Spiriva HandiHaler '
+  generic_name: Tiotropium
+  is_active: '0'
+products_294:
+  id: 565
+  product_name_long: Metaglip 2.5mg-250mg Tablet
+  product_name_short: 'Metaglip '
+  generic_name: Glipizide, Metformin Hydrochloride
+  is_active: '1'
+products_295:
+  id: 566
+  product_name_long: Metaglip 2.5mg-500mg Tablet
+  product_name_short: 'Metaglip '
+  generic_name: Glipizide, Metformin Hydrochloride
+  is_active: '0'
+products_296:
+  id: 567
+  product_name_long: Metaglip 5mg-500mg Tablet
+  product_name_short: 'Metaglip '
+  generic_name: Glipizide, Metformin Hydrochloride
+  is_active: '0'
+products_297:
+  id: 568
+  product_name_long: Coumadin 1mg Tablet
+  product_name_short: 'Coumadin '
+  generic_name: Warfarin Sodium
+  is_active: '1'
+products_298:
+  id: 569
+  product_name_long: Coumadin 2mg Tablet
+  product_name_short: 'Coumadin '
+  generic_name: Warfarin Sodium
+  is_active: '1'
+products_299:
+  id: 570
+  product_name_long: Coumadin 2.5mg Tablet
+  product_name_short: 'Coumadin '
+  generic_name: Warfarin Sodium
+  is_active: '1'
+products_300:
+  id: 571
+  product_name_long: Coumadin 3mg Tablet
+  product_name_short: 'Coumadin '
+  generic_name: Warfarin Sodium
+  is_active: '1'
+products_301:
+  id: 572
+  product_name_long: Coumadin 4mg Tablet
+  product_name_short: 'Coumadin '
+  generic_name: Warfarin Sodium
+  is_active: '1'
+products_302:
+  id: 573
+  product_name_long: Coumadin 5mg Tablet
+  product_name_short: 'Coumadin '
+  generic_name: Warfarin Sodium
+  is_active: '1'
+products_303:
+  id: 574
+  product_name_long: Coumadin 6mg Tablet
+  product_name_short: 'Coumadin '
+  generic_name: Warfarin Sodium
+  is_active: '1'
+products_304:
+  id: 575
+  product_name_long: Coumadin 7.5mg Tablet
+  product_name_short: 'Coumadin '
+  generic_name: Warfarin Sodium
+  is_active: '1'
+products_305:
+  id: 576
+  product_name_long: Coumadin 10mg Tablet
+  product_name_short: 'Coumadin '
+  generic_name: Warfarin Sodium
+  is_active: '1'
+products_306:
+  id: 577
+  product_name_long: Tri-Luma Topical Cream
+  product_name_short: Tri-Luma Topical Cream
+  generic_name: Fluocinolone Acetonide, Hydroquinone, Tretinoin
+  is_active: '1'
+products_307:
+  id: 578
+  product_name_long: Fluzone 2002-2003 Formula Solution for Injection
+  product_name_short: 'Fluzone '
+  generic_name: Influenza Virus Vaccine (Avian)
+  is_active: '0'
+products_308:
+  id: 580
+  product_name_long: Amevive 7.5mg Powder for Injection
+  product_name_short: 'Amevive '
+  generic_name: Alefacept
+  is_active: '0'
+products_309:
+  id: 581
+  product_name_long: Artane 2mg/5ml Solution
+  product_name_short: 'Artane '
+  generic_name: Trihexyphenidyl Hydrochloride
+  is_active: '0'
+products_310:
+  id: 582
+  product_name_long: Avastin 100mg/4ml Solution for Injection
+  product_name_short: 'Avastin '
+  generic_name: Bevacizumab (Hamster)
+  is_active: '1'
+products_311:
+  id: 585
+  product_name_long: Raptiva 125mg Powder for Injection
+  product_name_short: 'Raptiva '
+  generic_name: Efalizumab (Hamster)
+  is_active: '0'
+products_312:
+  id: 586
+  product_name_long: Tarceva 25mg Tablet
+  product_name_short: 'Tarceva '
+  generic_name: Erlotinib
+  is_active: '1'
+products_313:
+  id: 587
+  product_name_long: Phospholine Iodide 0.03% Ophthalmic Solution
+  product_name_short: 'Phospholine Iodide '
+  generic_name: Echothiophate Iodide
+  is_active: '0'
+products_314:
+  id: 588
+  product_name_long: Phospholine Iodide 0.06% Ophthalmic Solution
+  product_name_short: 'Phospholine Iodide '
+  generic_name: Echothiophate Iodide
+  is_active: '0'
+products_315:
+  id: 589
+  product_name_long: Phospholine Iodide 0.25% Ophthalmic Solution
+  product_name_short: 'Phospholine Iodide '
+  generic_name: Echothiophate Iodide
+  is_active: '0'
+products_316:
+  id: 590
+  product_name_long: Avandamet 1mg-500mg Tablet
+  product_name_short: 'Avandamet '
+  generic_name: Rosiglitazone Maleate, Metformin Hydrochloride
+  is_active: '0'
+products_317:
+  id: 591
+  product_name_long: Namenda 5mg Tablet
+  product_name_short: 'Namenda '
+  generic_name: Memantine
+  is_active: '1'
+products_318:
+  id: 592
+  product_name_long: LAC-lotion 12% Lotion
+  product_name_short: 'LAC-lotion '
+  generic_name: Ammonium Lactate
+  is_active: '1'
+products_319:
+  id: 593
+  product_name_long: Xifaxan 200mg Tablet
+  product_name_short: 'Xifaxan '
+  generic_name: Rifaximin
+  is_active: '1'
+products_320:
+  id: 594
+  product_name_long: Crestor 10mg Tablet
+  product_name_short: 'Crestor '
+  generic_name: Rosuvastatin Calcium
+  is_active: '1'
+products_321:
+  id: 595
+  product_name_long: Cialis 10mg Tablet
+  product_name_short: 'Cialis '
+  generic_name: Tadalafil
+  is_active: '1'
+products_322:
+  id: 596
+  product_name_long: Ovace 10% Topical Wash
+  product_name_short: 'Ovace '
+  generic_name: Sulfacetamide Sodium
+  is_active: '0'
+products_323:
+  id: 597
+  product_name_long: O-Cal Prenatal Tablet
+  product_name_short: O-Cal Prenatal Tablet
+  generic_name: Ascorbic Acid (Vitamin C), Beta-Carotene (Vitamin A), Calcium Carbonate,
+    Cholecalciferol, Cupric Sulfate, Cyanocobalamin (Vitamin B12), Dl-Alpha Tocopheryl
+    Acetate (Vitamin E), Ferrous Fumarate, Folic Acid (Vitamin B9), Magnesium Oxide,
+    Niacin (Vitamin B3
+  is_active: '1'
+products_324:
+  id: 598
+  product_name_long: Fuzeon 90mg Powder for Injection
+  product_name_short: 'Fuzeon '
+  generic_name: Enfuvirtide
+  is_active: '0'
+products_325:
+  id: 599
+  product_name_long: Amphetamine/Dextroamphetamine Salts 5mg Tablet
+  product_name_short: 'Amphetamine/Dextroamphetamine Salts '
+  generic_name: Amphetamine Aspartate, Amphetamine Sulfate, Dextroamphetamine Saccharate,
+    Dextroamphetamine Sulfate
+  is_active: '1'
+products_326:
+  id: 600
+  product_name_long: Lisinopril 2.5mg Tablet
+  product_name_short: 'Lisinopril '
+  generic_name: Lisinopril
+  is_active: '1'
+products_327:
+  id: 601
+  product_name_long: Lisinopril 5mg Tablet
+  product_name_short: 'Lisinopril '
+  generic_name: Lisinopril
+  is_active: '1'
+products_328:
+  id: 602
+  product_name_long: Lisinopril 10mg Tablet
+  product_name_short: 'Lisinopril '
+  generic_name: Lisinopril
+  is_active: '1'
+products_329:
+  id: 603
+  product_name_long: Lisinopril 20mg Tablet
+  product_name_short: 'Lisinopril '
+  generic_name: Lisinopril
+  is_active: '1'
+products_330:
+  id: 604
+  product_name_long: Lisinopril 30mg Tablet
+  product_name_short: 'Lisinopril '
+  generic_name: Lisinopril
+  is_active: '1'
+products_331:
+  id: 605
+  product_name_long: Lisinopril 40mg Tablet
+  product_name_short: 'Lisinopril '
+  generic_name: Lisinopril
+  is_active: '1'
+products_332:
+  id: 606
+  product_name_long: Ticlopidine Hydrochloride 250mg Tablet
+  product_name_short: 'Ticlopidine Hydrochloride '
+  generic_name: Ticlopidine Hydrochloride
+  is_active: '1'
+products_333:
+  id: 607
+  product_name_long: Dilt-XR 120mg Extended-Release Capsule
+  product_name_short: 'Dilt-XR '
+  generic_name: Diltiazem Hydrochloride
+  is_active: '1'
+products_334:
+  id: 608
+  product_name_long: Dilt-XR 180mg Extended-Release Capsule
+  product_name_short: 'Dilt-XR '
+  generic_name: Diltiazem Hydrochloride
+  is_active: '1'
+products_335:
+  id: 609
+  product_name_long: Glipizide 5mg Tablet
+  product_name_short: 'Glipizide '
+  generic_name: Glipizide
+  is_active: '1'
+products_336:
+  id: 610
+  product_name_long: Glipizide 10mg Tablet
+  product_name_short: 'Glipizide '
+  generic_name: Glipizide
+  is_active: '1'
+products_337:
+  id: 611
+  product_name_long: Ipratropium Bromide 0.02% Solution for Inhalation
+  product_name_short: 'Ipratropium Bromide '
+  generic_name: Ipratropium Bromide
+  is_active: '1'
+products_338:
+  id: 615
+  product_name_long: PSE Brom DM 4mg-30mg-60mg/5ml Syrup
+  product_name_short: 'PSE Brom DM '
+  generic_name: Brompheniramine Maleate, Dextromethorphan Hydrobromide, Pseudoephedrine
+    Hydrochloride
+  is_active: '0'
+products_339:
+  id: 617
+  product_name_long: Prednisolone Sodium Phosphate 5mg/5ml Solution
+  product_name_short: 'Prednisolone Sodium Phosphate '
+  generic_name: Prednisolone Sodium Phosphate
+  is_active: '1'
+products_340:
+  id: 618
+  product_name_long: PreCare Prenatal Tablet
+  product_name_short: PreCare Prenatal Tablet
+  generic_name: Ascorbic Acid (Vitamin C), Calcium Carbonate, Cholecalciferol, Cupric
+    Oxide, Cyanocobalamin (Vitamin B12), Dl-Alpha Tocopheryl Acetate (Vitamin E),
+    Ferrous Fumarate, Folic Acid (Vitamin B9), Magnesium Oxide, Niacinamide, Pyridoxine
+    (Vitamin B6), Riboflavi
+  is_active: '0'
+products_341:
+  id: 626
+  product_name_long: Potassium Chloride 10mEq Extended-Release Tablet
+  product_name_short: 'Potassium Chloride '
+  generic_name: Potassium Chloride
+  is_active: '1'
+products_342:
+  id: 627
+  product_name_long: Magonate 1000mg/5ml Solution
+  product_name_short: 'Magonate '
+  generic_name: Magnesium, Magnesium Gluconate Dihydrate
+  is_active: '0'
+products_343:
+  id: 630
+  product_name_long: Oxandrin 10mg Tablet
+  product_name_short: 'Oxandrin '
+  generic_name: Oxandrolone
+  is_active: '1'
+products_344:
+  id: 631
+  product_name_long: Lipram-CR5 Delayed-Release Capsule
+  product_name_short: Lipram-CR
+  generic_name: Lipase (Porcine), Amylase (Porcine), Protease (Porcine)
+  is_active: '0'
+products_345:
+  id: 632
+  product_name_long: VoSpire ER 8mg Extended-Release Tablet
+  product_name_short: 'VoSpire ER '
+  generic_name: Albuterol Sulfate
+  is_active: '0'
+products_346:
+  id: 633
+  product_name_long: Ambien 5mg Tablet
+  product_name_short: 'Ambien '
+  generic_name: Zolpidem Tartrate
+  is_active: '1'
+products_347:
+  id: 634
+  product_name_long: Ambien 10mg Tablet
+  product_name_short: 'Ambien '
+  generic_name: Zolpidem Tartrate
+  is_active: '1'
+products_348:
+  id: 635
+  product_name_long: Dextroamphetamine Sulfate 5mg Extended-Release Capsule
+  product_name_short: 'Dextroamphetamine Sulfate '
+  generic_name: Dextroamphetamine Sulfate
+  is_active: '1'
+products_349:
+  id: 636
+  product_name_long: Dextroamphetamine Sulfate 10mg Extended-Release Capsule
+  product_name_short: 'Dextroamphetamine Sulfate '
+  generic_name: Dextroamphetamine Sulfate
+  is_active: '1'
+products_350:
+  id: 637
+  product_name_long: Cerezyme 400unit Powder for Injection
+  product_name_short: 'Cerezyme '
+  generic_name: Imiglucerase
+  is_active: '1'
+products_351:
+  id: 638
+  product_name_long: Erythromycin 0.5% Ophthalmic Ointment
+  product_name_short: 'Erythromycin '
+  generic_name: Erythromycin
+  is_active: '0'
+products_352:
+  id: 639
+  product_name_long: Abilify 15mg Tablet
+  product_name_short: 'Abilify '
+  generic_name: Aripiprazole
+  is_active: '1'
+products_353:
+  id: 640
+  product_name_long: Abilify 20mg Tablet
+  product_name_short: 'Abilify '
+  generic_name: Aripiprazole
+  is_active: '1'
+products_354:
+  id: 641
+  product_name_long: Abilify 30mg Tablet
+  product_name_short: 'Abilify '
+  generic_name: Aripiprazole
+  is_active: '1'
+products_355:
+  id: 642
+  product_name_long: Cenogen Ultra Capsule
+  product_name_short: Cenogen Ultra Capsule
+  generic_name: Ascorbic Acid (Vitamin C), Copper, Cyanocobalamin (Vitamin B12), Ferrous
+    Fumarate, Folic Acid (Vitamin B9), Manganese, Niacin (Vitamin B3), Pantothenic
+    Acid (Vitamin B5), Pyridoxine (Vitamin B6), Riboflavin (Vitamin B2), Thiamine
+    (Vitamin B1)
+  is_active: '1'
+products_356:
+  id: 643
+  product_name_long: AlleRx 2mg-5mg-12.5mg/5ml Suspension
+  product_name_short: 'AlleRx '
+  generic_name: Chlorpheniramine Tannate, Phenylephrine Tannate, Pyrilamine Tannate
+  is_active: '0'
+products_357:
+  id: 644
+  product_name_long: Aquatab DM 10mg-200mg/5ml Syrup
+  product_name_short: 'Aquatab DM '
+  generic_name: Dextromethorphan Hydrobromide, Guaifenesin
+  is_active: '0'
+products_358:
+  id: 648
+  product_name_long: Embeline 0.05% Topical Cream
+  product_name_short: 'Embeline '
+  generic_name: Clobetasol Propionate
+  is_active: '0'
+products_359:
+  id: 649
+  product_name_long: Embeline 0.05% Topical Ointment
+  product_name_short: 'Embeline '
+  generic_name: Clobetasol Propionate
+  is_active: '0'
+products_360:
+  id: 650
+  product_name_long: Embeline 0.05% Scalp Application Topical Solution
+  product_name_short: 'Embeline '
+  generic_name: Clobetasol Propionate
+  is_active: '0'
+products_361:
+  id: 651
+  product_name_long: Embeline 0.05% Topical Gel
+  product_name_short: 'Embeline '
+  generic_name: Clobetasol Propionate
+  is_active: '0'
+products_362:
+  id: 653
+  product_name_long: Atropine Sulfate 0.4mg/ml Solution for Injection
+  product_name_short: 'Atropine Sulfate '
+  generic_name: Atropine Sulfate
+  is_active: '0'
+products_363:
+  id: 654
+  product_name_long: Atropine Sulfate 1mg/ml Solution for Injection
+  product_name_short: 'Atropine Sulfate '
+  generic_name: Atropine Sulfate
+  is_active: '0'
+products_364:
+  id: 655
+  product_name_long: Bumetanide 0.25mg/ml Solution for Injection
+  product_name_short: 'Bumetanide '
+  generic_name: Bumetanide
+  is_active: '0'
+products_365:
+  id: 656
+  product_name_long: Diltiazem Hydrochloride 5mg/ml Solution for Injection
+  product_name_short: 'Diltiazem Hydrochloride '
+  generic_name: Diltiazem Hydrochloride
+  is_active: '0'
+products_366:
+  id: 657
+  product_name_long: Enalaprilat 1.25mg/ml Solution for Injection
+  product_name_short: 'Enalaprilat '
+  generic_name: Enalaprilat
+  is_active: '0'
+products_367:
+  id: 658
+  product_name_long: Hetastarch 6% in Sodium Chloride 0.9% Solution for Injection
+  product_name_short: 'Hetastarch '
+  generic_name: Hetastarch, Sodium Chloride
+  is_active: '0'
+products_368:
+  id: 659
+  product_name_long: Metoclopramide Hydrochloride 5mg/ml Solution for Injection
+  product_name_short: 'Metoclopramide Hydrochloride '
+  generic_name: Metoclopramide Hydrochloride
+  is_active: '0'
+products_369:
+  id: 660
+  product_name_long: Neostigmine Methylsulfate 0.5mg/ml Solution for Injection
+  product_name_short: 'Neostigmine Methylsulfate '
+  generic_name: Neostigmine Methylsulfate
+  is_active: '0'
+products_370:
+  id: 661
+  product_name_long: Neostigmine Methylsulfate 1mg/ml Solution for Injection
+  product_name_short: 'Neostigmine Methylsulfate '
+  generic_name: Neostigmine Methylsulfate
+  is_active: '0'
+products_371:
+  id: 662
+  product_name_long: Pancuronium Bromide 1mg/ml Solution for Injection
+  product_name_short: 'Pancuronium Bromide '
+  generic_name: Pancuronium Bromide
+  is_active: '0'
+products_372:
+  id: 663
+  product_name_long: Pancuronium Bromide 2mg/ml Solution for Injection
+  product_name_short: 'Pancuronium Bromide '
+  generic_name: Pancuronium Bromide
+  is_active: '0'
+products_373:
+  id: 664
+  product_name_long: Phenylephrine Hydrochloride 10mg/ml Solution for Injection
+  product_name_short: 'Phenylephrine Hydrochloride '
+  generic_name: Phenylephrine Hydrochloride
+  is_active: '0'
+products_374:
+  id: 665
+  product_name_long: Propofol 10mg/ml Emulsion for Injection
+  product_name_short: 'Propofol '
+  generic_name: Propofol
+  is_active: '0'
+products_375:
+  id: 666
+  product_name_long: Nitroprusside 25mg/ml Solution for Injection
+  product_name_short: 'Nitroprusside '
+  generic_name: Sodium Nitroprusside
+  is_active: '0'
+products_376:
+  id: 669
+  product_name_long: Vecuronium Bromide 10mg Powder for Injection
+  product_name_short: 'Vecuronium Bromide '
+  generic_name: Vecuronium Bromide
+  is_active: '0'
+products_377:
+  id: 670
+  product_name_long: Vecuronium Bromide 20mg Powder for Injection
+  product_name_short: 'Vecuronium Bromide '
+  generic_name: Vecuronium Bromide
+  is_active: '0'
+products_378:
+  id: 672
+  product_name_long: Nuhist Pediatric 4.5mg-5mg/5ml Suspension
+  product_name_short: 'Nuhist Pediatric '
+  generic_name: Chlorpheniramine Tannate, Phenylephrine Tannate
+  is_active: '1'
+products_379:
+  id: 674
+  product_name_long: Ethosuximide 250mg Capsule
+  product_name_short: 'Ethosuximide '
+  generic_name: Ethosuximide
+  is_active: '1'
+products_380:
+  id: 675
+  product_name_long: Econazole Nitrate 1% Topical Cream
+  product_name_short: 'Econazole Nitrate '
+  generic_name: Econazole Nitrate
+  is_active: '0'
+products_381:
+  id: 676
+  product_name_long: Levothyroxine Sodium 25mcg Tablet
+  product_name_short: 'Levothyroxine Sodium '
+  generic_name: Levothyroxine Sodium
+  is_active: '1'
+products_382:
+  id: 677
+  product_name_long: Levothyroxine Sodium 50mcg Tablet
+  product_name_short: 'Levothyroxine Sodium '
+  generic_name: Levothyroxine Sodium
+  is_active: '1'
+products_383:
+  id: 678
+  product_name_long: Levothyroxine Sodium 75mcg Tablet
+  product_name_short: 'Levothyroxine Sodium '
+  generic_name: Levothyroxine Sodium
+  is_active: '1'
+products_384:
+  id: 679
+  product_name_long: Levothyroxine Sodium 88mcg Tablet
+  product_name_short: 'Levothyroxine Sodium '
+  generic_name: Levothyroxine Sodium
+  is_active: '1'
+products_385:
+  id: 680
+  product_name_long: Levothyroxine Sodium 100mcg Tablet
+  product_name_short: 'Levothyroxine Sodium '
+  generic_name: Levothyroxine Sodium
+  is_active: '1'
+products_386:
+  id: 681
+  product_name_long: Levothyroxine Sodium 112mcg Tablet
+  product_name_short: 'Levothyroxine Sodium '
+  generic_name: Levothyroxine Sodium
+  is_active: '1'
+products_387:
+  id: 682
+  product_name_long: Levothyroxine Sodium 125mcg Tablet
+  product_name_short: 'Levothyroxine Sodium '
+  generic_name: Levothyroxine Sodium
+  is_active: '1'
+products_388:
+  id: 683
+  product_name_long: Levothyroxine Sodium 150mcg Tablet
+  product_name_short: 'Levothyroxine Sodium '
+  generic_name: Levothyroxine Sodium
+  is_active: '1'
+products_389:
+  id: 684
+  product_name_long: Levothyroxine Sodium 175mcg Tablet
+  product_name_short: 'Levothyroxine Sodium '
+  generic_name: Levothyroxine Sodium
+  is_active: '1'
+products_390:
+  id: 685
+  product_name_long: Levothyroxine Sodium 200mcg Tablet
+  product_name_short: 'Levothyroxine Sodium '
+  generic_name: Levothyroxine Sodium
+  is_active: '1'
+products_391:
+  id: 686
+  product_name_long: Levothyroxine Sodium 300mcg Tablet
+  product_name_short: 'Levothyroxine Sodium '
+  generic_name: Levothyroxine Sodium
+  is_active: '1'
+products_392:
+  id: 688
+  product_name_long: Claritin RediTabs 24 Hour 10mg Orally Disintegrating Tablet
+  product_name_short: 'Claritin RediTabs '
+  generic_name: Loratadine
+  is_active: '1'
+products_393:
+  id: 689
+  product_name_long: Claritin-D 12 Hour 5mg-120mg Extended-Release Tablet
+  product_name_short: 'Claritin-D '
+  generic_name: Pseudoephedrine Sulfate, Loratadine
+  is_active: '1'
+products_394:
+  id: 690
+  product_name_long: Claritin-D 24 Hour 10mg-240mg Extended-Release Tablet
+  product_name_short: 'Claritin-D '
+  generic_name: Pseudoephedrine Sulfate, Loratadine
+  is_active: '0'
+products_395:
+  id: 692
+  product_name_long: Plaretase 8000 Tablet
+  product_name_short: 'Plaretase '
+  generic_name: Lipase (Porcine), Amylase (Porcine), Protease (Porcine)
+  is_active: '0'
+products_396:
+  id: 693
+  product_name_long: Natalfirst Tablet
+  product_name_short: Natalfirst Tablet
+  generic_name: Ascorbic Acid (Vitamin C), Calcium Carbonate, Cholecalciferol, Cyanocobalamin
+    (Vitamin B12), Docusate Sodium, Ferrous Fumarate, Folic Acid (Vitamin B9), Niacinamide,
+    Pantothenic Acid (Vitamin B5), Pyridoxine (Vitamin B6), Riboflavin (Vitamin B2),
+    Thiamine
+  is_active: '0'
+products_397:
+  id: 694
+  product_name_long: Alinia 100mg/5ml Powder for Suspension
+  product_name_short: 'Alinia '
+  generic_name: Nitazoxanide
+  is_active: '1'
+products_398:
+  id: 695
+  product_name_long: Tizanidine Hydrochloride 2mg Tablet
+  product_name_short: 'Tizanidine Hydrochloride '
+  generic_name: Tizanidine Hydrochloride
+  is_active: '1'
+products_399:
+  id: 697
+  product_name_long: Midazolam Hydrochloride 2mg/ml Syrup
+  product_name_short: 'Midazolam Hydrochloride '
+  generic_name: Midazolam Hydrochloride
+  is_active: '1'
+products_400:
+  id: 698
+  product_name_long: Pannaz 8mg-2.5mg-90mg Extended-Release Tablet
+  product_name_short: 'Pannaz '
+  generic_name: Chlorpheniramine Maleate, Methscopolamine Nitrate, Pseudoephedrine
+    Hydrochloride
+  is_active: '0'
+products_401:
+  id: 701
+  product_name_long: Prochieve 8% Vaginal Gel
+  product_name_short: 'Prochieve '
+  generic_name: Progesterone
+  is_active: '0'
+products_402:
+  id: 702
+  product_name_long: Prochieve 8% Vaginal Gel
+  product_name_short: 'Prochieve '
+  generic_name: Progesterone
+  is_active: '0'
+products_403:
+  id: 703
+  product_name_long: PanMist S 200mg-40mg/5ml Syrup
+  product_name_short: 'PanMist S '
+  generic_name: Guaifenesin, Pseudoephedrine Hydrochloride
+  is_active: '0'
+products_404:
+  id: 704
+  product_name_long: Dryvax Intradermal Injection
+  product_name_short: Dryvax Intradermal Injection
+  generic_name: Smallpox Vaccine (Live), Dried (Bovine)
+  is_active: '0'
+products_405:
+  id: 706
+  product_name_long: Restoril 7.5mg Capsule
+  product_name_short: 'Restoril '
+  generic_name: Temazepam
+  is_active: '1'
+products_406:
+  id: 707
+  product_name_long: Restoril 15mg Capsule
+  product_name_short: 'Restoril '
+  generic_name: Temazepam
+  is_active: '1'
+products_407:
+  id: 708
+  product_name_long: Restoril 30mg Capsule
+  product_name_short: 'Restoril '
+  generic_name: Temazepam
+  is_active: '1'
+products_408:
+  id: 709
+  product_name_long: Cubicin 500mg Powder for Injection
+  product_name_short: 'Cubicin '
+  generic_name: Daptomycin
+  is_active: '1'
+products_409:
+  id: 710
+  product_name_long: Penicillin G Procaine 1.2million unit/ml Suspension for Injection
+  product_name_short: 'Penicillin G Procaine '
+  generic_name: Penicillin G Procaine
+  is_active: '0'
+products_410:
+  id: 711
+  product_name_long: Humira 40mg/0.8ml Pre-Filled Syringe Kit
+  product_name_short: 'Humira '
+  generic_name: Adalimumab
+  is_active: '1'
+products_411:
+  id: 713
+  product_name_long: Restasis 0.05% Ophthalmic Emulsion
+  product_name_short: 'Restasis '
+  generic_name: Cyclosporine
+  is_active: '1'
+products_412:
+  id: 714
+  product_name_long: Finacea 15% Topical Gel
+  product_name_short: 'Finacea '
+  generic_name: Azelaic Acid
+  is_active: '0'
+products_413:
+  id: 717
+  product_name_long: Pancof PD 3mg-2mg-7.5mg/5ml Syrup
+  product_name_short: 'Pancof PD '
+  generic_name: Chlorpheniramine Maleate, Dihydrocodeine Bitartrate, Phenylephrine
+    Hydrochloride
+  is_active: '0'
+products_414:
+  id: 718
+  product_name_long: Alimta 500mg Powder for Injection
+  product_name_short: 'Alimta '
+  generic_name: Pemetrexed Disodium
+  is_active: '1'
+products_415:
+  id: 719
+  product_name_long: Bromfed-PD 6mg-7.5mg Extended-Release Capsule
+  product_name_short: 'Bromfed-PD '
+  generic_name: Brompheniramine Maleate, Phenylephrine Hydrochloride
+  is_active: '0'
+products_416:
+  id: 720
+  product_name_long: Guaifed 400mg-15mg Extended-Release Capsule
+  product_name_short: 'Guaifed '
+  generic_name: Guaifenesin, Phenylephrine Hydrochloride
+  is_active: '0'
+products_417:
+  id: 721
+  product_name_long: Guaifed PD 200mg-7.5mg Extended-Release Capsule
+  product_name_short: 'Guaifed PD '
+  generic_name: Guaifenesin, Phenylephrine Hydrochloride
+  is_active: '0'
+products_418:
+  id: 722
+  product_name_long: Zerit XR 37.5mg Extended-Release Capsule
+  product_name_short: 'Zerit XR '
+  generic_name: Stavudine
+  is_active: '0'
+products_419:
+  id: 723
+  product_name_long: Zerit XR 50mg Extended-Release Capsule
+  product_name_short: 'Zerit XR '
+  generic_name: Stavudine
+  is_active: '0'
+products_420:
+  id: 724
+  product_name_long: Zerit XR 75mg Extended-Release Capsule
+  product_name_short: 'Zerit XR '
+  generic_name: Stavudine
+  is_active: '0'
+products_421:
+  id: 725
+  product_name_long: Zerit XR 100mg Extended-Release Capsule
+  product_name_short: 'Zerit XR '
+  generic_name: Stavudine
+  is_active: '0'
+products_422:
+  id: 727
+  product_name_long: Emetrol 1.87g-1.87g-21.5g/5ml Syrup (Cherry)
+  product_name_short: 'Emetrol '
+  generic_name: Dextrose, Fructose, Phosphoric Acid
+  is_active: '0'
+products_423:
+  id: 767
+  product_name_long: Comtrex Maximum Strength Sore Throat Relief 500mg/15ml Solution
+  product_name_short: 'Comtrex Maximum Strength Sore Throat Relief '
+  generic_name: Acetaminophen
+  is_active: '1'
+products_424:
+  id: 780
+  product_name_long: Dramamine Formula 50mg Chewable Tablet
+  product_name_short: 'Dramamine Formula '
+  generic_name: Dimenhydrinate
+  is_active: '0'
+products_425:
+  id: 782
+  product_name_long: Dramamine Less Drowsy Formula 25mg Tablet
+  product_name_short: 'Dramamine Less Drowsy Formula '
+  generic_name: Meclizine Hydrochloride
+  is_active: '0'
+products_426:
+  id: 788
+  product_name_long: Simulect 10mg Powder for Injection
+  product_name_short: 'Simulect '
+  generic_name: Basiliximab (Murine)
+  is_active: '1'
+products_427:
+  id: 789
+  product_name_long: Mentax-TC 1% Topical Cream
+  product_name_short: 'Mentax-TC '
+  generic_name: Butenafine Hydrochloride
+  is_active: '0'
+products_428:
+  id: 790
+  product_name_long: Daypro Alta 600mg Tablet
+  product_name_short: 'Daypro Alta '
+  generic_name: Oxaprozin Potassium
+  is_active: '0'
+products_429:
+  id: 800
+  product_name_long: Amiodarone Hydrochloride 50mg/ml Solution for Injection
+  product_name_short: 'Amiodarone Hydrochloride '
+  generic_name: Amiodarone Hydrochloride
+  is_active: '0'
+products_430:
+  id: 801
+  product_name_long: Amiodarone Hydrochloride 50mg/ml Solution for Injection
+  product_name_short: 'Amiodarone Hydrochloride '
+  generic_name: Amiodarone Hydrochloride
+  is_active: '0'
+products_431:
+  id: 802
+  product_name_long: Amevive 15mg Powder for Injection
+  product_name_short: 'Amevive '
+  generic_name: Alefacept
+  is_active: '0'
+products_432:
+  id: 803
+  product_name_long: Wytensin 4mg Tablet
+  product_name_short: 'Wytensin '
+  generic_name: Guanabenz Acetate
+  is_active: '0'
+products_433:
+  id: 804
+  product_name_long: Flexeril 5mg Tablet
+  product_name_short: 'Flexeril '
+  generic_name: Cyclobenzaprine Hydrochloride
+  is_active: '0'
+products_434:
+  id: 805
+  product_name_long: Azathioprine 50mg Tablet
+  product_name_short: 'Azathioprine '
+  generic_name: Azathioprine
+  is_active: '0'
+products_435:
+  id: 806
+  product_name_long: Tylenol with Codeine 120mg-12mg/5ml Elixir
+  product_name_short: 'Tylenol with Codeine '
+  generic_name: Acetaminophen, Codeine Phosphate
+  is_active: '0'
+products_436:
+  id: 809
+  product_name_long: Loratadine 10mg Tablet
+  product_name_short: 'Loratadine '
+  generic_name: Loratadine
+  is_active: '1'
+products_437:
+  id: 814
+  product_name_long: Mupirocin 2% Topical Ointment
+  product_name_short: 'Mupirocin '
+  generic_name: Mupirocin
+  is_active: '0'
+products_438:
+  id: 816
+  product_name_long: Hydroquinone 4% Topical Cream
+  product_name_short: 'Hydroquinone '
+  generic_name: Hydroquinone
+  is_active: '0'
+products_439:
+  id: 817
+  product_name_long: Potassium Chloride 20mEq Extended-Release Tablet
+  product_name_short: 'Potassium Chloride '
+  generic_name: Potassium Chloride
+  is_active: '0'
+products_440:
+  id: 821
+  product_name_long: Clenia 10%-5% Foaming Wash
+  product_name_short: 'Clenia '
+  generic_name: 'Sulfacetamide Sodium, Sulfur, pharmaceutical '
+  is_active: '0'
+products_441:
+  id: 822
+  product_name_long: Clenia 10%-5% Emollient Topical Cream
+  product_name_short: 'Clenia '
+  generic_name: 'Sulfacetamide Sodium, Sulfur, pharmaceutical '
+  is_active: '0'
+products_442:
+  id: 823
+  product_name_long: Vanamide 40% Topical Cream
+  product_name_short: 'Vanamide '
+  generic_name: Urea
+  is_active: '0'
+products_443:
+  id: 825
+  product_name_long: Tanafed DP 2.5mg-75mg/5ml Suspension
+  product_name_short: 'Tanafed DP '
+  generic_name: Dexchlorpheniramine Tannate, Pseudoephedrine Tannate
+  is_active: '0'
+products_444:
+  id: 826
+  product_name_long: Tanafed DMX 2.5mg-25mg-75mg/5ml Suspension
+  product_name_short: 'Tanafed DMX '
+  generic_name: Dexchlorpheniramine Maleate, Dextromethorphan Tannate, Pseudoephedrine
+    Tannate
+  is_active: '0'
+products_445:
+  id: 827
+  product_name_long: Duraflu Tablet
+  product_name_short: Duraflu Tablet
+  generic_name: Acetaminophen, Dextromethorphan Hydrobromide, Guaifenesin, Pseudoephedrine
+    Hydrochloride
+  is_active: '0'
+products_446:
+  id: 831
+  product_name_long: Pandel 0.1% Topical Cream
+  product_name_short: 'Pandel '
+  generic_name: Hydrocortisone Probutate
+  is_active: '0'
+products_447:
+  id: 834
+  product_name_long: Levulan Kerastick 20% Topical Solution
+  product_name_short: 'Levulan Kerastick '
+  generic_name: Aminolevulinic Acid Hydrochloride
+  is_active: '1'
+products_448:
+  id: 835
+  product_name_long: Innopran XL 80mg Extended-Release Capsule
+  product_name_short: 'Innopran XL '
+  generic_name: Propranolol Hydrochloride
+  is_active: '0'
+products_449:
+  id: 836
+  product_name_long: Innopran XL 120mg Extended-Release Capsule
+  product_name_short: 'Innopran XL '
+  generic_name: Propranolol Hydrochloride
+  is_active: '0'
+products_450:
+  id: 838
+  product_name_long: Norepinephrine Bitartrate 1mg/ml Solution for Injection
+  product_name_short: 'Norepinephrine Bitartrate '
+  generic_name: Norepinephrine Bitartrate
+  is_active: '1'
+products_451:
+  id: 842
+  product_name_long: Flecainide Acetate 50mg Tablet
+  product_name_short: 'Flecainide Acetate '
+  generic_name: Flecainide Acetate
+  is_active: '1'
+products_452:
+  id: 843
+  product_name_long: Flecainide Acetate 100mg Tablet
+  product_name_short: 'Flecainide Acetate '
+  generic_name: Flecainide Acetate
+  is_active: '1'
+products_453:
+  id: 844
+  product_name_long: Tri-Vent DPC 2mg-15mg-6mg/5ml Syrup
+  product_name_short: 'Tri-Vent DPC '
+  generic_name: Chlorpheniramine Maleate, Dextromethorphan Hydrobromide, Phenylephrine
+    Hydrochloride
+  is_active: '0'
+products_454:
+  id: 848
+  product_name_long: Hyoscyamine Sulfate 0.125mg Orally Disintegrating Tablet
+  product_name_short: 'Hyoscyamine Sulfate '
+  generic_name: Hyoscyamine Sulfate
+  is_active: '0'
+products_455:
+  id: 850
+  product_name_long: MagneBind 400 RX Tablet
+  product_name_short: 'MagneBind '
+  generic_name: Calcium Carbonate, Folic Acid (Vitamin B9), Magnesium Carbonate
+  is_active: '1'
+products_456:
+  id: 851
+  product_name_long: Zavesca 100mg Capsule
+  product_name_short: 'Zavesca '
+  generic_name: Miglustat
+  is_active: '1'
+products_457:
+  id: 852
+  product_name_long: Velcade 3.5mg Powder for Injection
+  product_name_short: 'Velcade '
+  generic_name: Bortezomib
+  is_active: '1'
+products_458:
+  id: 853
+  product_name_long: Hista-Vent PSE 8mg-2.5mg-120mg Extended-Release Tablet
+  product_name_short: 'Hista-Vent PSE '
+  generic_name: Chlorpheniramine Maleate, Methscopolamine Nitrate, Pseudoephedrine
+    Hydrochloride
+  is_active: '0'
+products_459:
+  id: 854
+  product_name_long: Florinef 0.1mg Tablet
+  product_name_short: 'Florinef '
+  generic_name: Fludrocortisone Acetate
+  is_active: '0'
+products_460:
+  id: 855
+  product_name_long: Corzide 40/5 40mg-5mg Tablet
+  product_name_short: 'Corzide '
+  generic_name: Nadolol, Bendroflumethiazide
+  is_active: '0'
+products_461:
+  id: 856
+  product_name_long: Corzide 80/5 80mg-5mg Tablet
+  product_name_short: 'Corzide '
+  generic_name: Nadolol, Bendroflumethiazide
+  is_active: '0'
+products_462:
+  id: 857
+  product_name_long: Sular 10mg Extended-Release Tablet
+  product_name_short: 'Sular '
+  generic_name: Nisoldipine
+  is_active: '0'
+products_463:
+  id: 858
+  product_name_long: Sular 20mg Extended-Release Tablet
+  product_name_short: 'Sular '
+  generic_name: Nisoldipine
+  is_active: '0'
+products_464:
+  id: 859
+  product_name_long: Sular 30mg Extended-Release Tablet
+  product_name_short: 'Sular '
+  generic_name: Nisoldipine
+  is_active: '0'
+products_465:
+  id: 860
+  product_name_long: Sular 40mg Extended-Release Tablet
+  product_name_short: 'Sular '
+  generic_name: Nisoldipine
+  is_active: '0'
+products_466:
+  id: 861
+  product_name_long: Somavert 10mg Powder for Injection
+  product_name_short: 'Somavert '
+  generic_name: Pegvisomant (PEG)
+  is_active: '0'
+products_467:
+  id: 862
+  product_name_long: Somavert 15mg Powder for Injection
+  product_name_short: 'Somavert '
+  generic_name: Pegvisomant (PEG)
+  is_active: '0'
+products_468:
+  id: 863
+  product_name_long: Somavert 20mg Powder for Injection
+  product_name_short: 'Somavert '
+  generic_name: Pegvisomant (PEG)
+  is_active: '0'
+products_469:
+  id: 864
+  product_name_long: Delestrogen 10mg/ml in Oil for Injection
+  product_name_short: 'Delestrogen '
+  generic_name: Estradiol Valerate
+  is_active: '0'
+products_470:
+  id: 865
+  product_name_long: Delestrogen 20mg/ml in Oil for Injection
+  product_name_short: 'Delestrogen '
+  generic_name: Estradiol Valerate
+  is_active: '0'
+products_471:
+  id: 866
+  product_name_long: Delestrogen 40mg/ml in Oil for Injection
+  product_name_short: 'Delestrogen '
+  generic_name: Estradiol Valerate
+  is_active: '0'
+products_472:
+  id: 867
+  product_name_long: Strovite Advance Caplet
+  product_name_short: Strovite Advance Caplet
+  generic_name: 'Alpha Lipoic Acid, Ascorbic Acid (Vitamin C), Beta-Carotene (Vitamin
+    A), Biotin, Calcium Pantothenate (Vitamin B5), Carotenoids, Cholecalciferol, Chromium,
+    Cryptoxanthin, Cupric Sulfate, Cyanocobalamin (Vitamin B12), D-Alpha Tocopheryl
+    Succinate (Vitamin '
+  is_active: '1'
+products_473:
+  id: 869
+  product_name_long: Nizoral A-D 1% Shampoo
+  product_name_short: 'Nizoral A-D '
+  generic_name: Ketoconazole
+  is_active: '1'
+products_474:
+  id: 876
+  product_name_long: Femring 0.05mg/24hr Vaginal Insert
+  product_name_short: 'Femring '
+  generic_name: Estradiol Acetate
+  is_active: '1'
+products_475:
+  id: 877
+  product_name_long: Femring 0.1mg/24hr Vaginal Insert
+  product_name_short: 'Femring '
+  generic_name: Estradiol Acetate
+  is_active: '1'
+products_476:
+  id: 878
+  product_name_long: Bleomycin Sulfate 15units Powder for Injection
+  product_name_short: 'Bleomycin Sulfate '
+  generic_name: Bleomycin Sulfate
+  is_active: '0'
+products_477:
+  id: 879
+  product_name_long: Vitrase 6200USP units Powder for Injection
+  product_name_short: 'Vitrase '
+  generic_name: Hyaluronidase (Ovine)
+  is_active: '0'
+products_478:
+  id: 881
+  product_name_long: Advil Flu and Body Ache 200mg-30mg Tablet
+  product_name_short: 'Advil Flu and Body Ache '
+  generic_name: Ibuprofen, Pseudoephedrine Hydrochloride
+  is_active: '0'
+products_479:
+  id: 892
+  product_name_long: Tylenol Infants' 80mg/0.8ml Concentrated Drops (Grape)
+  product_name_short: 'Tylenol Infants'' '
+  generic_name: Acetaminophen
+  is_active: '0'
+products_480:
+  id: 895
+  product_name_long: Tylenol Children's 80mg Chewable Tablet (Bubblegum)
+  product_name_short: 'Tylenol Children''s '
+  generic_name: Acetaminophen
+  is_active: '0'
+products_481:
+  id: 896
+  product_name_long: Tylenol Children's 80mg Soft Chew (Fruit Burst)
+  product_name_short: 'Tylenol Children''s '
+  generic_name: Acetaminophen
+  is_active: '0'
+products_482:
+  id: 897
+  product_name_long: Tylenol Children's 80mg Soft Chew (Grape)
+  product_name_short: 'Tylenol Children''s '
+  generic_name: Acetaminophen
+  is_active: '0'
+products_483:
+  id: 900
+  product_name_long: Tylenol 325mg Tablet
+  product_name_short: 'Tylenol '
+  generic_name: Acetaminophen
+  is_active: '1'
+products_484:
+  id: 905
+  product_name_long: Nora-BE 0.35mg Tablet
+  product_name_short: 'Nora-BE '
+  generic_name: Norethindrone
+  is_active: '1'
+products_485:
+  id: 920
+  product_name_long: Zymar 0.3% Ophthalmic Solution
+  product_name_short: 'Zymar '
+  generic_name: Gatifloxacin
+  is_active: '0'
+products_486:
+  id: 921
+  product_name_long: Hematinic Plus Tablet
+  product_name_short: Hematinic Plus Tablet
+  generic_name: Calcium Pantothenate (Vitamin B5), Cupric Sulfate, Cyanocobalamin
+    (Vitamin B12), Ferrous Fumarate, Folic Acid (Vitamin B9), Magnesium Sulfate, Manganese
+    Sulfate, Niacinamide, Pyridoxine (Vitamin B6), Riboflavin (Vitamin B2), Sodium
+    Ascorbate, Thiamine Mon
+  is_active: '1'
+products_487:
+  id: 924
+  product_name_long: Clindamycin Phosphate 1% Topical Lotion
+  product_name_short: 'Clindamycin Phosphate '
+  generic_name: Clindamycin Phosphate
+  is_active: '1'
+products_488:
+  id: 925
+  product_name_long: Desonide 0.05% Topical Lotion
+  product_name_short: 'Desonide '
+  generic_name: Desonide
+  is_active: '0'
+products_489:
+  id: 926
+  product_name_long: Diclofenac Sodium 50mg Delayed-Release Tablet
+  product_name_short: 'Diclofenac Sodium '
+  generic_name: Diclofenac Sodium
+  is_active: '0'
+products_490:
+  id: 928
+  product_name_long: Pentazocine Hydrochloride/Acetaminophen 25mg-650mg Tablet
+  product_name_short: 'Pentazocine Hydrochloride/Acetaminophen '
+  generic_name: Acetaminophen, Pentazocine Hydrochloride
+  is_active: '1'
+products_491:
+  id: 929
+  product_name_long: Pentazocine Hydrochloride/Naloxone Hydrochloride 50mg-0.5mg Tablet
+  product_name_short: 'Pentazocine Hydrochloride/Naloxone Hydrochloride '
+  generic_name: Naloxone Hydrochloride, Pentazocine Hydrochloride
+  is_active: '1'
+products_492:
+  id: 935
+  product_name_long: Folgard RX 2.2 Tablet
+  product_name_short: 'Folgard RX '
+  generic_name: Cyanocobalamin (Vitamin B12), Folic Acid (Vitamin B9), Pyridoxine
+    (Vitamin B6)
+  is_active: '0'
+products_493:
+  id: 948
+  product_name_long: Benadryl Itch Stopping Extra Strength 2% Topical Gel
+  product_name_short: 'Benadryl Itch Stopping Extra Strength '
+  generic_name: Diphenhydramine Hydrochloride
+  is_active: '0'
+products_494:
+  id: 955
+  product_name_long: Promethegan 25mg Rectal Suppository
+  product_name_short: 'Promethegan '
+  generic_name: Promethazine Hydrochloride
+  is_active: '1'
+products_495:
+  id: 959
+  product_name_long: Triaminic Chest and Nasal Congestion 50mg-15mg/5ml Solution
+  product_name_short: 'Triaminic Chest and Nasal Congestion '
+  generic_name: Guaifenesin, Pseudoephedrine Hydrochloride
+  is_active: '0'
+products_496:
+  id: 965
+  product_name_long: Thalomid 100mg Capsule
+  product_name_short: 'Thalomid '
+  generic_name: Thalidomide
+  is_active: '1'
+products_497:
+  id: 966
+  product_name_long: Thalomid 200mg Capsule
+  product_name_short: 'Thalomid '
+  generic_name: Thalidomide
+  is_active: '1'
+products_498:
+  id: 967
+  product_name_long: Neomycin Sulfate/Polymyxin B Sulfate/Hydrocortisone Ophthalmic Suspension
+  product_name_short: Neomycin Sulfate/Polymyxin B Sulfate/Hydrocortisone Ophthalmic
+    Suspension
+  generic_name: Hydrocortisone, Neomycin Sulfate, Polymyxin B Sulfate
+  is_active: '1'
+products_499:
+  id: 968
+  product_name_long: Tamoxifen Citrate 10mg Tablet
+  product_name_short: 'Tamoxifen Citrate '
+  generic_name: Tamoxifen Citrate
+  is_active: '1'
+products_500:
+  id: 969
+  product_name_long: Tamoxifen Citrate 10mg Tablet
+  product_name_short: 'Tamoxifen Citrate '
+  generic_name: Tamoxifen Citrate
+  is_active: '1'
+products_501:
+  id: 970
+  product_name_long: Tamoxifen Citrate 20mg Tablet
+  product_name_short: 'Tamoxifen Citrate '
+  generic_name: Tamoxifen Citrate
+  is_active: '1'
+products_502:
+  id: 971
+  product_name_long: Tamoxifen Citrate 20mg Tablet
+  product_name_short: 'Tamoxifen Citrate '
+  generic_name: Tamoxifen Citrate
+  is_active: '1'
+products_503:
+  id: 972
+  product_name_long: Flecainide Acetate 50mg Tablet
+  product_name_short: 'Flecainide Acetate '
+  generic_name: Flecainide Acetate
+  is_active: '1'
+products_504:
+  id: 973
+  product_name_long: Flecainide Acetate 100mg Tablet
+  product_name_short: 'Flecainide Acetate '
+  generic_name: Flecainide Acetate
+  is_active: '1'
+products_505:
+  id: 974
+  product_name_long: Ipratropium Bromide 0.03% Nasal Spray
+  product_name_short: 'Ipratropium Bromide '
+  generic_name: Ipratropium Bromide
+  is_active: '1'
+products_506:
+  id: 975
+  product_name_long: Levorphanol Tartrate 2mg Tablet
+  product_name_short: 'Levorphanol Tartrate '
+  generic_name: Levorphanol Tartrate
+  is_active: '0'
+products_507:
+  id: 976
+  product_name_long: Clindamax 1% Topical Gel
+  product_name_short: 'Clindamax '
+  generic_name: Clindamycin Phosphate
+  is_active: '1'
+products_508:
+  id: 977
+  product_name_long: Clindamax 1% Topical Lotion
+  product_name_short: 'Clindamax '
+  generic_name: Clindamycin Phosphate
+  is_active: '1'
+products_509:
+  id: 978
+  product_name_long: Respi-TANN 25mg-75mg/5ml Suspension
+  product_name_short: 'Respi-TANN '
+  generic_name: Carbetapentane Tannate, Pseudoephedrine Tannate
+  is_active: '0'
+products_510:
+  id: 979
+  product_name_long: Respi-TANN 25mg-75mg Chewable Tablet
+  product_name_short: 'Respi-TANN '
+  generic_name: Carbetapentane Tannate, Pseudoephedrine Tannate
+  is_active: '0'
+products_511:
+  id: 980
+  product_name_long: Histex CT 8mg Extended-Release Tablet
+  product_name_short: 'Histex CT '
+  generic_name: Carbinoxamine Maleate
+  is_active: '0'
+products_512:
+  id: 982
+  product_name_long: Lovenox 300mg/3ml Solution for Injection
+  product_name_short: 'Lovenox '
+  generic_name: Enoxaparin Sodium (Porcine)
+  is_active: '1'
+products_513:
+  id: 986
+  product_name_long: Erythromycin/Benzoyl Peroxide 3%-5% Topical Gel
+  product_name_short: 'Erythromycin/Benzoyl Peroxide '
+  generic_name: Benzoyl Peroxide;Erythromycin
+  is_active: '1'
+products_514:
+  id: 987
+  product_name_long: Claravis 20mg Capsule
+  product_name_short: 'Claravis '
+  generic_name: Isotretinoin
+  is_active: '0'
+products_515:
+  id: 988
+  product_name_long: Claravis 40mg Capsule
+  product_name_short: 'Claravis '
+  generic_name: Isotretinoin
+  is_active: '0'
+products_516:
+  id: 989
+  product_name_long: Denavir 1% Topical Cream
+  product_name_short: 'Denavir '
+  generic_name: Penciclovir Sodium
+  is_active: '0'
+products_517:
+  id: 990
+  product_name_long: Amiodarone Hydrochloride 200mg Tablet
+  product_name_short: 'Amiodarone Hydrochloride '
+  generic_name: Amiodarone Hydrochloride
+  is_active: '1'
+products_518:
+  id: 995
+  product_name_long: Zovirax 5% Topical Cream
+  product_name_short: 'Zovirax '
+  generic_name: Acyclovir
+  is_active: '0'
+products_519:
+  id: 1002
+  product_name_long: Humibid DM 30mg-600mg Extended-Release Tablet
+  product_name_short: 'Humibid DM '
+  generic_name: Dextromethorphan Hydrobromide, Guaifenesin
+  is_active: '0'
+products_520:
+  id: 1003
+  product_name_long: Humibid LA 600mg Extended-Release Tablet
+  product_name_short: 'Humibid LA '
+  generic_name: Guaifenesin
+  is_active: '0'
+products_521:
+  id: 1004
+  product_name_long: Deconsal II 600mg-60mg Extended-Release Tablet
+  product_name_short: 'Deconsal II '
+  generic_name: Guaifenesin, Pseudoephedrine Hydrochloride
+  is_active: '0'
+products_522:
+  id: 1006
+  product_name_long: Semprex-D 8mg-60mg Capsule
+  product_name_short: 'Semprex-D '
+  generic_name: Acrivastine, Pseudoephedrine Hydrochloride
+  is_active: '0'
+products_523:
+  id: 1017
+  product_name_long: Prenatal U Capsule
+  product_name_short: Prenatal U Capsule
+  generic_name: Calcium Pantothenate (Vitamin B5), Cupric Sulfate, Cyanocobalamin
+    (Vitamin B12), Ferrous Fumarate, Folic Acid (Vitamin B9), Manganese, Niacinamide,
+    Pyridoxine (Vitamin B6), Riboflavin (Vitamin B2), Sodium Ascorbate, Thiamine Mononitrate
+    (Vitamin B1)
+  is_active: '1'
+products_524:
+  id: 1029
+  product_name_long: Aldurazyme 2.9mg/5ml Solution for Injection
+  product_name_short: 'Aldurazyme '
+  generic_name: Laronidase (Hamster)
+  is_active: '1'
+products_525:
+  id: 1038
+  product_name_long: Eligard 30mg Suspension for Injection
+  product_name_short: 'Eligard '
+  generic_name: Leuprolide Acetate
+  is_active: '1'
+products_526:
+  id: 1040
+  product_name_long: Cafcit 20mg/ml Solution for Injection
+  product_name_short: 'Cafcit '
+  generic_name: Caffeine Citrate
+  is_active: '0'
+products_527:
+  id: 1044
+  product_name_long: Clozapine 25mg Tablet
+  product_name_short: 'Clozapine '
+  generic_name: Clozapine
+  is_active: '1'
+products_528:
+  id: 1045
+  product_name_long: Clozapine 100mg Tablet
+  product_name_short: 'Clozapine '
+  generic_name: Clozapine
+  is_active: '1'
+products_529:
+  id: 1049
+  product_name_long: Bromfenex PE 12mg-15mg Capsule
+  product_name_short: 'Bromfenex PE '
+  generic_name: Brompheniramine Maleate, Phenylephrine Hydrochloride
+  is_active: '0'
+products_530:
+  id: 1050
+  product_name_long: Bromfenex PE Pediatric 6mg-7.5mg Capsule
+  product_name_short: 'Bromfenex PE Pediatric '
+  generic_name: Brompheniramine Maleate, Phenylephrine Hydrochloride
+  is_active: '0'
+products_531:
+  id: 1051
+  product_name_long: Hydro-Tussin DHC 2mg-7.5mg-15mg/5ml Solution
+  product_name_short: 'Hydro-Tussin DHC '
+  generic_name: Chlorpheniramine Maleate, Dihydrocodeine Bitartrate, Pseudoephedrine
+    Hydrochloride
+  is_active: '0'
+products_532:
+  id: 1052
+  product_name_long: Risperdal M-Tab 1mg Orally Disintegrating Tablet
+  product_name_short: 'Risperdal M-Tab '
+  generic_name: Risperidone
+  is_active: '1'
+products_533:
+  id: 1053
+  product_name_long: Risperdal M-Tab 2mg Orally Disintegrating Tablet
+  product_name_short: 'Risperdal M-Tab '
+  generic_name: Risperidone
+  is_active: '1'
+products_534:
+  id: 1054
+  product_name_long: Diastat 2.5mg Rectal Gel (Twin Pack)
+  product_name_short: 'Diastat '
+  generic_name: Diazepam
+  is_active: '0'
+products_535:
+  id: 1055
+  product_name_long: Diastat 5mg Rectal Gel (Twin Pack)
+  product_name_short: 'Diastat '
+  generic_name: Diazepam
+  is_active: '0'
+products_536:
+  id: 1056
+  product_name_long: Diastat 10mg Rectal Gel (Twin Pack)
+  product_name_short: 'Diastat '
+  generic_name: Diazepam
+  is_active: '0'
+products_537:
+  id: 1057
+  product_name_long: Diastat 15mg Rectal Gel (Twin Pack)
+  product_name_short: 'Diastat '
+  generic_name: Diazepam
+  is_active: '0'
+products_538:
+  id: 1058
+  product_name_long: Diastat 20mg Rectal Gel (Twin Pack)
+  product_name_short: 'Diastat '
+  generic_name: Diazepam
+  is_active: '0'
+products_539:
+  id: 1059
+  product_name_long: Migranal 4mg/ml Nasal Spray
+  product_name_short: 'Migranal '
+  generic_name: Dihydroergotamine Mesylate
+  is_active: '0'
+products_540:
+  id: 1060
+  product_name_long: Repronex 150unit Powder for Injection
+  product_name_short: 'Repronex '
+  generic_name: Menotropins (FSH), Menotropins (LH)
+  is_active: '0'
+products_541:
+  id: 1061
+  product_name_long: Moexipril Hydrochloride 15mg Tablet
+  product_name_short: 'Moexipril Hydrochloride '
+  generic_name: Moexipril Hydrochloride
+  is_active: '0'
+products_542:
+  id: 1062
+  product_name_long: Hypercare 20% Topical Solution
+  product_name_short: 'Hypercare '
+  generic_name: Aluminum Chloride Hexahydrate
+  is_active: '1'
+products_543:
+  id: 1063
+  product_name_long: Reyataz 200mg Capsule
+  product_name_short: 'Reyataz '
+  generic_name: Atazanavir Sulfate
+  is_active: '1'
+products_544:
+  id: 1064
+  product_name_long: Klonopin 0.125mg Wafer
+  product_name_short: 'Klonopin '
+  generic_name: Clonazepam
+  is_active: '0'
+products_545:
+  id: 1065
+  product_name_long: Klonopin 0.25mg Wafer
+  product_name_short: 'Klonopin '
+  generic_name: Clonazepam
+  is_active: '0'
+products_546:
+  id: 1066
+  product_name_long: Klonopin 0.5mg Wafer
+  product_name_short: 'Klonopin '
+  generic_name: Clonazepam
+  is_active: '0'
+products_547:
+  id: 1067
+  product_name_long: Klonopin 1mg Wafer
+  product_name_short: 'Klonopin '
+  generic_name: Clonazepam
+  is_active: '0'
+products_548:
+  id: 1068
+  product_name_long: Klonopin 2mg Wafer
+  product_name_short: 'Klonopin '
+  generic_name: Clonazepam
+  is_active: '0'
+products_549:
+  id: 1069
+  product_name_long: Gleevec 400mg Tablet
+  product_name_short: 'Gleevec '
+  generic_name: Imatinib Mesylate
+  is_active: '0'
+products_550:
+  id: 1070
+  product_name_long: Tobraflex 0.3%-0.1% Ophthalmic Suspension
+  product_name_short: 'Tobraflex '
+  generic_name: Fluorometholone Acetate, Tobramycin
+  is_active: '0'
+products_551:
+  id: 1071
+  product_name_long: Thyro-Tabs 25mcg Tablet
+  product_name_short: 'Thyro-Tabs '
+  generic_name: Levothyroxine Sodium
+  is_active: '0'
+products_552:
+  id: 1072
+  product_name_long: Thyro-Tabs 50mcg Tablet
+  product_name_short: 'Thyro-Tabs '
+  generic_name: Levothyroxine Sodium
+  is_active: '0'
+products_553:
+  id: 1073
+  product_name_long: Thyro-Tabs 75mcg Tablet
+  product_name_short: 'Thyro-Tabs '
+  generic_name: Levothyroxine Sodium
+  is_active: '0'
+products_554:
+  id: 1074
+  product_name_long: Thyro-Tabs 88mcg Tablet
+  product_name_short: 'Thyro-Tabs '
+  generic_name: Levothyroxine Sodium
+  is_active: '0'
+products_555:
+  id: 1075
+  product_name_long: Thyro-Tabs 100mcg Tablet
+  product_name_short: 'Thyro-Tabs '
+  generic_name: Levothyroxine Sodium
+  is_active: '0'
+products_556:
+  id: 1076
+  product_name_long: Thyro-Tabs 112mcg Tablet
+  product_name_short: 'Thyro-Tabs '
+  generic_name: Levothyroxine Sodium
+  is_active: '0'
+products_557:
+  id: 1077
+  product_name_long: Thyro-Tabs 125mcg Tablet
+  product_name_short: 'Thyro-Tabs '
+  generic_name: Levothyroxine Sodium
+  is_active: '0'
+products_558:
+  id: 1078
+  product_name_long: Thyro-Tabs 150mcg Tablet
+  product_name_short: 'Thyro-Tabs '
+  generic_name: Levothyroxine Sodium
+  is_active: '0'
+products_559:
+  id: 1079
+  product_name_long: Thyro-Tabs 175mcg Tablet
+  product_name_short: 'Thyro-Tabs '
+  generic_name: Levothyroxine Sodium
+  is_active: '0'
+products_560:
+  id: 1080
+  product_name_long: Thyro-Tabs 200mcg Tablet
+  product_name_short: 'Thyro-Tabs '
+  generic_name: Levothyroxine Sodium
+  is_active: '0'
+products_561:
+  id: 1081
+  product_name_long: Thyro-Tabs 300mcg Tablet
+  product_name_short: 'Thyro-Tabs '
+  generic_name: Levothyroxine Sodium
+  is_active: '0'
+products_562:
+  id: 1082
+  product_name_long: Viracept 625mg Tablet
+  product_name_short: 'Viracept '
+  generic_name: Nelfinavir Mesylate
+  is_active: '0'
+products_563:
+  id: 1083
+  product_name_long: Palgic 4mg/5ml Solution
+  product_name_short: 'Palgic '
+  generic_name: Carbinoxamine Maleate
+  is_active: '1'
+products_564:
+  id: 1084
+  product_name_long: Palgic 4mg Tablet
+  product_name_short: 'Palgic '
+  generic_name: Carbinoxamine Maleate
+  is_active: '1'
+products_565:
+  id: 1089
+  product_name_long: Maalox Max Plus Antigas Suspension
+  product_name_short: Maalox Max Plus Antigas Suspension
+  generic_name: Aluminum Hydroxide, Magnesium Hydroxide, Simethicone
+  is_active: '0'
+products_566:
+  id: 1095
+  product_name_long: Motrin IB 200mg Gelcap
+  product_name_short: 'Motrin IB '
+  generic_name: Ibuprofen
+  is_active: '1'
+products_567:
+  id: 1099
+  product_name_long: Imodium A-D 2mg Caplet
+  product_name_short: 'Imodium A-D '
+  generic_name: Loperamide Hydrochloride
+  is_active: '1'
+products_568:
+  id: 1107
+  product_name_long: Melatonin 3mg Tablet
+  product_name_short: 'Melatonin '
+  generic_name: Melatonin
+  is_active: '1'
+products_569:
+  id: 1108
+  product_name_long: Pannaz 8mg-2.5mg-90mg Extended-Release Tablet
+  product_name_short: 'Pannaz '
+  generic_name: Carbinoxamine Maleate, Methscopolamine Nitrate, Pseudoephedrine Hydrochloride
+  is_active: '0'
+products_570:
+  id: 1109
+  product_name_long: Acular LS 0.4% Ophthalmic Solution
+  product_name_short: 'Acular LS '
+  generic_name: Ketorolac Tromethamine
+  is_active: '1'
+products_571:
+  id: 1110
+  product_name_long: Prempro 0.45mg-1.5mg Tablet
+  product_name_short: 'Prempro '
+  generic_name: Conjugated Estrogens, Medroxyprogesterone Acetate
+  is_active: '0'
+products_572:
+  id: 1112
+  product_name_long: Ciprofloxacin 250mg/5ml Suspension
+  product_name_short: 'Ciprofloxacin '
+  generic_name: Ciprofloxacin
+  is_active: '0'
+products_573:
+  id: 1113
+  product_name_long: Ciprofloxacin 500mg/5ml Suspension
+  product_name_short: 'Ciprofloxacin '
+  generic_name: Ciprofloxacin
+  is_active: '0'
+products_574:
+  id: 1114
+  product_name_long: Ciprofloxacin Hydrochloride 250mg Tablet
+  product_name_short: 'Ciprofloxacin Hydrochloride '
+  generic_name: Ciprofloxacin Hydrochloride
+  is_active: '0'
+products_575:
+  id: 1115
+  product_name_long: Ciprofloxacin Hydrochloride 500mg Tablet
+  product_name_short: 'Ciprofloxacin Hydrochloride '
+  generic_name: Ciprofloxacin Hydrochloride
+  is_active: '0'
+products_576:
+  id: 1116
+  product_name_long: Ciprofloxacin Hydrochloride 750mg Tablet
+  product_name_short: 'Ciprofloxacin Hydrochloride '
+  generic_name: Ciprofloxacin Hydrochloride
+  is_active: '0'
+products_577:
+  id: 1117
+  product_name_long: Stalevo 50 Tablet
+  product_name_short: 'Stalevo '
+  generic_name: Carbidopa, Levodopa, Entacapone
+  is_active: '1'
+products_578:
+  id: 1118
+  product_name_long: Stalevo 100 Tablet
+  product_name_short: 'Stalevo '
+  generic_name: Carbidopa, Levodopa, Entacapone
+  is_active: '1'
+products_579:
+  id: 1119
+  product_name_long: Stalevo 150 Tablet
+  product_name_short: 'Stalevo '
+  generic_name: Carbidopa, Levodopa, Entacapone
+  is_active: '1'
+products_580:
+  id: 1120
+  product_name_long: Benicar HCT 20mg-12.5mg Tablet
+  product_name_short: 'Benicar HCT '
+  generic_name: Olmesartan Medoxomil, Hydrochlorothiazide
+  is_active: '1'
+products_581:
+  id: 1121
+  product_name_long: Benicar HCT 40mg-12.5mg Tablet
+  product_name_short: 'Benicar HCT '
+  generic_name: Olmesartan Medoxomil, Hydrochlorothiazide
+  is_active: '1'
+products_582:
+  id: 1122
+  product_name_long: Benicar HCT 40mg-25mg Tablet
+  product_name_short: 'Benicar HCT '
+  generic_name: Olmesartan Medoxomil, Hydrochlorothiazide
+  is_active: '1'
+products_583:
+  id: 1123
+  product_name_long: Concerta 27mg Extended-Release Tablet
+  product_name_short: 'Concerta '
+  generic_name: Methylphenidate Hydrochloride
+  is_active: '0'
+products_584:
+  id: 1124
+  product_name_long: Tarka 2mg-180mg Extended-Release Tablet
+  product_name_short: 'Tarka '
+  generic_name: Trandolapril, Verapamil Hydrochloride
+  is_active: '0'
+products_585:
+  id: 1125
+  product_name_long: Tarka 1mg-240mg Extended-Release Tablet
+  product_name_short: 'Tarka '
+  generic_name: Trandolapril, Verapamil Hydrochloride
+  is_active: '0'
+products_586:
+  id: 1126
+  product_name_long: Tarka 2mg-240mg Extended-Release Tablet
+  product_name_short: 'Tarka '
+  generic_name: Trandolapril, Verapamil Hydrochloride
+  is_active: '0'
+products_587:
+  id: 1127
+  product_name_long: Tarka 4mg-240mg Extended-Release Tablet
+  product_name_short: 'Tarka '
+  generic_name: Trandolapril, Verapamil Hydrochloride
+  is_active: '0'
+products_588:
+  id: 1128
+  product_name_long: Ryna-12 25mg-60mg Tablet
+  product_name_short: Ryna-
+  generic_name: Phenylephrine Tannate, Pyrilamine Tannate
+  is_active: '0'
+products_589:
+  id: 1129
+  product_name_long: Lorabid 100mg/5ml Powder for Suspension
+  product_name_short: 'Lorabid '
+  generic_name: Loracarbef
+  is_active: '0'
+products_590:
+  id: 1130
+  product_name_long: Lorazepam 1mg Tablet
+  product_name_short: 'Lorazepam '
+  generic_name: Lorazepam
+  is_active: '1'
+products_591:
+  id: 1131
+  product_name_long: Lorazepam 0.5mg Tablet
+  product_name_short: 'Lorazepam '
+  generic_name: Lorazepam
+  is_active: '1'
+products_592:
+  id: 1132
+  product_name_long: Lorazepam 2mg Tablet
+  product_name_short: 'Lorazepam '
+  generic_name: Lorazepam
+  is_active: '1'
+products_593:
+  id: 1133
+  product_name_long: Misoprostol 100mcg Tablet
+  product_name_short: 'Misoprostol '
+  generic_name: Misoprostol
+  is_active: '1'
+products_594:
+  id: 1134
+  product_name_long: Morphine Sulfate 100mg Extended-Release Tablet
+  product_name_short: 'Morphine Sulfate '
+  generic_name: Morphine Sulfate
+  is_active: '0'
+products_595:
+  id: 1135
+  product_name_long: Propoxyphene Napsylate/Acetaminophen 100mg-650mg Tablet
+  product_name_short: 'Propoxyphene Napsylate/Acetaminophen '
+  generic_name: Propoxyphene Napsylate, Acetaminophen
+  is_active: '0'
+products_596:
+  id: 1137
+  product_name_long: Nifedipine 60mg Extended-Release Tablet
+  product_name_short: 'Nifedipine '
+  generic_name: Nifedipine
+  is_active: '0'
+products_597:
+  id: 1138
+  product_name_long: Reyataz 100mg Capsule
+  product_name_short: 'Reyataz '
+  generic_name: Atazanavir Sulfate
+  is_active: '0'
+products_598:
+  id: 1139
+  product_name_long: Reyataz 150mg Capsule
+  product_name_short: 'Reyataz '
+  generic_name: Atazanavir Sulfate
+  is_active: '1'
+products_599:
+  id: 1140
+  product_name_long: Aralast 0.5g Powder for Injection
+  product_name_short: 'Aralast '
+  generic_name: Alpha-1-Proteinase Inhibitor (Human)
+  is_active: '0'
+products_600:
+  id: 1141
+  product_name_long: Duocaine 0.375%-1% Solution for Injection
+  product_name_short: 'Duocaine '
+  generic_name: Bupivacaine Hydrochloride, Lidocaine Hydrochloride
+  is_active: '0'
+products_601:
+  id: 1142
+  product_name_long: Microgestin 1.5/30 21-Day Tablet
+  product_name_short: 'Microgestin '
+  generic_name: Norethindrone Acetate, Ethinyl Estradiol
+  is_active: '1'
+products_602:
+  id: 1143
+  product_name_long: Dextromethorphan Hydrobromide/Guaifenesin/Pseudoephedrine Hydrochloride
+    15mg-100mg-40mg/5ml Syrup
+  product_name_short: 'Dextromethorphan Hydrobromide/Guaifenesin/Pseudoephedrine Hydrochloride '
+  generic_name: Dextromethorphan Hydrobromide, Guaifenesin, Pseudoephedrine Hydrochloride
+  is_active: '0'
+products_603:
+  id: 1144
+  product_name_long: R-Tanna 25mg-9mg Tablet
+  product_name_short: 'R-Tanna '
+  generic_name: Chlorpheniramine Tannate, Phenylephrine Tannate
+  is_active: '0'
+products_604:
+  id: 1145
+  product_name_long: Dynacin 50mg Tablet
+  product_name_short: 'Dynacin '
+  generic_name: Minocycline Hydrochloride
+  is_active: '0'
+products_605:
+  id: 1146
+  product_name_long: Prochlorperazine Edisylate 5mg/ml Solution for Injection
+  product_name_short: 'Prochlorperazine Edisylate '
+  generic_name: Prochlorperazine Edisylate
+  is_active: '0'
+products_606:
+  id: 1147
+  product_name_long: Midrin 65mg-100mg-325mg Capsule
+  product_name_short: 'Midrin '
+  generic_name: Isometheptene Mucate, Dichloralphenazone, Acetaminophen
+  is_active: '0'
+products_607:
+  id: 1148
+  product_name_long: Ipratropium Bromide 0.03% Nasal Spray
+  product_name_short: 'Ipratropium Bromide '
+  generic_name: Ipratropium Bromide
+  is_active: '1'
+products_608:
+  id: 1150
+  product_name_long: Ipratropium Bromide 0.06% Nasal Spray
+  product_name_short: 'Ipratropium Bromide '
+  generic_name: Ipratropium Bromide
+  is_active: '1'
+products_609:
+  id: 1151
+  product_name_long: Calcitriol 1mcg/ml Solution for Injection
+  product_name_short: 'Calcitriol '
+  generic_name: Calcitriol
+  is_active: '0'
+products_610:
+  id: 1152
+  product_name_long: Calcitriol 2mcg/ml Solution for Injection
+  product_name_short: 'Calcitriol '
+  generic_name: Calcitriol
+  is_active: '0'
+products_611:
+  id: 1153
+  product_name_long: Prilosec OTC 20mg Delayed-Release Tablet
+  product_name_short: 'Prilosec OTC '
+  generic_name: Omeprazole Magnesium
+  is_active: '1'
+products_612:
+  id: 1154
+  product_name_long: Bleomycin Sulfate 30units Powder for Injection
+  product_name_short: 'Bleomycin Sulfate '
+  generic_name: Bleomycin Sulfate
+  is_active: '0'
+products_613:
+  id: 1155
+  product_name_long: Dihydroergotamine Mesylate 1mg/ml Solution for Injection
+  product_name_short: 'Dihydroergotamine Mesylate '
+  generic_name: Dihydroergotamine Mesylate
+  is_active: '1'
+products_614:
+  id: 1156
+  product_name_long: Darvon Compound-32 Capsule
+  product_name_short: Darvon Compound-
+  generic_name: Propoxyphene Hydrochloride, Aspirin, Caffeine
+  is_active: '0'
+products_615:
+  id: 1157
+  product_name_long: Reglan 10mg Tablet
+  product_name_short: 'Reglan '
+  generic_name: Metoclopramide Hydrochloride
+  is_active: '0'
+products_616:
+  id: 1158
+  product_name_long: Reglan 5mg Tablet
+  product_name_short: 'Reglan '
+  generic_name: Metoclopramide Hydrochloride
+  is_active: '0'
+products_617:
+  id: 1159
+  product_name_long: Sotret 30mg Capsule
+  product_name_short: 'Sotret '
+  generic_name: Isotretinoin
+  is_active: '0'
+products_618:
+  id: 1160
+  product_name_long: Bexxar Dosimetric Step Iodine I-131 Tositumomab Solution for Injection
+  product_name_short: Bexxar Dosimetric Step Iodine I-
+  generic_name: I-131 Tositumomab (Murine)
+  is_active: '0'
+products_619:
+  id: 1161
+  product_name_long: Bexxar Therapeutic Step Iodine I-131 Tositumomab Solution for Injection
+  product_name_short: Bexxar Therapeutic Step Iodine I-
+  generic_name: I-131 Tositumomab (Murine)
+  is_active: '0'
+products_620:
+  id: 1164
+  product_name_long: Emtriva 200mg Capsule
+  product_name_short: 'Emtriva '
+  generic_name: Emtricitabine
+  is_active: '1'
+products_621:
+  id: 1165
+  product_name_long: Durahist PE 8mg-1.25mg-20mg Extended-Release Tablet
+  product_name_short: 'Durahist PE '
+  generic_name: Chlorpheniramine Maleate, Methscopolamine Nitrate, Phenylephrine Hydrochloride
+  is_active: '0'
+products_622:
+  id: 1166
+  product_name_long: Duraphen DM 40mg-1200mg-20mg Extended-Release Tablet
+  product_name_short: 'Duraphen DM '
+  generic_name: Dextromethorphan Hydrobromide, Guaifenesin, Phenylephrine Hydrochloride
+  is_active: '0'
+products_623:
+  id: 1167
+  product_name_long: Duraphen II 800mg-25mg Extended-Release Tablet
+  product_name_short: 'Duraphen II '
+  generic_name: Guaifenesin, Phenylephrine Hydrochloride
+  is_active: '0'
+products_624:
+  id: 1169
+  product_name_long: Histex I/E 10mg Extended-Release Capsule
+  product_name_short: 'Histex I/E '
+  generic_name: Carbinoxamine Maleate
+  is_active: '0'
+products_625:
+  id: 1170
+  product_name_long: Zemaira Powder for Injection
+  product_name_short: Zemaira Powder for Injection
+  generic_name: Alpha-1-Proteinase Inhibitor (Human)
+  is_active: '1'
+products_626:
+  id: 1171
+  product_name_long: Vaseretic 5mg-12.5mg Tablet
+  product_name_short: 'Vaseretic '
+  generic_name: Enalapril Maleate, Hydrochlorothiazide
+  is_active: '0'
+products_627:
+  id: 1172
+  product_name_long: Vaseretic 10mg-25mg Tablet
+  product_name_short: 'Vaseretic '
+  generic_name: Enalapril Maleate, Hydrochlorothiazide
+  is_active: '0'
+products_628:
+  id: 1173
+  product_name_long: Zovirax 5% Topical Ointment
+  product_name_short: 'Zovirax '
+  generic_name: Acyclovir
+  is_active: '0'
+products_629:
+  id: 1174
+  product_name_long: Vasotec 5mg Tablet
+  product_name_short: 'Vasotec '
+  generic_name: Enalapril Maleate
+  is_active: '0'
+products_630:
+  id: 1175
+  product_name_long: Vasotec 20mg Tablet
+  product_name_short: 'Vasotec '
+  generic_name: Enalapril Maleate
+  is_active: '0'
+products_631:
+  id: 1176
+  product_name_long: Prempro 0.3mg-1.5mg Tablet
+  product_name_short: 'Prempro '
+  generic_name: Conjugated Estrogens, Medroxyprogesterone Acetate
+  is_active: '0'
+products_632:
+  id: 1177
+  product_name_long: Premarin 0.45mg Tablet
+  product_name_short: 'Premarin '
+  generic_name: Conjugated Estrogens
+  is_active: '0'
+products_633:
+  id: 1178
+  product_name_long: Mirtazapine 15mg Tablet
+  product_name_short: 'Mirtazapine '
+  generic_name: Mirtazapine
+  is_active: '1'
+products_634:
+  id: 1179
+  product_name_long: Mirtazapine 30mg Tablet
+  product_name_short: 'Mirtazapine '
+  generic_name: Mirtazapine
+  is_active: '1'
+products_635:
+  id: 1180
+  product_name_long: Mirtazapine 45mg Tablet
+  product_name_short: 'Mirtazapine '
+  generic_name: Mirtazapine
+  is_active: '1'
+products_636:
+  id: 1181
+  product_name_long: Mirtazapine 30mg Tablet
+  product_name_short: 'Mirtazapine '
+  generic_name: Mirtazapine
+  is_active: '1'
+products_637:
+  id: 1182
+  product_name_long: Mirtazapine 45mg Tablet
+  product_name_short: 'Mirtazapine '
+  generic_name: Mirtazapine
+  is_active: '1'
+products_638:
+  id: 1183
+  product_name_long: Mirtazapine 15mg Tablet
+  product_name_short: 'Mirtazapine '
+  generic_name: Mirtazapine
+  is_active: '1'
+products_639:
+  id: 1184
+  product_name_long: EtheDent 0.25mg Chewable Tablet
+  product_name_short: 'EtheDent '
+  generic_name: Sodium Fluoride
+  is_active: '0'
+products_640:
+  id: 1185
+  product_name_long: EtheDent 0.5mg Chewable Tablet
+  product_name_short: 'EtheDent '
+  generic_name: Sodium Fluoride
+  is_active: '0'
+products_641:
+  id: 1186
+  product_name_long: EtheDent 1mg Chewable Tablet
+  product_name_short: 'EtheDent '
+  generic_name: Sodium Fluoride
+  is_active: '0'
+products_642:
+  id: 1187
+  product_name_long: EtheDent 1.1% Dental Cream
+  product_name_short: 'EtheDent '
+  generic_name: Sodium Fluoride
+  is_active: '0'
+products_643:
+  id: 1188
+  product_name_long: DTIC-Dome 200mg Powder for Injection
+  product_name_short: 'DTIC-Dome '
+  generic_name: Dacarbazine
+  is_active: '1'
+products_644:
+  id: 1189
+  product_name_long: Kefurox 7.5g Bulk Powder for Injection
+  product_name_short: 'Kefurox '
+  generic_name: Cefuroxime Sodium
+  is_active: '0'
+products_645:
+  id: 1190
+  product_name_long: Oncaspar 750unit/ml Solution for Injection
+  product_name_short: 'Oncaspar '
+  generic_name: Pegaspargase
+  is_active: '0'
+products_646:
+  id: 1191
+  product_name_long: Inderide LA 50mg-80mg Extended-Release Capsule
+  product_name_short: 'Inderide LA '
+  generic_name: Propranolol Hydrochloride, Hydrochlorothiazide
+  is_active: '0'
+products_647:
+  id: 1192
+  product_name_long: Inderide LA 50mg-120mg Extended-Release Capsule
+  product_name_short: 'Inderide LA '
+  generic_name: Propranolol Hydrochloride, Hydrochlorothiazide
+  is_active: '0'
+products_648:
+  id: 1193
+  product_name_long: Inderide LA 50mg-160mg Extended-Release Capsule
+  product_name_short: 'Inderide LA '
+  generic_name: Propranolol Hydrochloride, Hydrochlorothiazide
+  is_active: '0'
+products_649:
+  id: 1194
+  product_name_long: Artane 2mg Tablet
+  product_name_short: 'Artane '
+  generic_name: Trihexyphenidyl Hydrochloride
+  is_active: '0'
+products_650:
+  id: 1195
+  product_name_long: Artane 5mg Tablet
+  product_name_short: 'Artane '
+  generic_name: Trihexyphenidyl Hydrochloride
+  is_active: '0'
+products_651:
+  id: 1196
+  product_name_long: Ansaid 50mg Tablet
+  product_name_short: 'Ansaid '
+  generic_name: Flurbiprofen
+  is_active: '0'
+products_652:
+  id: 1197
+  product_name_long: STRIANT 30mg Buccal System
+  product_name_short: 'STRIANT '
+  generic_name: Testosterone
+  is_active: '0'
+products_653:
+  id: 1198
+  product_name_long: Boniva 2.5mg Tablet
+  product_name_short: 'Boniva '
+  generic_name: Ibandronate Sodium
+  is_active: '0'
+products_654:
+  id: 1199
+  product_name_long: Keppra 100mg/ml Solution
+  product_name_short: 'Keppra '
+  generic_name: Levetiracetam
+  is_active: '1'
+products_655:
+  id: 1200
+  product_name_long: Mirtazapine 15mg Tablet
+  product_name_short: 'Mirtazapine '
+  generic_name: Mirtazapine
+  is_active: '0'
+products_656:
+  id: 1201
+  product_name_long: Mirtazapine 15mg Tablet
+  product_name_short: 'Mirtazapine '
+  generic_name: Mirtazapine
+  is_active: '0'
+products_657:
+  id: 1202
+  product_name_long: Mirtazapine 30mg Tablet
+  product_name_short: 'Mirtazapine '
+  generic_name: Mirtazapine
+  is_active: '0'
+products_658:
+  id: 1203
+  product_name_long: Mirtazapine 30mg Tablet
+  product_name_short: 'Mirtazapine '
+  generic_name: Mirtazapine
+  is_active: '0'
+products_659:
+  id: 1204
+  product_name_long: Mirtazapine 45mg Tablet
+  product_name_short: 'Mirtazapine '
+  generic_name: Mirtazapine
+  is_active: '0'
+products_660:
+  id: 1205
+  product_name_long: Ovace 10% Topical Foam
+  product_name_short: 'Ovace '
+  generic_name: Sulfacetamide Sodium
+  is_active: '0'
+products_661:
+  id: 1206
+  product_name_long: Ovace 10% Topical Foam
+  product_name_short: 'Ovace '
+  generic_name: Sulfacetamide Sodium
+  is_active: '0'
+products_662:
+  id: 1207
+  product_name_long: Encort 30mg Rectal Suppository
+  product_name_short: 'Encort '
+  generic_name: Hydrocortisone Acetate
+  is_active: '0'
+products_663:
+  id: 1208
+  product_name_long: Nardil 15mg Tablet
+  product_name_short: 'Nardil '
+  generic_name: Phenelzine Sulfate
+  is_active: '1'
+products_664:
+  id: 1209
+  product_name_long: Albuterol Sulfate 0.5% Solution for Inhalation
+  product_name_short: 'Albuterol Sulfate '
+  generic_name: Albuterol Sulfate
+  is_active: '0'
+products_665:
+  id: 1212
+  product_name_long: Cefaclor 500mg Capsule
+  product_name_short: 'Cefaclor '
+  generic_name: Cefaclor Monohydrate
+  is_active: '0'
+products_666:
+  id: 1213
+  product_name_long: Estropipate 1.5mg Tablet
+  product_name_short: 'Estropipate '
+  generic_name: Estropipate
+  is_active: '1'
+products_667:
+  id: 1214
+  product_name_long: Estropipate 3mg Tablet
+  product_name_short: 'Estropipate '
+  generic_name: Estropipate
+  is_active: '1'
+products_668:
+  id: 1215
+  product_name_long: Etodolac 500mg Tablet
+  product_name_short: 'Etodolac '
+  generic_name: Etodolac
+  is_active: '0'
+products_669:
+  id: 1216
+  product_name_long: Triamterene/Hydrochlorothiazide 37.5mg-25mg Capsule
+  product_name_short: 'Triamterene/Hydrochlorothiazide '
+  generic_name: Triamterene, Hydrochlorothiazide
+  is_active: '0'
+products_670:
+  id: 1217
+  product_name_long: Fragmin 10,000unit/ml Solution for Injection
+  product_name_short: 'Fragmin '
+  generic_name: Dalteparin Sodium (Porcine)
+  is_active: '0'
+products_671:
+  id: 1218
+  product_name_long: Avonex 30mcg/0.5ml Solution for Injection
+  product_name_short: 'Avonex '
+  generic_name: Interferon Beta-1a
+  is_active: '0'
+products_672:
+  id: 1219
+  product_name_long: Activella 1mg-0.5mg Tablet
+  product_name_short: 'Activella '
+  generic_name: Estradiol, Norethindrone Acetate
+  is_active: '1'
+products_673:
+  id: 1220
+  product_name_long: Vagifem 25mcg Vaginal Tablet
+  product_name_short: 'Vagifem '
+  generic_name: Estradiol
+  is_active: '0'
+products_674:
+  id: 1221
+  product_name_long: Hydromorphone Hydrochloride 10mg/ml Solution for Injection
+  product_name_short: 'Hydromorphone Hydrochloride '
+  generic_name: Hydromorphone Hydrochloride
+  is_active: '0'
+products_675:
+  id: 1222
+  product_name_long: Ciprodex 0.3%-0.1% Otic Suspension
+  product_name_short: 'Ciprodex '
+  generic_name: Ciprofloxacin Hydrochloride, Dexamethasone
+  is_active: '1'
+products_676:
+  id: 1223
+  product_name_long: Palladone 12mg Extended-Release Capsule
+  product_name_short: 'Palladone '
+  generic_name: Hydromorphone Hydrochloride
+  is_active: '0'
+products_677:
+  id: 1224
+  product_name_long: Advate 250units Powder for Injection
+  product_name_short: 'Advate '
+  generic_name: Antihemophilic Factor, Plasma/Albumin-Free Method (Recombinant, Human)
+    (Hamster) (Murine)
+  is_active: '1'
+products_678:
+  id: 1225
+  product_name_long: Aloxi 0.25mg/5ml Solution for Injection
+  product_name_short: 'Aloxi '
+  generic_name: Palonosetron Hydrochloride
+  is_active: '0'
+products_679:
+  id: 1226
+  product_name_long: Helixate FS 250units Powder for Injection
+  product_name_short: 'Helixate FS '
+  generic_name: Antihemophilic Factor (Recombinant, Human) (Hamster) (Murine)
+  is_active: '1'
+products_680:
+  id: 1227
+  product_name_long: Hemofil M Powder for Injection (220-400units)
+  product_name_short: Hemofil M Powder for Injection (
+  generic_name: Antihemophilic Factor (Pooled Human Plasma), Method M, Monoclonal
+    Antibody Purified (Murine)
+  is_active: '0'
+products_681:
+  id: 1228
+  product_name_long: Fosrenol 500mg Chewable Tablet
+  product_name_short: 'Fosrenol '
+  generic_name: Lanthanum Carbonate
+  is_active: '1'
+products_682:
+  id: 1229
+  product_name_long: EpiQuin Micro 4% Topical Cream
+  product_name_short: 'EpiQuin Micro '
+  generic_name: Hydroquinone
+  is_active: '1'
+products_683:
+  id: 1230
+  product_name_long: Clobex 0.05% Topical Lotion
+  product_name_short: 'Clobex '
+  generic_name: Clobetasol Propionate
+  is_active: '1'
+products_684:
+  id: 1231
+  product_name_long: Klor-Con M15 Extended-Release Tablet
+  product_name_short: Klor-Con M
+  generic_name: Potassium Chloride
+  is_active: '1'
+products_685:
+  id: 1232
+  product_name_long: Dextroamphetamine Sulfate 10mg Tablet
+  product_name_short: 'Dextroamphetamine Sulfate '
+  generic_name: Dextroamphetamine Sulfate
+  is_active: '0'
+products_686:
+  id: 1233
+  product_name_long: Dextroamphetamine Sulfate 5mg Tablet
+  product_name_short: 'Dextroamphetamine Sulfate '
+  generic_name: Dextroamphetamine Sulfate
+  is_active: '0'
+products_687:
+  id: 1234
+  product_name_long: Cefuroxime Axetil 250mg Tablet
+  product_name_short: 'Cefuroxime Axetil '
+  generic_name: Cefuroxime Axetil
+  is_active: '0'
+products_688:
+  id: 1235
+  product_name_long: Cefuroxime Axetil 500mg Tablet
+  product_name_short: 'Cefuroxime Axetil '
+  generic_name: Cefuroxime Axetil
+  is_active: '0'
+products_689:
+  id: 1236
+  product_name_long: Acyclovir 800mg Tablet
+  product_name_short: 'Acyclovir '
+  generic_name: Acyclovir
+  is_active: '0'
+products_690:
+  id: 1237
+  product_name_long: Acyclovir 400mg Tablet
+  product_name_short: 'Acyclovir '
+  generic_name: Acyclovir
+  is_active: '0'
+products_691:
+  id: 1239
+  product_name_long: Nitroglycerin 0.1mg/hr Transdermal Patch
+  product_name_short: 'Nitroglycerin '
+  generic_name: Nitroglycerin
+  is_active: '1'
+products_692:
+  id: 1240
+  product_name_long: Allopurinol 300mg Tablet
+  product_name_short: 'Allopurinol '
+  generic_name: Allopurinol
+  is_active: '1'
+products_693:
+  id: 1241
+  product_name_long: PhosLo Gelcaps 667mg Capsule
+  product_name_short: 'PhosLo Gelcaps '
+  generic_name: Calcium Acetate
+  is_active: '0'
+products_694:
+  id: 1242
+  product_name_long: PhosLo 667mg Tablet
+  product_name_short: 'PhosLo '
+  generic_name: Calcium Acetate
+  is_active: '0'
+products_695:
+  id: 1244
+  product_name_long: Crestor 5mg Tablet
+  product_name_short: 'Crestor '
+  generic_name: Rosuvastatin Calcium
+  is_active: '1'
+products_696:
+  id: 1245
+  product_name_long: Crestor 20mg Tablet
+  product_name_short: 'Crestor '
+  generic_name: Rosuvastatin Calcium
+  is_active: '1'
+products_697:
+  id: 1246
+  product_name_long: Crestor 40mg Tablet
+  product_name_short: 'Crestor '
+  generic_name: Rosuvastatin Calcium
+  is_active: '1'
+products_698:
+  id: 1247
+  product_name_long: Azactam 1g/50ml Premixed Solution for Injection
+  product_name_short: 'Azactam '
+  generic_name: Aztreonam
+  is_active: '0'
+products_699:
+  id: 1248
+  product_name_long: Azactam 2g/50ml Premixed Solution for Injection
+  product_name_short: 'Azactam '
+  generic_name: Aztreonam
+  is_active: '0'
+products_700:
+  id: 1251
+  product_name_long: DisperMox 200mg Tablet for Suspension
+  product_name_short: 'DisperMox '
+  generic_name: Amoxicillin Trihydrate
+  is_active: '0'
+products_701:
+  id: 1252
+  product_name_long: DisperMox 400mg Tablet for Suspension
+  product_name_short: 'DisperMox '
+  generic_name: Amoxicillin Trihydrate
+  is_active: '0'
+products_702:
+  id: 1262
+  product_name_long: Abilify 5mg Tablet
+  product_name_short: 'Abilify '
+  generic_name: Aripiprazole
+  is_active: '1'
+products_703:
+  id: 1264
+  product_name_long: Ferrous Sulfate ER 160mg Tablet
+  product_name_short: 'Ferrous Sulfate ER '
+  generic_name: Iron
+  is_active: '0'
+products_704:
+  id: 1279
+  product_name_long: Loxapine Succinate 25mg Capsule
+  product_name_short: 'Loxapine Succinate '
+  generic_name: Loxapine Succinate
+  is_active: '1'
+products_705:
+  id: 1280
+  product_name_long: Hydrocodone Bitartrate/Acetaminophen 5mg-500mg Tablet
+  product_name_short: 'Hydrocodone Bitartrate/Acetaminophen '
+  generic_name: Hydrocodone Bitartrate, Acetaminophen
+  is_active: '1'
+products_706:
+  id: 1281
+  product_name_long: Loxapine Succinate 5mg Capsule
+  product_name_short: 'Loxapine Succinate '
+  generic_name: Loxapine Succinate
+  is_active: '1'
+products_707:
+  id: 1282
+  product_name_long: Loxapine Succinate 50mg Capsule
+  product_name_short: 'Loxapine Succinate '
+  generic_name: Loxapine Succinate
+  is_active: '1'
+products_708:
+  id: 1283
+  product_name_long: Butalbital/Aspirin/Caffeine/Codeine Capsule
+  product_name_short: Butalbital/Aspirin/Caffeine/Codeine Capsule
+  generic_name: Butalbital, Aspirin, Caffeine, Codeine Phosphate
+  is_active: '0'
+products_709:
+  id: 1289
+  product_name_long: Ibuprofen 200mg Tablet
+  product_name_short: 'Ibuprofen '
+  generic_name: Ibuprofen
+  is_active: '0'
+products_710:
+  id: 1297
+  product_name_long: Levitra 10mg Tablet
+  product_name_short: 'Levitra '
+  generic_name: Vardenafil Hydrochloride
+  is_active: '0'
+products_711:
+  id: 1298
+  product_name_long: Levitra 20mg Tablet
+  product_name_short: 'Levitra '
+  generic_name: Vardenafil Hydrochloride
+  is_active: '0'
+products_712:
+  id: 1299
+  product_name_long: Cialis 20mg Tablet
+  product_name_short: 'Cialis '
+  generic_name: Tadalafil
+  is_active: '1'
+products_713:
+  id: 1301
+  product_name_long: AVC 15% Vaginal Cream
+  product_name_short: 'AVC '
+  generic_name: Sulfanilamide
+  is_active: '0'
+products_714:
+  id: 1302
+  product_name_long: AVC 1050mg Vaginal Suppository
+  product_name_short: 'AVC '
+  generic_name: Sulfanilamide
+  is_active: '0'
+products_715:
+  id: 1308
+  product_name_long: Sumycin 125mg/5ml Suspension
+  product_name_short: 'Sumycin '
+  generic_name: Tetracycline Hydrochloride
+  is_active: '0'
+products_716:
+  id: 1309
+  product_name_long: Adderall 7.5mg Tablet
+  product_name_short: 'Adderall '
+  generic_name: Amphetamine Aspartate, Amphetamine Sulfate, Dextroamphetamine Saccharate,
+    Dextroamphetamine Sulfate
+  is_active: '0'
+products_717:
+  id: 1310
+  product_name_long: Adderall 15mg Tablet
+  product_name_short: 'Adderall '
+  generic_name: Amphetamine Aspartate, Amphetamine Sulfate, Dextroamphetamine Saccharate,
+    Dextroamphetamine Sulfate
+  is_active: '0'
+products_718:
+  id: 1311
+  product_name_long: Levitra 2.5mg Tablet
+  product_name_short: 'Levitra '
+  generic_name: Vardenafil Hydrochloride
+  is_active: '0'
+products_719:
+  id: 1312
+  product_name_long: Acyclovir 800mg Tablet
+  product_name_short: 'Acyclovir '
+  generic_name: Acyclovir
+  is_active: '0'
+products_720:
+  id: 1313
+  product_name_long: Verapamil Hydrochloride 120mg Tablet
+  product_name_short: 'Verapamil Hydrochloride '
+  generic_name: Verapamil Hydrochloride
+  is_active: '0'
+products_721:
+  id: 1314
+  product_name_long: Valproic Acid 250mg/5ml Solution
+  product_name_short: 'Valproic Acid '
+  generic_name: Valproic Acid
+  is_active: '1'
+products_722:
+  id: 1315
+  product_name_long: Guanfacine Hydrochloride 2mg Tablet
+  product_name_short: 'Guanfacine Hydrochloride '
+  generic_name: Guanfacine Hydrochloride
+  is_active: '1'
+products_723:
+  id: 1316
+  product_name_long: Nitro-Dur 0.8mg/hr Transdermal Patch
+  product_name_short: 'Nitro-Dur '
+  generic_name: Nitroglycerin
+  is_active: '1'
+products_724:
+  id: 1317
+  product_name_long: Metoprolol Tartrate 50mg Tablet
+  product_name_short: 'Metoprolol Tartrate '
+  generic_name: Metoprolol Tartrate
+  is_active: '1'
+products_725:
+  id: 1318
+  product_name_long: Metoprolol Tartrate 100mg Tablet
+  product_name_short: 'Metoprolol Tartrate '
+  generic_name: Metoprolol Tartrate
+  is_active: '1'
+products_726:
+  id: 1319
+  product_name_long: Tramadol Hydrochloride 50mg Tablet
+  product_name_short: 'Tramadol Hydrochloride '
+  generic_name: Tramadol Hydrochloride
+  is_active: '0'
+products_727:
+  id: 1320
+  product_name_long: Halotussin AC 10mg-100mg/5ml Solution
+  product_name_short: 'Halotussin AC '
+  generic_name: Codeine Phosphate, Guaifenesin
+  is_active: '0'
+products_728:
+  id: 1321
+  product_name_long: Halotussin DAC 10mg-100mg-30mg/5ml Syrup
+  product_name_short: 'Halotussin DAC '
+  generic_name: Codeine Phosphate, Guaifenesin, Pseudoephedrine Hydrochloride
+  is_active: '0'
+products_729:
+  id: 1322
+  product_name_long: Mexiletine Hydrochloride 200mg Capsule
+  product_name_short: 'Mexiletine Hydrochloride '
+  generic_name: Mexiletine Hydrochloride
+  is_active: '0'
+products_730:
+  id: 1323
+  product_name_long: Mexiletine Hydrochloride 250mg Capsule
+  product_name_short: 'Mexiletine Hydrochloride '
+  generic_name: Mexiletine Hydrochloride
+  is_active: '0'
+products_731:
+  id: 1324
+  product_name_long: Desipramine Hydrochloride 100mg Tablet
+  product_name_short: 'Desipramine Hydrochloride '
+  generic_name: Desipramine Hydrochloride
+  is_active: '0'
+products_732:
+  id: 1325
+  product_name_long: Labetalol Hydrochloride 100mg Tablet
+  product_name_short: 'Labetalol Hydrochloride '
+  generic_name: Labetalol Hydrochloride
+  is_active: '1'
+products_733:
+  id: 1326
+  product_name_long: Potassium Chloride 20mEq Powder for Solution
+  product_name_short: 'Potassium Chloride '
+  generic_name: Potassium Chloride
+  is_active: '0'
+products_734:
+  id: 1327
+  product_name_long: Afeditab CR 30mg Extended-Release Tablet
+  product_name_short: 'Afeditab CR '
+  generic_name: Nifedipine
+  is_active: '0'
+products_735:
+  id: 1328
+  product_name_long: Enalapril Maleate 5mg Tablet
+  product_name_short: 'Enalapril Maleate '
+  generic_name: Enalapril Maleate
+  is_active: '0'
+products_736:
+  id: 1329
+  product_name_long: Propoxyphene Hydrochloride/Acetaminophen 65mg-650mg Tablet
+  product_name_short: 'Propoxyphene Hydrochloride/Acetaminophen '
+  generic_name: Propoxyphene Hydrochloride, Acetaminophen
+  is_active: '0'
+products_737:
+  id: 1330
+  product_name_long: Quinine Sulfate 260mg Tablet
+  product_name_short: 'Quinine Sulfate '
+  generic_name: Quinine Sulfate
+  is_active: '0'
+products_738:
+  id: 1331
+  product_name_long: Quinine Sulfate 325mg Capsule
+  product_name_short: 'Quinine Sulfate '
+  generic_name: Quinine Sulfate
+  is_active: '0'
+products_739:
+  id: 1332
+  product_name_long: Meperidine Hydrochloride 50mg Tablet
+  product_name_short: 'Meperidine Hydrochloride '
+  generic_name: Meperidine Hydrochloride
+  is_active: '0'
+products_740:
+  id: 1333
+  product_name_long: Meperidine Hydrochloride 100mg Tablet
+  product_name_short: 'Meperidine Hydrochloride '
+  generic_name: Meperidine Hydrochloride
+  is_active: '0'
+products_741:
+  id: 1334
+  product_name_long: Oxycodone Hydrochloride/Acetaminophen 5mg-500mg Capsule
+  product_name_short: 'Oxycodone Hydrochloride/Acetaminophen '
+  generic_name: Oxycodone Hydrochloride, Acetaminophen
+  is_active: '0'
+products_742:
+  id: 1335
+  product_name_long: Estazolam 1mg Tablet
+  product_name_short: 'Estazolam '
+  generic_name: Estazolam
+  is_active: '1'
+products_743:
+  id: 1336
+  product_name_long: Estazolam 2mg Tablet
+  product_name_short: 'Estazolam '
+  generic_name: Estazolam
+  is_active: '1'
+products_744:
+  id: 1337
+  product_name_long: Clonazepam 0.5mg Tablet
+  product_name_short: 'Clonazepam '
+  generic_name: Clonazepam
+  is_active: '0'
+products_745:
+  id: 1338
+  product_name_long: Clonazepam 1mg Tablet
+  product_name_short: 'Clonazepam '
+  generic_name: Clonazepam
+  is_active: '0'
+products_746:
+  id: 1339
+  product_name_long: Clonazepam 2mg Tablet
+  product_name_short: 'Clonazepam '
+  generic_name: Clonazepam
+  is_active: '0'
+products_747:
+  id: 1341
+  product_name_long: Oxycodone Hydrochloride/Acetaminophen 5mg-325mg Tablet
+  product_name_short: 'Oxycodone Hydrochloride/Acetaminophen '
+  generic_name: Oxycodone Hydrochloride, Acetaminophen
+  is_active: '1'
+products_748:
+  id: 1342
+  product_name_long: Ranitidine Hydrochloride 150mg Tablet
+  product_name_short: 'Ranitidine Hydrochloride '
+  generic_name: Ranitidine Hydrochloride
+  is_active: '0'
+products_749:
+  id: 1343
+  product_name_long: Ranitidine Hydrochloride 300mg Tablet
+  product_name_short: 'Ranitidine Hydrochloride '
+  generic_name: Ranitidine Hydrochloride
+  is_active: '0'
+products_750:
+  id: 1344
+  product_name_long: Diltiazem Hydrochloride 30mg Tablet
+  product_name_short: 'Diltiazem Hydrochloride '
+  generic_name: Diltiazem Hydrochloride
+  is_active: '0'
+products_751:
+  id: 1345
+  product_name_long: Tramadol Hydrochloride 50mg Tablet
+  product_name_short: 'Tramadol Hydrochloride '
+  generic_name: Tramadol Hydrochloride
+  is_active: '0'
+products_752:
+  id: 1346
+  product_name_long: Nizatidine 150mg Capsule
+  product_name_short: 'Nizatidine '
+  generic_name: Nizatidine
+  is_active: '0'
+products_753:
+  id: 1347
+  product_name_long: Diltiazem Hydrochloride 60mg Tablet
+  product_name_short: 'Diltiazem Hydrochloride '
+  generic_name: Diltiazem Hydrochloride
+  is_active: '0'
+products_754:
+  id: 1348
+  product_name_long: Oxybutynin Chloride 5mg Tablet
+  product_name_short: 'Oxybutynin Chloride '
+  generic_name: Oxybutynin Chloride
+  is_active: '0'
+products_755:
+  id: 1349
+  product_name_long: Capoten 25mg Tablet
+  product_name_short: 'Capoten '
+  generic_name: Captopril
+  is_active: '0'
+products_756:
+  id: 1350
+  product_name_long: Capoten 50mg Tablet
+  product_name_short: 'Capoten '
+  generic_name: Captopril
+  is_active: '0'
+products_757:
+  id: 1351
+  product_name_long: Capoten 100mg Tablet
+  product_name_short: 'Capoten '
+  generic_name: Captopril
+  is_active: '0'
+products_758:
+  id: 1352
+  product_name_long: Capoten 12.5mg Tablet
+  product_name_short: 'Capoten '
+  generic_name: Captopril
+  is_active: '0'
+products_759:
+  id: 1353
+  product_name_long: Sucralfate 1g Tablet
+  product_name_short: 'Sucralfate '
+  generic_name: Sucralfate
+  is_active: '1'
+products_760:
+  id: 1354
+  product_name_long: Questran 4g Powder for Suspension
+  product_name_short: 'Questran '
+  generic_name: Cholestyramine
+  is_active: '0'
+products_761:
+  id: 1355
+  product_name_long: Clomiphene Citrate 50mg Tablet
+  product_name_short: 'Clomiphene Citrate '
+  generic_name: Clomiphene Citrate
+  is_active: '1'
+products_762:
+  id: 1356
+  product_name_long: Questran Light 4g Powder for Suspension
+  product_name_short: 'Questran Light '
+  generic_name: Cholestyramine
+  is_active: '0'
+products_763:
+  id: 1357
+  product_name_long: Diethylpropion Hydrochloride 75mg Extended-Release Tablet
+  product_name_short: 'Diethylpropion Hydrochloride '
+  generic_name: Diethylpropion Hydrochloride
+  is_active: '1'
+products_764:
+  id: 1358
+  product_name_long: Chlordiazepoxide Hydrochloride 5mg Capsule
+  product_name_short: 'Chlordiazepoxide Hydrochloride '
+  generic_name: Chlordiazepoxide Hydrochloride
+  is_active: '0'
+products_765:
+  id: 1359
+  product_name_long: Chlordiazepoxide Hydrochloride 10mg Capsule
+  product_name_short: 'Chlordiazepoxide Hydrochloride '
+  generic_name: Chlordiazepoxide Hydrochloride
+  is_active: '0'
+products_766:
+  id: 1360
+  product_name_long: Chlordiazepoxide Hydrochloride 25mg Capsule
+  product_name_short: 'Chlordiazepoxide Hydrochloride '
+  generic_name: Chlordiazepoxide Hydrochloride
+  is_active: '0'
+products_767:
+  id: 1361
+  product_name_long: Methylprednisolone 4mg Tablet
+  product_name_short: 'Methylprednisolone '
+  generic_name: Methylprednisolone
+  is_active: '0'
+products_768:
+  id: 1362
+  product_name_long: Naproxen 500mg Tablet
+  product_name_short: 'Naproxen '
+  generic_name: Naproxen
+  is_active: '0'
+products_769:
+  id: 1363
+  product_name_long: Calcitriol 1mcg/ml Solution
+  product_name_short: 'Calcitriol '
+  generic_name: Calcitriol
+  is_active: '1'
+products_770:
+  id: 1364
+  product_name_long: Permethrin 5% Topical Cream
+  product_name_short: 'Permethrin '
+  generic_name: Permethrin
+  is_active: '1'
+products_771:
+  id: 1365
+  product_name_long: Promethazine 12.5mg Rectal Suppository
+  product_name_short: 'Promethazine '
+  generic_name: Promethazine Hydrochloride
+  is_active: '1'
+products_772:
+  id: 1366
+  product_name_long: Promethazine 25mg Rectal Suppository
+  product_name_short: 'Promethazine '
+  generic_name: Promethazine Hydrochloride
+  is_active: '1'
+products_773:
+  id: 1367
+  product_name_long: Naproxen Sodium 275mg Tablet
+  product_name_short: 'Naproxen Sodium '
+  generic_name: Naproxen Sodium
+  is_active: '0'
+products_774:
+  id: 1368
+  product_name_long: Naproxen Sodium 550mg Tablet
+  product_name_short: 'Naproxen Sodium '
+  generic_name: Naproxen Sodium
+  is_active: '0'
+products_775:
+  id: 1369
+  product_name_long: Desipramine Hydrochloride 25mg Tablet
+  product_name_short: 'Desipramine Hydrochloride '
+  generic_name: Desipramine Hydrochloride
+  is_active: '0'
+products_776:
+  id: 1371
+  product_name_long: Desipramine Hydrochloride 50mg Tablet
+  product_name_short: 'Desipramine Hydrochloride '
+  generic_name: Desipramine Hydrochloride
+  is_active: '0'
+products_777:
+  id: 1372
+  product_name_long: Oxycodone/Aspirin 4.5mg-0.38mg-325mg Tablet
+  product_name_short: 'Oxycodone/Aspirin '
+  generic_name: Oxycodone Hydrochloride, Oxycodone Terephthalate, Aspirin
+  is_active: '1'
+products_778:
+  id: 1373
+  product_name_long: Naproxen 250mg Tablet
+  product_name_short: 'Naproxen '
+  generic_name: Naproxen
+  is_active: '0'
+products_779:
+  id: 1374
+  product_name_long: Naproxen 375mg Tablet
+  product_name_short: 'Naproxen '
+  generic_name: Naproxen
+  is_active: '0'
+products_780:
+  id: 1375
+  product_name_long: Lisinopril/Hydrochlorothiazide 10mg-12.5mg Tablet
+  product_name_short: 'Lisinopril/Hydrochlorothiazide '
+  generic_name: Lisinopril, Hydrochlorothiazide
+  is_active: '1'
+products_781:
+  id: 1376
+  product_name_long: Lisinopril/Hydrochlorothiazide 20mg-12.5mg Tablet
+  product_name_short: 'Lisinopril/Hydrochlorothiazide '
+  generic_name: Lisinopril, Hydrochlorothiazide
+  is_active: '1'
+products_782:
+  id: 1377
+  product_name_long: Lisinopril/Hydrochlorothiazide 20mg-25mg Tablet
+  product_name_short: 'Lisinopril/Hydrochlorothiazide '
+  generic_name: Lisinopril, Hydrochlorothiazide
+  is_active: '1'
+products_783:
+  id: 1378
+  product_name_long: Nandrolone Decanoate 200mg/ml in Oil for Injection
+  product_name_short: 'Nandrolone Decanoate '
+  generic_name: Nandrolone Decanoate
+  is_active: '0'
+products_784:
+  id: 1379
+  product_name_long: Cefazolin Sodium 1g Powder for Injection
+  product_name_short: 'Cefazolin Sodium '
+  generic_name: Cefazolin Sodium
+  is_active: '0'
+products_785:
+  id: 1380
+  product_name_long: Cefazolin Sodium 10g Bulk Powder for Injection
+  product_name_short: 'Cefazolin Sodium '
+  generic_name: Cefazolin Sodium
+  is_active: '0'
+products_786:
+  id: 1381
+  product_name_long: Acyclovir 200mg Capsule
+  product_name_short: 'Acyclovir '
+  generic_name: Acyclovir
+  is_active: '0'
+products_787:
+  id: 1382
+  product_name_long: Verapamil Hydrochloride 120mg Sustained-Release Capsule
+  product_name_short: 'Verapamil Hydrochloride '
+  generic_name: Verapamil Hydrochloride
+  is_active: '1'
+products_788:
+  id: 1383
+  product_name_long: Verapamil Hydrochloride 180mg Sustained-Release Capsule
+  product_name_short: 'Verapamil Hydrochloride '
+  generic_name: Verapamil Hydrochloride
+  is_active: '1'
+products_789:
+  id: 1384
+  product_name_long: Metadate CD 30mg Extended-Release Capsule
+  product_name_short: 'Metadate CD '
+  generic_name: Methylphenidate Hydrochloride
+  is_active: '0'
+products_790:
+  id: 1385
+  product_name_long: Metadate CD 10mg Extended-Release Capsule
+  product_name_short: 'Metadate CD '
+  generic_name: Methylphenidate Hydrochloride
+  is_active: '0'
+products_791:
+  id: 1388
+  product_name_long: BAC 50mg-325mg-40mg Tablet
+  product_name_short: 'BAC '
+  generic_name: Butalbital, Acetaminophen, Caffeine
+  is_active: '0'
+products_792:
+  id: 1389
+  product_name_long: Doxycycline Hyclate 50mg Capsule
+  product_name_short: 'Doxycycline Hyclate '
+  generic_name: Doxycycline Hyclate
+  is_active: '0'
+products_793:
+  id: 1390
+  product_name_long: Doxycycline Hyclate 100mg Capsule
+  product_name_short: 'Doxycycline Hyclate '
+  generic_name: Doxycycline Hyclate
+  is_active: '0'
+products_794:
+  id: 1391
+  product_name_long: Doxycycline Hyclate 100mg Tablet
+  product_name_short: 'Doxycycline Hyclate '
+  generic_name: Doxycycline Hyclate
+  is_active: '0'
+products_795:
+  id: 1392
+  product_name_long: Verapamil Hydrochloride 240mg Sustained-Release Capsule
+  product_name_short: 'Verapamil Hydrochloride '
+  generic_name: Verapamil Hydrochloride
+  is_active: '1'
+products_796:
+  id: 1393
+  product_name_long: Verapamil Hydrochloride 360mg Sustained-Release Capsule
+  product_name_short: 'Verapamil Hydrochloride '
+  generic_name: Verapamil Hydrochloride
+  is_active: '1'
+products_797:
+  id: 1394
+  product_name_long: Halotussin AC 10mg-100mg/5ml Solution
+  product_name_short: 'Halotussin AC '
+  generic_name: Codeine Phosphate, Guaifenesin
+  is_active: '0'
+products_798:
+  id: 1395
+  product_name_long: Progesterone 50mg/ml in Sesame Oil for Injection
+  product_name_short: 'Progesterone '
+  generic_name: Progesterone
+  is_active: '1'
+products_799:
+  id: 1396
+  product_name_long: Halotussin DAC 10mg-100mg-30mg/5ml Syrup
+  product_name_short: 'Halotussin DAC '
+  generic_name: Codeine Phosphate, Guaifenesin, Pseudoephedrine Hydrochloride
+  is_active: '0'
+products_800:
+  id: 1397
+  product_name_long: Nizatidine 150mg Capsule
+  product_name_short: 'Nizatidine '
+  generic_name: Nizatidine
+  is_active: '1'
+products_801:
+  id: 1398
+  product_name_long: Hydro-Tuss 100mg-5mg/5ml Solution
+  product_name_short: 'Hydro-Tuss '
+  generic_name: Hydrocodone Bitartrate, Guaifenesin
+  is_active: '0'
+products_802:
+  id: 1399
+  product_name_long: Lidocaine/Prilocaine 2.5%-2.5% Topical Cream
+  product_name_short: 'Lidocaine/Prilocaine '
+  generic_name: Lidocaine, Prilocaine
+  is_active: '1'
+products_803:
+  id: 1400
+  product_name_long: Prednisolone 15mg/5ml Solution
+  product_name_short: 'Prednisolone '
+  generic_name: Prednisolone
+  is_active: '0'
+products_804:
+  id: 1401
+  product_name_long: Nizatidine 300mg Capsule
+  product_name_short: 'Nizatidine '
+  generic_name: Nizatidine
+  is_active: '1'
+products_805:
+  id: 1402
+  product_name_long: Hydropane 1.5mg-5mg/5ml Syrup
+  product_name_short: 'Hydropane '
+  generic_name: Hydrocodone Bitartrate, Homatropine Methylbromide
+  is_active: '0'
+products_806:
+  id: 1403
+  product_name_long: Hydrocodone Bitartrate/Acetaminophen 5mg-500mg Tablet
+  product_name_short: 'Hydrocodone Bitartrate/Acetaminophen '
+  generic_name: Hydrocodone Bitartrate, Acetaminophen
+  is_active: '0'
+products_807:
+  id: 1404
+  product_name_long: Hydrocodone Bitartrate/Acetaminophen 7.5mg-750mg Tablet
+  product_name_short: 'Hydrocodone Bitartrate/Acetaminophen '
+  generic_name: Hydrocodone Bitartrate, Acetaminophen
+  is_active: '0'
+products_808:
+  id: 1405
+  product_name_long: Hydrocodone Bitartrate/Acetaminophen 10mg-650mg Tablet
+  product_name_short: 'Hydrocodone Bitartrate/Acetaminophen '
+  generic_name: Hydrocodone Bitartrate, Acetaminophen
+  is_active: '0'
+products_809:
+  id: 1406
+  product_name_long: Hydrocodone Bitartrate/Acetaminophen 7.5mg-650mg Tablet
+  product_name_short: 'Hydrocodone Bitartrate/Acetaminophen '
+  generic_name: Hydrocodone Bitartrate, Acetaminophen
+  is_active: '0'
+products_810:
+  id: 1407
+  product_name_long: Minocycline Hydrochloride 75mg Capsule
+  product_name_short: 'Minocycline Hydrochloride '
+  generic_name: Minocycline Hydrochloride
+  is_active: '1'
+products_811:
+  id: 1408
+  product_name_long: Promethazine Hydrochloride 25mg/ml Solution for Injection
+  product_name_short: 'Promethazine Hydrochloride '
+  generic_name: Promethazine Hydrochloride
+  is_active: '0'
+products_812:
+  id: 1409
+  product_name_long: Promethazine Hydrochloride 50mg/ml Solution for Injection
+  product_name_short: 'Promethazine Hydrochloride '
+  generic_name: Promethazine Hydrochloride
+  is_active: '0'
+products_813:
+  id: 1410
+  product_name_long: Mysoline 50mg Tablet
+  product_name_short: 'Mysoline '
+  generic_name: Primidone
+  is_active: '0'
+products_814:
+  id: 1411
+  product_name_long: Mysoline 250mg Tablet
+  product_name_short: 'Mysoline '
+  generic_name: Primidone
+  is_active: '0'
+products_815:
+  id: 1412
+  product_name_long: Hydrocodone Bitartrate/Acetaminophen 5mg-325mg Tablet
+  product_name_short: 'Hydrocodone Bitartrate/Acetaminophen '
+  generic_name: Hydrocodone Bitartrate, Acetaminophen
+  is_active: '1'
+products_816:
+  id: 1413
+  product_name_long: Hydrocodone Bitartrate/Acetaminophen 7.5mg-325mg Tablet
+  product_name_short: 'Hydrocodone Bitartrate/Acetaminophen '
+  generic_name: Hydrocodone Bitartrate, Acetaminophen
+  is_active: '0'
+products_817:
+  id: 1414
+  product_name_long: Prednisone 20mg Tablet
+  product_name_short: 'Prednisone '
+  generic_name: Prednisone
+  is_active: '1'
+products_818:
+  id: 1415
+  product_name_long: Potassium Bicarbonate 25mEq Effervescent Tablet
+  product_name_short: 'Potassium Bicarbonate '
+  generic_name: Potassium Bicarbonate
+  is_active: '0'
+products_819:
+  id: 1416
+  product_name_long: Nandrolone Decanoate 100mg/ml in Oil for Injection
+  product_name_short: 'Nandrolone Decanoate '
+  generic_name: Nandrolone Decanoate
+  is_active: '0'
+products_820:
+  id: 1417
+  product_name_long: INFeD 50mg/ml Solution for Injection
+  product_name_short: 'INFeD '
+  generic_name: Iron Dextran
+  is_active: '1'
+products_821:
+  id: 1421
+  product_name_long: Stilphostrol 250mg/5ml Solution for Injection
+  product_name_short: 'Stilphostrol '
+  generic_name: Diethylstilbestrol Diphosphate
+  is_active: '0'
+products_822:
+  id: 1422
+  product_name_long: Nascobal 500mcg/0.1ml Nasal Gel
+  product_name_short: 'Nascobal '
+  generic_name: Cyanocobalamin (Vitamin B12)
+  is_active: '0'
+products_823:
+  id: 1423
+  product_name_long: Ucephan 10%-10% Solution
+  product_name_short: 'Ucephan '
+  generic_name: Sodium Phenylacetate, Sodium Benzoate
+  is_active: '0'
+products_824:
+  id: 1425
+  product_name_long: Symbyax 6mg-25mg Capsule
+  product_name_short: 'Symbyax '
+  generic_name: Olanzapine, Fluoxetine Hydrochloride
+  is_active: '1'
+products_825:
+  id: 1426
+  product_name_long: Gengraf 50mg Capsule
+  product_name_short: 'Gengraf '
+  generic_name: Cyclosporine, Modified
+  is_active: '0'
+products_826:
+  id: 1427
+  product_name_long: Biavax II Vaccine Powder for Injection
+  product_name_short: Biavax II Vaccine Powder for Injection
+  generic_name: Mumps Virus Vaccine, Live, Rubella Virus Vaccine, Live
+  is_active: '0'
+products_827:
+  id: 1428
+  product_name_long: Cefazolin Sodium 500mg Powder for Injection
+  product_name_short: 'Cefazolin Sodium '
+  generic_name: Cefazolin Sodium
+  is_active: '1'
+products_828:
+  id: 1429
+  product_name_long: Cefazolin Sodium 1g Powder for Injection
+  product_name_short: 'Cefazolin Sodium '
+  generic_name: Cefazolin Sodium
+  is_active: '1'
+products_829:
+  id: 1430
+  product_name_long: Doxycycline Hyclate 100mg Tablet
+  product_name_short: 'Doxycycline Hyclate '
+  generic_name: Doxycycline Hyclate
+  is_active: '1'
+products_830:
+  id: 1431
+  product_name_long: Glyburide (Micronized) 1.5mg Tablet
+  product_name_short: 'Glyburide (Micronized) '
+  generic_name: Glyburide, Micronized
+  is_active: '1'
+products_831:
+  id: 1432
+  product_name_long: Glyburide (Micronized) 3mg Tablet
+  product_name_short: 'Glyburide (Micronized) '
+  generic_name: Glyburide, Micronized
+  is_active: '1'
+products_832:
+  id: 1433
+  product_name_long: Glyburide (Micronized) 6mg Tablet
+  product_name_short: 'Glyburide (Micronized) '
+  generic_name: Glyburide, Micronized
+  is_active: '1'
+products_833:
+  id: 1434
+  product_name_long: Lisinopril 5mg Tablet
+  product_name_short: 'Lisinopril '
+  generic_name: Lisinopril
+  is_active: '1'
+products_834:
+  id: 1435
+  product_name_long: Lisinopril 10mg Tablet
+  product_name_short: 'Lisinopril '
+  generic_name: Lisinopril
+  is_active: '1'
+products_835:
+  id: 1436
+  product_name_long: Lisinopril 20mg Tablet
+  product_name_short: 'Lisinopril '
+  generic_name: Lisinopril
+  is_active: '1'
+products_836:
+  id: 1437
+  product_name_long: Lisinopril 30mg Tablet
+  product_name_short: 'Lisinopril '
+  generic_name: Lisinopril
+  is_active: '1'
+products_837:
+  id: 1438
+  product_name_long: Lisinopril 40mg Tablet
+  product_name_short: 'Lisinopril '
+  generic_name: Lisinopril
+  is_active: '1'
+products_838:
+  id: 1439
+  product_name_long: Renese-R 2mg-0.25mg Tablet
+  product_name_short: 'Renese-R '
+  generic_name: Polythiazide, Reserpine
+  is_active: '0'
+products_839:
+  id: 1440
+  product_name_long: Lithium Carbonate 150mg Capsule
+  product_name_short: 'Lithium Carbonate '
+  generic_name: Lithium Carbonate
+  is_active: '1'
+products_840:
+  id: 1441
+  product_name_long: Lithium Carbonate 450mg Extended-Release Tablet
+  product_name_short: 'Lithium Carbonate '
+  generic_name: Lithium Carbonate
+  is_active: '1'
+products_841:
+  id: 1444
+  product_name_long: Zantac 150mg/10ml Syrup
+  product_name_short: 'Zantac '
+  generic_name: Ranitidine Hydrochloride
+  is_active: '0'
+products_842:
+  id: 1446
+  product_name_long: Carafate 1g/10ml Suspension
+  product_name_short: 'Carafate '
+  generic_name: Sucralfate
+  is_active: '1'
+products_843:
+  id: 1448
+  product_name_long: Copaxone 32-Dose Patient Pack 20mg Powder for Injection
+  product_name_short: 'Copaxone '
+  generic_name: Glatiramer Acetate
+  is_active: '0'
+products_844:
+  id: 1449
+  product_name_long: Climara 0.0375mg/24hr Transdermal System
+  product_name_short: 'Climara '
+  generic_name: Estradiol
+  is_active: '0'
+products_845:
+  id: 1450
+  product_name_long: Climara 0.06mg/24hr Transdermal System
+  product_name_short: 'Climara '
+  generic_name: Estradiol
+  is_active: '0'
+products_846:
+  id: 1451
+  product_name_long: Actiq 200mcg Lozenge
+  product_name_short: 'Actiq '
+  generic_name: Fentanyl Citrate
+  is_active: '1'
+products_847:
+  id: 1452
+  product_name_long: Actiq 400mcg Lozenge
+  product_name_short: 'Actiq '
+  generic_name: Fentanyl Citrate
+  is_active: '1'
+products_848:
+  id: 1453
+  product_name_long: Actiq 600mcg Lozenge
+  product_name_short: 'Actiq '
+  generic_name: Fentanyl Citrate
+  is_active: '1'
+products_849:
+  id: 1454
+  product_name_long: Actiq 800mcg Lozenge
+  product_name_short: 'Actiq '
+  generic_name: Fentanyl Citrate
+  is_active: '1'
+products_850:
+  id: 1455
+  product_name_long: Actiq 1200mcg Lozenge
+  product_name_short: 'Actiq '
+  generic_name: Fentanyl Citrate
+  is_active: '1'
+products_851:
+  id: 1456
+  product_name_long: Actiq 1600mcg Lozenge
+  product_name_short: 'Actiq '
+  generic_name: Fentanyl Citrate
+  is_active: '1'
+products_852:
+  id: 1457
+  product_name_long: ReVia 50mg Tablet
+  product_name_short: 'ReVia '
+  generic_name: Naltrexone Hydrochloride
+  is_active: '1'
+products_853:
+  id: 1458
+  product_name_long: Cefuroxime Axetil 250mg Tablet
+  product_name_short: 'Cefuroxime Axetil '
+  generic_name: Cefuroxime Axetil
+  is_active: '0'
+products_854:
+  id: 1459
+  product_name_long: Cefuroxime Axetil 500mg Tablet
+  product_name_short: 'Cefuroxime Axetil '
+  generic_name: Cefuroxime Axetil
+  is_active: '0'
+products_855:
+  id: 1460
+  product_name_long: Uritract DS Tablet
+  product_name_short: Uritract DS Tablet
+  generic_name: Atropine Sulfate, Benzoic Acid, Hyoscyamine Sulfate, Methenamine,
+    Methylene Blue, Phenyl Salicylate
+  is_active: '0'
+products_856:
+  id: 1461
+  product_name_long: Afeditab CR 60mg Extended-Release Tablet
+  product_name_short: 'Afeditab CR '
+  generic_name: Nifedipine
+  is_active: '1'
+products_857:
+  id: 1462
+  product_name_long: Bellahist-D LA Tablet
+  product_name_short: Bellahist-D LA Tablet
+  generic_name: Atropine Sulfate, Chlorpheniramine Maleate, Hyoscyamine Sulfate, Phenylephrine
+    Hydrochloride, Scopolamine Hydrobromide
+  is_active: '0'
+products_858:
+  id: 1463
+  product_name_long: Mirtazapine 15mg Tablet
+  product_name_short: 'Mirtazapine '
+  generic_name: Mirtazapine
+  is_active: '0'
+products_859:
+  id: 1464
+  product_name_long: Mirtazapine 30mg Tablet
+  product_name_short: 'Mirtazapine '
+  generic_name: Mirtazapine
+  is_active: '0'
+products_860:
+  id: 1465
+  product_name_long: Estrace 0.5mg Tablet
+  product_name_short: 'Estrace '
+  generic_name: Estradiol
+  is_active: '0'
+products_861:
+  id: 1467
+  product_name_long: Bromhist Pediatric 1mg-15mg/ml Drops
+  product_name_short: 'Bromhist Pediatric '
+  generic_name: Brompheniramine Maleate, Pseudoephedrine Hydrochloride
+  is_active: '0'
+products_862:
+  id: 1468
+  product_name_long: Bromhist DM 1mg-4mg-15mg/ml Drops
+  product_name_short: 'Bromhist DM '
+  generic_name: Brompheniramine Maleate, Dextromethorphan Hydrobromide, Pseudoephedrine
+    Hydrochloride
+  is_active: '0'
+products_863:
+  id: 1469
+  product_name_long: Carboxine PSE 2mg-20mg/5ml Solution
+  product_name_short: 'Carboxine PSE '
+  generic_name: Carbinoxamine Maleate, Pseudoephedrine Hydrochloride
+  is_active: '0'
+products_864:
+  id: 1470
+  product_name_long: Corfen DM 4mg-15mg-10mg/5ml Solution
+  product_name_short: 'Corfen DM '
+  generic_name: Chlorpheniramine Maleate, Dextromethorphan Hydrobromide, Phenylephrine
+    Hydrochloride
+  is_active: '0'
+products_865:
+  id: 1471
+  product_name_long: De-Chlor G 100mg-2mg-10mg/5ml Solution
+  product_name_short: 'De-Chlor G '
+  generic_name: Guaifenesin, Hydrocodone Bitartrate, Phenylephrine Hydrochloride
+  is_active: '1'
+products_866:
+  id: 1472
+  product_name_long: De-Chlor MR 5mg-5mg-5mg/5ml Solution
+  product_name_short: 'De-Chlor MR '
+  generic_name: Hydrocodone Bitartrate, Phenylephrine Hydrochloride, Pyrilamine Maleate
+  is_active: '1'
+products_867:
+  id: 1473
+  product_name_long: De-Chlor NX 3mg-150mg/5ml Solution
+  product_name_short: 'De-Chlor NX '
+  generic_name: Hydrocodone Bitartrate, Potassium Guaiacolsulfonate
+  is_active: '1'
+products_868:
+  id: 1474
+  product_name_long: Decahist DM 2mg-5mg-15mg/5ml Solution
+  product_name_short: 'Decahist DM '
+  generic_name: Carbinoxamine Maleate, Dextromethorphan Hydrobromide, Pseudoephedrine
+    Hydrochloride
+  is_active: '0'
+products_869:
+  id: 1475
+  product_name_long: Drocon CS 2mg-2.5mg-30mg/5ml Solution
+  product_name_short: 'Drocon CS '
+  generic_name: Brompheniramine Maleate, Hydrocodone Bitartrate, Pseudoephedrine Hydrochloride
+  is_active: '0'
+products_870:
+  id: 1476
+  product_name_long: Ferrous Fumarate 324mg Tablet
+  product_name_short: 'Ferrous Fumarate '
+  generic_name: Ferrous Fumarate
+  is_active: '1'
+products_871:
+  id: 1477
+  product_name_long: GFN 1200/Phenylephrine 40 Extended-Release Tablet
+  product_name_short: 'GFN '
+  generic_name: Guaifenesin, Phenylephrine Hydrochloride
+  is_active: '0'
+products_872:
+  id: 1478
+  product_name_long: GFN 1200/DM 60/PSE 60 Extended-Release Tablet
+  product_name_short: 'GFN '
+  generic_name: Dextromethorphan Hydrobromide, Guaifenesin, Pseudoephedrine Hydrochloride
+  is_active: '1'
+products_873:
+  id: 1479
+  product_name_long: GFN 595/PSE 48 Extended-Release Tablet
+  product_name_short: 'GFN '
+  generic_name: Guaifenesin, Pseudoephedrine Hydrochloride
+  is_active: '1'
+products_874:
+  id: 1480
+  product_name_long: GFN 595/PSE 48/DM 32 Extended-Release Tablet
+  product_name_short: 'GFN '
+  generic_name: Dextromethorphan Hydrobromide, Guaifenesin, Pseudoephedrine Hydrochloride
+  is_active: '0'
+products_875:
+  id: 1481
+  product_name_long: GFN 795/PSE 85 Extended-Release Tablet
+  product_name_short: 'GFN '
+  generic_name: Guaifenesin, Pseudoephedrine Hydrochloride
+  is_active: '0'
+products_876:
+  id: 1482
+  product_name_long: GFN 800/DM 30 Extended-Release Tablet
+  product_name_short: 'GFN '
+  generic_name: Dextromethorphan Hydrobromide, Guaifenesin
+  is_active: '0'
+products_877:
+  id: 1483
+  product_name_long: GFN 800/PSE 60 Extended-Release Tablet
+  product_name_short: 'GFN '
+  generic_name: Guaifenesin, Pseudoephedrine Hydrochloride
+  is_active: '0'
+products_878:
+  id: 1484
+  product_name_long: G/P 1200/75 Extended-Release Tablet
+  product_name_short: 'G/P '
+  generic_name: Guaifenesin, Pseudoephedrine Hydrochloride
+  is_active: '1'
+products_879:
+  id: 1485
+  product_name_long: Dytan-D 25mg-10mg Chewable Tablet
+  product_name_short: 'Dytan-D '
+  generic_name: Diphenhydramine Tannate, Phenylephrine Tannate
+  is_active: '1'
+products_880:
+  id: 1486
+  product_name_long: Hy-KXP 4.5mg-300mg/5ml Solution
+  product_name_short: 'Hy-KXP '
+  generic_name: Hydrocodone Bitartrate, Potassium Guaiacolsulfonate
+  is_active: '1'
+products_881:
+  id: 1487
+  product_name_long: Hydro PC II Plus 2mg-3.5mg-7.5mg/5ml Solution
+  product_name_short: 'Hydro PC II Plus '
+  generic_name: Chlorpheniramine Maleate, Hydrocodone Bitartrate, Phenylephrine Hydrochloride
+  is_active: '1'
+products_882:
+  id: 1488
+  product_name_long: KGS PE 5mg-75mg/5ml Solution
+  product_name_short: 'KGS PE '
+  generic_name: Potassium Guaiacolsulfonate, Phenylephrine Hydrochloride
+  is_active: '0'
+products_883:
+  id: 1489
+  product_name_long: Relacon DM 15mg-200mg-40mg/5ml Solution
+  product_name_short: 'Relacon DM '
+  generic_name: Dextromethorphan Hydrobromide, Guaifenesin, Pseudoephedrine Hydrochloride
+  is_active: '0'
+products_884:
+  id: 1490
+  product_name_long: Relacon HC 2.5mg-3.5mg-10mg/5ml Solution
+  product_name_short: 'Relacon HC '
+  generic_name: Chlorpheniramine Maleate, Hydrocodone Bitartrate, Phenylephrine Hydrochloride
+  is_active: '0'
+products_885:
+  id: 1491
+  product_name_long: Zero Order Release Aspirin Controlled-Release 800mg Tablet
+  product_name_short: 'Zero Order Release Aspirin Controlled-Release '
+  generic_name: Aspirin
+  is_active: '0'
+products_886:
+  id: 1492
+  product_name_long: Dytan-D 25mg-7.5mg/5ml Suspension
+  product_name_short: 'Dytan-D '
+  generic_name: Diphenhydramine Tannate, Phenylephrine Tannate
+  is_active: '1'
+products_887:
+  id: 1493
+  product_name_long: Phos-NaK 250mg Powder for Solution
+  product_name_short: 'Phos-NaK '
+  generic_name: Potassium Phosphate, Dibasic, Sodium Phosphate, Monobasic
+  is_active: '1'
+products_888:
+  id: 1496
+  product_name_long: Niferex-150 Forte Capsule
+  product_name_short: Niferex-
+  generic_name: Ascorbic Acid (Vitamin C), Cyanocobalamin (Vitamin B12), Ferrous bis-glycinate
+    chelate, Folic Acid (Vitamin B9), Polysaccharide-Iron Complex, Threonic acid
+  is_active: '0'
+products_889:
+  id: 1497
+  product_name_long: Robaxin 500mg Tablet
+  product_name_short: 'Robaxin '
+  generic_name: Methocarbamol
+  is_active: '0'
+products_890:
+  id: 1498
+  product_name_long: Robaxin 750mg Tablet
+  product_name_short: 'Robaxin '
+  generic_name: Methocarbamol
+  is_active: '0'
+products_891:
+  id: 1500
+  product_name_long: Wellbutrin XL 300mg Extended-Release Tablet
+  product_name_short: 'Wellbutrin XL '
+  generic_name: Bupropion Hydrochloride
+  is_active: '0'
+products_892:
+  id: 1501
+  product_name_long: Avandamet 2mg-1000mg Tablet
+  product_name_short: 'Avandamet '
+  generic_name: Rosiglitazone Maleate, Metformin Hydrochloride
+  is_active: '0'
+products_893:
+  id: 1502
+  product_name_long: Avandamet 4mg-1000mg Tablet
+  product_name_short: 'Avandamet '
+  generic_name: Rosiglitazone Maleate, Metformin Hydrochloride
+  is_active: '0'
+products_894:
+  id: 1503
+  product_name_long: Metoprolol Tartrate 1mg/ml Solution for Injection
+  product_name_short: 'Metoprolol Tartrate '
+  generic_name: Metoprolol Tartrate
+  is_active: '1'
+products_895:
+  id: 1504
+  product_name_long: Dicyclomine Hydrochloride 10mg/ml Solution for Injection
+  product_name_short: 'Dicyclomine Hydrochloride '
+  generic_name: Dicyclomine Hydrochloride
+  is_active: '0'
+products_896:
+  id: 1505
+  product_name_long: ICAR Prenatal Rx Tablet
+  product_name_short: ICAR Prenatal Rx Tablet
+  generic_name: Ascorbic Acid (Vitamin C), Beta-Carotene (Vitamin A), Biotin, Boron,
+    Cholecalciferol, Chromium, Copper, Cyanocobalamin (Vitamin B12), D-Alpha Tocopherol
+    (Vitamin E) (Natural), Folic Acid (Vitamin B9), Iodine, Iron, Magnesium, Manganese,
+    Molybdenum, Niacin
+  is_active: '0'
+products_897:
+  id: 1507
+  product_name_long: Moexipril Hydrochloride 7.5mg Tablet
+  product_name_short: 'Moexipril Hydrochloride '
+  generic_name: Moexipril Hydrochloride
+  is_active: '0'
+products_898:
+  id: 1509
+  product_name_long: Orphenadrine Citrate 30mg/ml Solution for Injection
+  product_name_short: 'Orphenadrine Citrate '
+  generic_name: Orphenadrine Citrate
+  is_active: '1'
+products_899:
+  id: 1512
+  product_name_long: Gebauers Ethyl Chloride 100% Topical Spray
+  product_name_short: 'Gebauers Ethyl Chloride '
+  generic_name: Ethyl Chloride
+  is_active: '1'
+products_900:
+  id: 1514
+  product_name_long: Gelfilm Sterile Film
+  product_name_short: Gelfilm Sterile Film
+  generic_name: 
+  is_active: '1'
+products_901:
+  id: 1522
+  product_name_long: Pergolide Mesylate 0.05mg Tablet
+  product_name_short: 'Pergolide Mesylate '
+  generic_name: Pergolide Mesylate
+  is_active: '0'
+products_902:
+  id: 1523
+  product_name_long: Pergolide Mesylate 1mg Tablet
+  product_name_short: 'Pergolide Mesylate '
+  generic_name: Pergolide Mesylate
+  is_active: '0'
+products_903:
+  id: 1524
+  product_name_long: Pergolide Mesylate 0.25mg Tablet
+  product_name_short: 'Pergolide Mesylate '
+  generic_name: Pergolide Mesylate
+  is_active: '0'
+products_904:
+  id: 1526
+  product_name_long: Adrenalin 1mg/ml Nasal Solution
+  product_name_short: 'Adrenalin '
+  generic_name: Epinephrine Hydrochloride
+  is_active: '0'
+products_905:
+  id: 1527
+  product_name_long: ICAR-C Plus Tablet
+  product_name_short: ICAR-C Plus Tablet
+  generic_name: Ascorbic Acid (Vitamin C), Cyanocobalamin (Vitamin B12), Folic Acid
+    (Vitamin B9), Iron
+  is_active: '1'
+products_906:
+  id: 1536
+  product_name_long: Paclitaxel 6mg/ml Solution for Injection
+  product_name_short: 'Paclitaxel '
+  generic_name: Paclitaxel
+  is_active: '0'
+products_907:
+  id: 1537
+  product_name_long: Ofloxacin 200mg Tablet
+  product_name_short: 'Ofloxacin '
+  generic_name: Ofloxacin
+  is_active: '1'
+products_908:
+  id: 1538
+  product_name_long: Ofloxacin 300mg Tablet
+  product_name_short: 'Ofloxacin '
+  generic_name: Ofloxacin
+  is_active: '1'
+products_909:
+  id: 1539
+  product_name_long: Ofloxacin 400mg Tablet
+  product_name_short: 'Ofloxacin '
+  generic_name: Ofloxacin
+  is_active: '1'
+products_910:
+  id: 1541
+  product_name_long: Naproxen Sodium 275mg Tablet
+  product_name_short: 'Naproxen Sodium '
+  generic_name: Naproxen Sodium
+  is_active: '0'
+products_911:
+  id: 1542
+  product_name_long: Naproxen Sodium 550mg Tablet
+  product_name_short: 'Naproxen Sodium '
+  generic_name: Naproxen Sodium
+  is_active: '0'
+products_912:
+  id: 1544
+  product_name_long: Butalbital/Acetaminophen/Caffeine/Codeine Phosphate Capsule
+  product_name_short: Butalbital/Acetaminophen/Caffeine/Codeine Phosphate Capsule
+  generic_name: Butalbital, Acetaminophen, Caffeine, Codeine Phosphate
+  is_active: '0'
+products_913:
+  id: 1545
+  product_name_long: Trimethobenzamide Hydrochloride 300mg Capsule
+  product_name_short: 'Trimethobenzamide Hydrochloride '
+  generic_name: Trimethobenzamide Hydrochloride
+  is_active: '0'
+products_914:
+  id: 1546
+  product_name_long: Cefpodoxime Proxetil 100mg Tablet
+  product_name_short: 'Cefpodoxime Proxetil '
+  generic_name: Cefpodoxime Proxetil
+  is_active: '1'
+products_915:
+  id: 1547
+  product_name_long: Paroxetine Hydrochloride 10mg Tablet
+  product_name_short: 'Paroxetine Hydrochloride '
+  generic_name: Paroxetine Hydrochloride
+  is_active: '1'
+products_916:
+  id: 1548
+  product_name_long: Paroxetine Hydrochloride 20mg Tablet
+  product_name_short: 'Paroxetine Hydrochloride '
+  generic_name: Paroxetine Hydrochloride
+  is_active: '1'
+products_917:
+  id: 1549
+  product_name_long: Paroxetine Hydrochloride 30mg Tablet
+  product_name_short: 'Paroxetine Hydrochloride '
+  generic_name: Paroxetine Hydrochloride
+  is_active: '1'
+products_918:
+  id: 1550
+  product_name_long: Paroxetine Hydrochloride 40mg Tablet
+  product_name_short: 'Paroxetine Hydrochloride '
+  generic_name: Paroxetine Hydrochloride
+  is_active: '1'
+products_919:
+  id: 1551
+  product_name_long: Midodrine Hydrochloride 2.5mg Tablet
+  product_name_short: 'Midodrine Hydrochloride '
+  generic_name: Midodrine Hydrochloride
+  is_active: '1'
+products_920:
+  id: 1552
+  product_name_long: Midodrine Hydrochloride 5mg Tablet
+  product_name_short: 'Midodrine Hydrochloride '
+  generic_name: Midodrine Hydrochloride
+  is_active: '1'
+products_921:
+  id: 1553
+  product_name_long: Midodrine Hydrochloride 2.5mg Tablet
+  product_name_short: 'Midodrine Hydrochloride '
+  generic_name: Midodrine Hydrochloride
+  is_active: '1'
+products_922:
+  id: 1554
+  product_name_long: Midodrine Hydrochloride 5mg Tablet
+  product_name_short: 'Midodrine Hydrochloride '
+  generic_name: Midodrine Hydrochloride
+  is_active: '1'
+products_923:
+  id: 1556
+  product_name_long: Midodrine Hydrochloride 10mg Tablet
+  product_name_short: 'Midodrine Hydrochloride '
+  generic_name: Midodrine Hydrochloride
+  is_active: '1'
+products_924:
+  id: 1558
+  product_name_long: Darvocet A500 Tablet
+  product_name_short: Darvocet A
+  generic_name: Propoxyphene Napsylate, Acetaminophen
+  is_active: '0'
+products_925:
+  id: 1560
+  product_name_long: Riomet 500mg/5ml Solution
+  product_name_short: 'Riomet '
+  generic_name: Metformin Hydrochloride
+  is_active: '0'
+products_926:
+  id: 1564
+  product_name_long: Fludarabine 50mg Powder for Injection
+  product_name_short: 'Fludarabine '
+  generic_name: Fludarabine Phosphate
+  is_active: '1'
+products_927:
+  id: 1565
+  product_name_long: Flavoxate Hydrochloride 100mg Tablet
+  product_name_short: 'Flavoxate Hydrochloride '
+  generic_name: Flavoxate Hydrochloride
+  is_active: '1'
+products_928:
+  id: 1567
+  product_name_long: Gamunex 10% Solution for Injection
+  product_name_short: 'Gamunex '
+  generic_name: Immune Globulin (Human)
+  is_active: '0'
+products_929:
+  id: 1569
+  product_name_long: Lopressor 5mg/5ml Solution for Injection
+  product_name_short: 'Lopressor '
+  generic_name: Metoprolol Tartrate
+  is_active: '1'
+products_930:
+  id: 1575
+  product_name_long: Cefuroxime Axetil 250mg Tablet
+  product_name_short: 'Cefuroxime Axetil '
+  generic_name: Cefuroxime Axetil
+  is_active: '0'
+products_931:
+  id: 1576
+  product_name_long: Cefuroxime Axetil 500mg Tablet
+  product_name_short: 'Cefuroxime Axetil '
+  generic_name: Cefuroxime Axetil
+  is_active: '0'
+products_932:
+  id: 1577
+  product_name_long: Etodolac 400mg Tablet
+  product_name_short: 'Etodolac '
+  generic_name: Etodolac
+  is_active: '1'
+products_933:
+  id: 1578
+  product_name_long: Omeprazole 10mg Delayed-Release Capsule
+  product_name_short: 'Omeprazole '
+  generic_name: Omeprazole
+  is_active: '1'
+products_934:
+  id: 1579
+  product_name_long: Omeprazole 20mg Delayed-Release Capsule
+  product_name_short: 'Omeprazole '
+  generic_name: Omeprazole
+  is_active: '1'
+products_935:
+  id: 1580
+  product_name_long: Phenadoz 12.5mg Rectal Suppository
+  product_name_short: 'Phenadoz '
+  generic_name: Promethazine Hydrochloride
+  is_active: '0'
+products_936:
+  id: 1581
+  product_name_long: Phenadoz 25mg Rectal Suppository
+  product_name_short: 'Phenadoz '
+  generic_name: Promethazine Hydrochloride
+  is_active: '0'
+products_937:
+  id: 1583
+  product_name_long: Pamine Forte Dose Pack 5mg Tablet
+  product_name_short: 'Pamine Forte Dose Pack '
+  generic_name: Methscopolamine Bromide
+  is_active: '0'
+products_938:
+  id: 1584
+  product_name_long: Spectracef 200mg Tablet
+  product_name_short: 'Spectracef '
+  generic_name: Cefditoren Pivoxil
+  is_active: '0'
+products_939:
+  id: 1585
+  product_name_long: Paroxetine Hydrochloride 10mg Tablet
+  product_name_short: 'Paroxetine Hydrochloride '
+  generic_name: Paroxetine Hydrochloride
+  is_active: '0'
+products_940:
+  id: 1586
+  product_name_long: Paroxetine Hydrochloride 20mg Tablet
+  product_name_short: 'Paroxetine Hydrochloride '
+  generic_name: Paroxetine Hydrochloride
+  is_active: '0'
+products_941:
+  id: 1587
+  product_name_long: Paroxetine Hydrochloride 30mg Tablet
+  product_name_short: 'Paroxetine Hydrochloride '
+  generic_name: Paroxetine Hydrochloride
+  is_active: '0'
+products_942:
+  id: 1588
+  product_name_long: Paroxetine Hydrochloride 40mg Tablet
+  product_name_short: 'Paroxetine Hydrochloride '
+  generic_name: Paroxetine Hydrochloride
+  is_active: '0'
+products_943:
+  id: 1590
+  product_name_long: Sotalol Hydrochloride AF 80mg Tablet
+  product_name_short: 'Sotalol Hydrochloride AF '
+  generic_name: Sotalol Hydrochloride
+  is_active: '1'
+products_944:
+  id: 1591
+  product_name_long: Sotalol Hydrochloride AF 120mg Tablet
+  product_name_short: 'Sotalol Hydrochloride AF '
+  generic_name: Sotalol Hydrochloride
+  is_active: '1'
+products_945:
+  id: 1592
+  product_name_long: Sotalol Hydrochloride AF 160mg Tablet
+  product_name_short: 'Sotalol Hydrochloride AF '
+  generic_name: Sotalol Hydrochloride
+  is_active: '1'
+products_946:
+  id: 1593
+  product_name_long: Terazosin Hydrochloride 1mg Capsule
+  product_name_short: 'Terazosin Hydrochloride '
+  generic_name: Terazosin Hydrochloride
+  is_active: '1'
+products_947:
+  id: 1594
+  product_name_long: Clozapine 12.5mg Tablet
+  product_name_short: 'Clozapine '
+  generic_name: Clozapine
+  is_active: '0'
+products_948:
+  id: 1595
+  product_name_long: Nefazodone Hydrochloride 50mg Tablet
+  product_name_short: 'Nefazodone Hydrochloride '
+  generic_name: Nefazodone Hydrochloride
+  is_active: '0'
+products_949:
+  id: 1596
+  product_name_long: Nefazodone Hydrochloride 100mg Tablet
+  product_name_short: 'Nefazodone Hydrochloride '
+  generic_name: Nefazodone Hydrochloride
+  is_active: '0'
+products_950:
+  id: 1597
+  product_name_long: Nefazodone Hydrochloride 150mg Tablet
+  product_name_short: 'Nefazodone Hydrochloride '
+  generic_name: Nefazodone Hydrochloride
+  is_active: '0'
+products_951:
+  id: 1598
+  product_name_long: Nefazodone Hydrochloride 200mg Tablet
+  product_name_short: 'Nefazodone Hydrochloride '
+  generic_name: Nefazodone Hydrochloride
+  is_active: '0'
+products_952:
+  id: 1599
+  product_name_long: Nefazodone Hydrochloride 250mg Tablet
+  product_name_short: 'Nefazodone Hydrochloride '
+  generic_name: Nefazodone Hydrochloride
+  is_active: '0'
+products_953:
+  id: 1600
+  product_name_long: Levo-T 25mcg Tablet
+  product_name_short: 'Levo-T '
+  generic_name: Levothyroxine Sodium
+  is_active: '0'
+products_954:
+  id: 1601
+  product_name_long: Levo-T 75mcg Tablet
+  product_name_short: 'Levo-T '
+  generic_name: Levothyroxine Sodium
+  is_active: '0'
+products_955:
+  id: 1602
+  product_name_long: Levo-T 100mcg Tablet
+  product_name_short: 'Levo-T '
+  generic_name: Levothyroxine Sodium
+  is_active: '0'
+products_956:
+  id: 1603
+  product_name_long: Levo-T 125mcg Tablet
+  product_name_short: 'Levo-T '
+  generic_name: Levothyroxine Sodium
+  is_active: '0'
+products_957:
+  id: 1604
+  product_name_long: Levo-T 137mcg Tablet
+  product_name_short: 'Levo-T '
+  generic_name: Levothyroxine Sodium
+  is_active: '0'
+products_958:
+  id: 1605
+  product_name_long: Levo-T 150mcg Tablet
+  product_name_short: 'Levo-T '
+  generic_name: Levothyroxine Sodium
+  is_active: '0'
+products_959:
+  id: 1606
+  product_name_long: Levo-T 300mcg Tablet
+  product_name_short: 'Levo-T '
+  generic_name: Levothyroxine Sodium
+  is_active: '0'
+products_960:
+  id: 1607
+  product_name_long: Nefazodone Hydrochloride 50mg Tablet
+  product_name_short: 'Nefazodone Hydrochloride '
+  generic_name: Nefazodone Hydrochloride
+  is_active: '1'
+products_961:
+  id: 1608
+  product_name_long: Nefazodone Hydrochloride 100mg Tablet
+  product_name_short: 'Nefazodone Hydrochloride '
+  generic_name: Nefazodone Hydrochloride
+  is_active: '1'
+products_962:
+  id: 1609
+  product_name_long: Nefazodone Hydrochloride 150mg Tablet
+  product_name_short: 'Nefazodone Hydrochloride '
+  generic_name: Nefazodone Hydrochloride
+  is_active: '1'
+products_963:
+  id: 1610
+  product_name_long: Nefazodone Hydrochloride 200mg Tablet
+  product_name_short: 'Nefazodone Hydrochloride '
+  generic_name: Nefazodone Hydrochloride
+  is_active: '1'
+products_964:
+  id: 1611
+  product_name_long: Nefazodone Hydrochloride 250mg Tablet
+  product_name_short: 'Nefazodone Hydrochloride '
+  generic_name: Nefazodone Hydrochloride
+  is_active: '1'
+products_965:
+  id: 1612
+  product_name_long: Nefazodone Hydrochloride 50mg Tablet
+  product_name_short: 'Nefazodone Hydrochloride '
+  generic_name: Nefazodone Hydrochloride
+  is_active: '0'
+products_966:
+  id: 1613
+  product_name_long: Nefazodone Hydrochloride 100mg Tablet
+  product_name_short: 'Nefazodone Hydrochloride '
+  generic_name: Nefazodone Hydrochloride
+  is_active: '0'
+products_967:
+  id: 1614
+  product_name_long: Nefazodone Hydrochloride 150mg Tablet
+  product_name_short: 'Nefazodone Hydrochloride '
+  generic_name: Nefazodone Hydrochloride
+  is_active: '0'
+products_968:
+  id: 1615
+  product_name_long: Nefazodone Hydrochloride 200mg Tablet
+  product_name_short: 'Nefazodone Hydrochloride '
+  generic_name: Nefazodone Hydrochloride
+  is_active: '0'
+products_969:
+  id: 1616
+  product_name_long: Nefazodone Hydrochloride 250mg Tablet
+  product_name_short: 'Nefazodone Hydrochloride '
+  generic_name: Nefazodone Hydrochloride
+  is_active: '0'
+products_970:
+  id: 1617
+  product_name_long: Lortuss HC 3.75mg-7.5mg/5ml Solution
+  product_name_short: 'Lortuss HC '
+  generic_name: Hydrocodone Bitartrate, Phenylephrine Hydrochloride
+  is_active: '0'
+products_971:
+  id: 1620
+  product_name_long: Nefazodone Hydrochloride 100mg Tablet
+  product_name_short: 'Nefazodone Hydrochloride '
+  generic_name: Nefazodone Hydrochloride
+  is_active: '0'
+products_972:
+  id: 1621
+  product_name_long: Nefazodone Hydrochloride 150mg Tablet
+  product_name_short: 'Nefazodone Hydrochloride '
+  generic_name: Nefazodone Hydrochloride
+  is_active: '0'
+products_973:
+  id: 1622
+  product_name_long: Nefazodone Hydrochloride 200mg Tablet
+  product_name_short: 'Nefazodone Hydrochloride '
+  generic_name: Nefazodone Hydrochloride
+  is_active: '0'
+products_974:
+  id: 1623
+  product_name_long: Nefazodone Hydrochloride 250mg Tablet
+  product_name_short: 'Nefazodone Hydrochloride '
+  generic_name: Nefazodone Hydrochloride
+  is_active: '0'
+products_975:
+  id: 1624
+  product_name_long: Ketoprofen 200mg Extended-Release Capsule
+  product_name_short: 'Ketoprofen '
+  generic_name: Ketoprofen
+  is_active: '1'
+products_976:
+  id: 1626
+  product_name_long: Nefazodone Hydrochloride 250mg Tablet
+  product_name_short: 'Nefazodone Hydrochloride '
+  generic_name: Nefazodone Hydrochloride
+  is_active: '0'
+products_977:
+  id: 1627
+  product_name_long: Nefazodone Hydrochloride 200mg Tablet
+  product_name_short: 'Nefazodone Hydrochloride '
+  generic_name: Nefazodone Hydrochloride
+  is_active: '0'
+products_978:
+  id: 1628
+  product_name_long: Nefazodone Hydrochloride 150mg Tablet
+  product_name_short: 'Nefazodone Hydrochloride '
+  generic_name: Nefazodone Hydrochloride
+  is_active: '0'
+products_979:
+  id: 1629
+  product_name_long: Nefazodone Hydrochloride 100mg Tablet
+  product_name_short: 'Nefazodone Hydrochloride '
+  generic_name: Nefazodone Hydrochloride
+  is_active: '0'
+products_980:
+  id: 1630
+  product_name_long: Brimonidine Tartrate 0.2% Ophthalmic Solution
+  product_name_short: 'Brimonidine Tartrate '
+  generic_name: Brimonidine Tartrate
+  is_active: '1'
+products_981:
+  id: 1631
+  product_name_long: Nefazodone Hydrochloride 50mg Tablet
+  product_name_short: 'Nefazodone Hydrochloride '
+  generic_name: Nefazodone Hydrochloride
+  is_active: '0'
+products_982:
+  id: 1632
+  product_name_long: Nefazodone Hydrochloride 100mg Tablet
+  product_name_short: 'Nefazodone Hydrochloride '
+  generic_name: Nefazodone Hydrochloride
+  is_active: '0'
+products_983:
+  id: 1633
+  product_name_long: Nefazodone Hydrochloride 100mg Tablet
+  product_name_short: 'Nefazodone Hydrochloride '
+  generic_name: Nefazodone Hydrochloride
+  is_active: '0'
+products_984:
+  id: 1634
+  product_name_long: Nefazodone Hydrochloride 150mg Tablet
+  product_name_short: 'Nefazodone Hydrochloride '
+  generic_name: Nefazodone Hydrochloride
+  is_active: '0'
+products_985:
+  id: 1635
+  product_name_long: Nefazodone Hydrochloride 150mg Tablet
+  product_name_short: 'Nefazodone Hydrochloride '
+  generic_name: Nefazodone Hydrochloride
+  is_active: '0'
+products_986:
+  id: 1636
+  product_name_long: Nefazodone Hydrochloride 200mg Tablet
+  product_name_short: 'Nefazodone Hydrochloride '
+  generic_name: Nefazodone Hydrochloride
+  is_active: '0'
+products_987:
+  id: 1637
+  product_name_long: Nefazodone Hydrochloride 200mg Tablet
+  product_name_short: 'Nefazodone Hydrochloride '
+  generic_name: Nefazodone Hydrochloride
+  is_active: '0'
+products_988:
+  id: 1638
+  product_name_long: Nefazodone Hydrochloride 250mg Tablet
+  product_name_short: 'Nefazodone Hydrochloride '
+  generic_name: Nefazodone Hydrochloride
+  is_active: '0'
+products_989:
+  id: 1646
+  product_name_long: Cipro XR 1000mg Extended-Release Tablet
+  product_name_short: 'Cipro XR '
+  generic_name: Ciprofloxacin Hydrochloride
+  is_active: '0'
+products_990:
+  id: 1647
+  product_name_long: Lisinopril/Hydrochlorothiazide 20mg-25mg Tablet
+  product_name_short: 'Lisinopril/Hydrochlorothiazide '
+  generic_name: Lisinopril, Hydrochlorothiazide
+  is_active: '1'
+products_991:
+  id: 1648
+  product_name_long: Lidocaine/Prilocaine 2.5%-2.5% Topical Cream
+  product_name_short: 'Lidocaine/Prilocaine '
+  generic_name: Lidocaine, Prilocaine
+  is_active: '1'
+products_992:
+  id: 1649
+  product_name_long: Sumycin 500mg Tablet
+  product_name_short: 'Sumycin '
+  generic_name: Tetracycline Hydrochloride
+  is_active: '0'
+products_993:
+  id: 1651
+  product_name_long: Bupropion Hydrochloride 100mg Sustained-Release Tablet
+  product_name_short: 'Bupropion Hydrochloride '
+  generic_name: Bupropion Hydrochloride
+  is_active: '0'
+products_994:
+  id: 1652
+  product_name_long: Bupropion Hydrochloride 150mg Sustained-Release Tablet
+  product_name_short: 'Bupropion Hydrochloride '
+  generic_name: Bupropion Hydrochloride
+  is_active: '0'
+products_995:
+  id: 1654
+  product_name_long: Salagen 7.5mg Tablet
+  product_name_short: 'Salagen '
+  generic_name: Pilocarpine Hydrochloride
+  is_active: '0'
+products_996:
+  id: 1655
+  product_name_long: Aminosyn 10% Sulfite-Free Solution for Injection
+  product_name_short: 'Aminosyn '
+  generic_name: Alanine, Arginine, Glycine, Histidine, Isoleucine, Leucine, Lysine,
+    Methionine, Phenylalanine, Proline, Serine, Threonine, Tryptophan, Tyrosine, Valine
+  is_active: '0'
+products_997:
+  id: 1657
+  product_name_long: Zomig 5mg/actuation Nasal Spray
+  product_name_short: 'Zomig '
+  generic_name: Zolmitriptan
+  is_active: '0'
+products_998:
+  id: 1658
+  product_name_long: Key-Plex Solution for Injection
+  product_name_short: Key-Plex Solution for Injection
+  generic_name: Ascorbic Acid (Vitamin C), Cyanocobalamin (Vitamin B12), Dexpanthenol,
+    Niacinamide, Pyridoxine (Vitamin B6), Riboflavin (Vitamin B2), Thiamine (Vitamin
+    B1)
+  is_active: '0'
+products_999:
+  id: 1664
+  product_name_long: Aminosyn II 7% Sulfite-Free Solution for Injection
+  product_name_short: 'Aminosyn II '
+  generic_name: Alanine, Arginine, Aspartic Acid, Glutamic Acid, Glycine, Histidine,
+    Isoleucine, Leucine, Lysine Acetate, Methionine, Phenylalanine, Proline, Serine,
+    Threonine, Tryptophan, Tyrosine, Valine
+  is_active: '0'
+products_1000:
+  id: 1666
+  product_name_long: Aminosyn II 8.5% Sulfite-Free Solution for Injection
+  product_name_short: 'Aminosyn II '
+  generic_name: Alanine, Arginine, Aspartic Acid, Glutamic Acid, Glycine, Histidine,
+    Isoleucine, Leucine, Lysine Acetate, Methionine, Phenylalanine, Proline, Serine,
+    Threonine, Tryptophan, Tyrosine, Valine
+  is_active: '0'
+product1:
+  product_name_long: "drug_test1"
+  product_name_short: "drug_test1"
+  generic_name: "product_test1"
+  is_active: 1 
+  id: 9

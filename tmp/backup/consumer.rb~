@@ -1,0 +1,97 @@
+# == Schema Information
+#
+# Table name: consumers
+#
+#  id             :integer          not null, primary key
+#  first_name     :string(255)
+#  last_name      :string(255)
+#  email          :string(255)
+#  phone_number   :string(255)
+#  consumer_image :string(255)
+#  created_at     :datetime
+#  updated_at     :datetime
+#  status         :boolean
+#  devices        :string(255)
+#  device_type    :string(255)
+#  delta          :boolean          default(TRUE), not null
+#  device_id      :text
+#  sign_in_count  :integer
+#  pass_code      :integer
+#  consumer_name  :string(255)
+#  person_id      :string(255)
+#  isd_code       :string(255)
+#
+
+class Consumer < ActiveRecord::Base
+  include ThinkingSphinx::Scopes
+  has_one :consumer_setting, dependent: :destroy
+  has_many :care_givers, dependent: :destroy
+  has_many :consumer_compliances, dependent: :destroy
+  has_many :consumer_medications, dependent: :destroy
+  has_many :drugs, through: :consumer_medications, source: :consumer_drug, source_type: "Drug"
+  has_many :consumer_custom_drugs, through: :consumer_medications, source: :consumer_drug, source_type: "ConsumerCustomDrug"
+  has_many :reminders
+  mount_uploader :consumer_image, AttatchmentUploader
+  has_one :api_key, dependent: :destroy
+
+
+  # after_save :set_consumer_setting
+  # after_save :set_provider_delta_flag
+
+  scope :android, -> { where devices: "Android",status: true }
+  scope :ios, -> { where devices: "iOS",status: true }
+  scope :all_devices, -> { where status: true }
+
+  # RELATIONS
+  has_and_belongs_to_many :providers
+
+  #validation
+  validates :first_name, :last_name, format: {with: /\A[a-zA-Z\d]+\z/},length: {maximum: 24}
+  validates  :phone_number, format: { with: /\A(\([1-9]{1}\)|[1-9])[0-9]{9}\z/ } 
+  validates :email, format: { with: /\A([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$\z/},uniqueness: {message: "Email is already taken"}
+  # validates :consumer_name, format: {with: /\A[a-zA-Z\d]+\z/},length: {maximum: 24},uniqueness: {message: "Consumer name already exists"}
+  validates :pass_code,   format: { with: /\A\d{4}\z/ }
+
+  def avg_compliance
+    result  = (consumer_compliances.where(:status => COMPLIANCE_STATUS_TAKEN).count * 100).to_f/consumer_compliances.count.to_f if consumer_compliances.count > 0
+    # binding.pry
+    result ? result.ceil : 0.0
+  end
+
+  sphinx_scope(:by_provider) { |consumer_ids|	
+    { :conditions => {:id => consumer_ids} }
+  }
+
+  def full_name
+    _full_name = []
+    _full_name << self.first_name.titlecase if !self.first_name.nil? || !self.first_name.blank?
+    _full_name << self.last_name.titlecase if !self.last_name.nil? || !self.last_name.blank?
+    _full_name.join(" ")
+  end
+
+  def image_url	
+    if consumer_image.file.try(:exists?)
+      "consumer/consumer_image/#{id}/#{read_attribute(:consumer_image)}"
+    else
+      "/assets/admin/images/noimg30x30.jpg"
+    end
+  end
+
+  def self.authenticate(email="", consumer_name="")                
+    consumer = Consumer.where("email = ? || consumer_name = ?", email, consumer_name).take
+    if consumer 
+      return consumer
+    else
+      return false
+    end
+  end
+
+  private
+
+  # def set_provider_delta_flag
+  # 	Provider.skip_callback(:save, :after, :set_provider_delta_flag)
+  # 	self.delta = true 
+  #   	self.save
+  # end
+
+end

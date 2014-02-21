@@ -1,0 +1,2 @@
+class ConsumerAsNeededMedication < ActiveRecord::Base
+end

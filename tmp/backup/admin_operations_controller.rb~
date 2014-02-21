@@ -1,0 +1,46 @@
+class Admin::AdminOperationsController < Admin::AdminController
+  skip_before_filter :admin_user_authenticate
+
+  def login
+    return (@adminuser = AdminUser.new) unless session[:adminuser]
+    redirect_to dashboard_admin_admin_operations_path
+  end
+
+  def check_login
+    admin_user = AdminUser.find_by_email(params[:admin_user][:email]) if params[:admin_user][:email].present?
+    if admin_user
+      session[:adminuser] = admin_user
+
+    elsif params[:admin_user][:email].blank?
+      flash[:error] = t('check_login.valid_id')
+
+    elsif (params[:admin_user][:email] =~/^([\w\.%\+\-]+)@([\w\-]+\.)+([\w]{2,})$/i ? false : true)
+      flash[:error] = t('check_login.not_valid_id')
+
+    else
+      flash[:error] = t('check_login.not_authorized')        
+
+    end
+    redirect_to dashboard_admin_admin_operations_path
+  end
+
+  def dashboard    
+    if session[:adminuser]
+      beginning_of_month  = DateTime.new(DateTime.now.year, DateTime.now.month, 1 )
+      end_of_month        = DateTime.new(DateTime.now.year, DateTime.now.month, -1 )
+      @products           = Kaminari.paginate_array(Product.percentage_compliances(beginning_of_month,end_of_month)).page(params[:page]).per(10)
+      @users              = {"total users" => Consumer.all_devices.count,"Android" => Consumer.android.count,"IOS" => Consumer.ios.count}
+      @providers          = {"Providers" => Provider.total_heads.count ,"New Waiting for Approval" => Provider.admin_heads_pending.count }
+
+      add_breadcrumb "Dashboard", dashboard_admin_admin_operations_path, :title => "Dashboard"
+    else
+      redirect_to action: 'login'
+    end
+  end
+
+  def logout
+    session.delete(:adminuser)
+    redirect_to action: 'login'
+  end
+
+end

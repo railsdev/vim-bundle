@@ -1,0 +1,77 @@
+include CustomHelper
+class ApplicationController < ActionController::Base
+  # Prevent CSRF attacks by raising an exception.
+  # For APIs, you may want to use :null_session instead.
+  protect_from_forgery with: :exception
+  helper_method :current_consumer
+  layout :layout_by_resource
+
+  # rescue_from Exception do |e|
+  #   flash[:error] = e.message
+  #   redirect_to providers_root_path
+  # end
+
+  before_filter :set_cache_buster
+
+  def today
+    consumer_settings = ConsumerSetting.where(:consumer_id => current_consumer.id).first if current_consumer
+    if consumer_settings
+      if consumer_settings.time_zone
+        return Date.today.in_time_zone(consumer_settings.time_zone).at_beginning_of_day..Date.today.in_time_zone(consumer_settings.time_zone).at_end_of_day
+      else
+        return Date.today.at_beginning_of_day..Date.today.at_end_of_day
+      end
+    else
+      return Date.today.at_beginning_of_day..Date.today.at_end_of_day
+    end
+  end
+
+  def drug_image(drug)
+    if drug.drug_image.present? && drug.drug_image.image_name.present?
+      '/drug_image/' + drug.drug_image.image_name
+    else
+      "/assets/no_drug.jpg"
+    end
+  end
+
+  protected
+
+  def layout_by_resource
+    if provider_signed_in?
+      "provider"
+    elsif devise_controller?
+      case resource_name
+      when :provider
+        "provider"
+      else
+        "application"
+      end
+    else
+      "application"
+    end
+  end
+
+  def set_cache_buster
+    response.headers["Cache-Control"] = "no-cache, no-store, max-age=0, must-revalidate"
+    response.headers["Pragma"] = "no-cache"
+    response.headers["Expires"] = "0"
+  end
+
+  def current_consumer
+   access_token = ApiKey.where(:access_token => request.headers["token"]).first 
+  	if access_token
+       @current_user ||= access_token.consumer
+    else
+        render json: {:message => "Login Required"}
+     	return false
+   	end
+  end
+
+  def set_cache_buster
+    response.headers["Cache-Control"] = "no-cache, no-store, max-age=0, must-revalidate"
+    response.headers["Pragma"] = "no-cache"
+    response.headers["Expires"] = "0"
+
+  end
+
+end

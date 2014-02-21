@@ -1,0 +1,8 @@
+ThinkingSphinx::Index.define :drug, :with => :active_record do
+  indexes drug_name_short, :prefixes => true 
+  indexes is_active
+  #indexes last_name, :prefixes => true 
+  #indexes email, :prefixes => true 
+  set_property :enable_star => true 
+  set_property :min_prefix_len => 3 
+end

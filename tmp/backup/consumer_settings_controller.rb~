@@ -1,0 +1,44 @@
+class Api::ConsumerSettingsController < ApplicationController
+	skip_before_filter  :verify_authenticity_token
+
+	def get_settings
+		@my_settings = find_consumer_settings params[:consumer_id]
+	end
+
+	def update_settings
+		@consumer_settings = find_consumer_settings params[:consumer_id]
+		@consumer_settings.update_attributes(consumer_settings_params) if @consumer_settings
+	end
+
+	def consumer_image_upload # move to api/consumers _controller
+		@consumer = Consumer.find params[:consumer_id]
+
+		@consumer.remote_consumer_image_url = params[:path]
+		@consumer.save!
+	end
+
+	def consumer_image_download # move to api/consumers _controller
+		@consumer = Consumer.find params[:consumer_id]
+		#send_file "http://www.disneyjunior.ca/en/files/392.jpg", :disposition => 'attachment' 
+		path = "#{Rails.root}#{@consumer.consumer_image_url}"
+		Rails.logger.ap File.file?(path)
+		#send_file "/home/biju/workspace/DIASPARK/pillphone/public/uploads/consumer/consumer_image/1/mickey_mouse-1096.png"
+		# raise image_file.inspect
+		# send_file image_file
+		#send_file "http://www.disneyjunior.ca/en/files/392.jpg"
+		#send_file "#{Rails.root}#{@consumer.consumer_image.url}"#, :type => 'image/jpeg', :disposition => 'inline',:x_sendfile => true
+		#image=File.open("#{Rails.root}#{@consumer.consumer_image.url}")
+		#send_file(image, filename:'mickey_mouse-1096.png' ,:type => 'image/png')
+	end
+
+	private
+
+		def find_consumer_settings consumer_id
+			ConsumerSetting.where(consumer_id:consumer_id).take
+		end
+
+		def consumer_settings_params
+		  	params.require(:consumer_setting).permit(:snooze_duration, :reminder, :language, :message)
+  		end
+
+end

@@ -1,0 +1,23 @@
+##dosage_diary_list.json.jbuilder
+if @consumer_dosage_diary
+  json.response_code "200"
+  json.response_message ""
+  json.body{
+    json.result "success"
+    json.user_info_list Consumer.where(id: @consumer_dosage_diary.map{|a| a.consumer_id})  do |dosage_diary|
+      json.user_id dosage_diary.id
+      json.first_name dosage_diary.first_name
+      json.last_name  dosage_diary.last_name
+      json.email dosage_diary.email
+      json.prfile_pic dosage_diary.consumer_image
+    end
+  }
+else
+  json.response_code "400"
+  json.response_message "failure"
+  json.result "user not found"
+end
+ 
+
+ 
+ 

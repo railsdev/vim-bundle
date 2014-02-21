@@ -1,0 +1,8 @@
+class ConsumersProviders < ActiveRecord::Migration
+  def change
+  	# create_table :consumers_providers do |t|
+	  	# t.integer	"provider_id"
+	  	# t.integer	"consumer_id"
+  	# end
+  end
+end

@@ -1,0 +1,48 @@
+ # Created by: Bharat Bhushan
+ # Functionality for Consumer who invites other consumer for making their caretaker, consumer can get list of care_taker 
+ # consumer can delete their caretaker
+class Api::CareGiversController < Api::ApiController
+
+  # skip_before_filter  :verify_authenticity_token # MOVED TO api_controller.rb
+
+  #logged in consumer send invitation to other consumer by email for making their caretaker  
+  def add_care_giver
+    @care_taker = Consumer.where(email: params[:email]).take
+    if @care_taker and current_consumer
+      begin
+
+        template = "https://gmi.iwsinc.com/tenant/ImageWare/template/CareGiverRequest"
+        RestClient.post "https://gmi.iwsinc.com/message/device/#{@care_taker.device_id}", 
+                        {"template"=> template, 
+                        "metadata"=> "{'name': '#{current_consumer.full_name}','agreement':'TRUE'}"}.to_json,
+                        content_type: 'application/json' 
+        #template = 'https://pillphone1.iwsinc.com/tenant/Diaspark/template/CareGiverRequest'
+        # @rest_response=RestClient.post("https://gmi.iwsinc.com/message/device/#{@care_taker.device_id}", {"template" => "https://gmi.iwsinc.com/tenant/ImageWare/template/CareGiverRequest","metadata" => "{\"name\": \"#{current_consumer.full_name}\",\"agreement\":\"TRUE\"}"}, :content_type => :json, :accept => :json)
+      rescue => e
+        puts e.response
+      end
+    else
+      vaild_mail=params[:email]=~/^([\w\.%\+\-]+)@([\w\-]+\.)+([\w]{2,})$/i
+      @user_mail=UserMailer.download_link(params[:email]).deliver if vaild_mail.eql?(0)
+    end
+  end
+
+#logged in consumer can get list of caretaker who is caring for consumer
+  def get_care_giver
+   @care_givers = current_consumer.care_givers.map{|care_taker|
+        Consumer.where(id: care_taker.care_taker_id).take
+    } if current_consumer.present?
+  end
+
+#logged in consumer can remove their caretaker
+  def remove_care_giver
+     @care_giver=current_consumer.care_givers.where(care_taker_id:params[:care_taker_id]).take
+      @care_giver.destroy! if @care_giver.present?
+  end
+
+  def caregiver_response
+    if params[:status].to_i == 1
+      @care_giver = current_consumer.care_givers.find_or_create_by(care_taker_id: params[:response_consumer_id].to_i) if params[:response_consumer_id].present?
+    end
+  end
+end

@@ -1,0 +1,153 @@
+class Api::RemindersController < ApplicationController
+  skip_before_filter  :verify_authenticity_token
+
+  def get_todays_reminders
+    @reminders = ScheduledReminder.pending_for(today, current_consumer.id)
+  end
+
+  def index
+    @reminders = Reminder.where consumer_id: current_consumer.id, ancestry: nil
+  end
+
+  def show
+    @reminder = Reminder.find_by id: params[:id]
+    @reminder = @reminder.parent unless @reminder.parent.nil?
+  end
+
+  def destroy
+    @reminder = Reminder.where(:id => params[:id], :consumer_id => current_consumer.id).first
+    @reminder.destroy_me(params[:destroy_all]) unless @reminder.nil?
+  end
+
+  def create
+    consumer_medication = ConsumerMedication.find(params[:consumer_medication_id])
+    @reminders = queue_up_schedules
+
+    if @reminders.all? {|x| x.errors.empty? }
+      consumer_medication.update(dose_quantity: params[:dose_quantity], dose_unit: params[:dose_unit])
+    end
+  end
+
+  def update
+    old_reminder = Reminder.where(:consumer_medication_id => params[:consumer_medication_id], :ancestry => nil, :is_active => true).first
+    old_reminder.destroy_me(true) # Destroy self and all child
+    params[:consumer_medication_id] = old_reminder.consumer_medication_id # set params[:consumer_medication_id] to older reminder
+
+    # Now queue up all new reminders
+    @reminders = queue_up_schedules
+  end
+
+  private
+
+  def queue_up_schedules
+    reminders = []
+    if params[:fq_type] == 'Daily'
+      fq_time = params[:fq_time].delete_at(0)
+      if !params[:fq_time].blank?
+        # create parent reminder
+        reminders << reminder = build_reminders_by_time(fq_time)
+
+        params[:fq_time].each do |time|
+          reminders << build_reminders_by_time(time, reminder) # build all child reminders
+        end
+
+      else
+        reminders << build_reminders_by_time(fq_time)
+      end
+    elsif ['Monthly', 'Weekly'].include? params[:fq_type]
+      fq_day = params[:fq_day].delete_at(0)
+      if !params[:fq_day].blank?
+        # create parent reminder
+        reminders << reminder = build_reminders_by_day(fq_day)
+
+        params[:fq_day].each do |day|
+          reminders << build_reminders_by_day(day, reminder) # build all child reminders
+        end
+
+      else
+        reminders << build_reminders_by_day(fq_day)
+      end
+    elsif params[:fq_type] == 'Yearly'
+      fq_month = params[:fq_month].delete_at(0)
+      if !params[:fq_month].blank?
+        # create parent reminder
+        reminders << reminder = build_reminders_by_month(fq_month)
+
+        params[:fq_month].each do |month|
+          reminders << build_reminders_by_month(month, reminder) # build all child reminders
+        end
+
+      else
+        reminders << build_reminders_by_month(fq_month)
+      end
+    elsif params[:fq_type] == 'As Needed'
+      reminders << build_reminders_by_time(nil)
+    else
+      fq_time = params[:fq_time].delete_at(0) #if params[:fq_time]
+      if !params[:fq_time].blank?
+        # create parent reminder
+        reminders << reminder = build_reminders_by_time(fq_time)
+
+        params[:fq_time].each do |time|
+          reminders << build_reminders_by_time(time, reminder) # build all child reminders
+        end
+
+      else
+        reminders << build_reminders_by_time(fq_time)
+      end
+    end
+    reminders
+  end
+
+  def build_reminders_by_time(fq_time, parent=nil)
+    return Reminder.create reminder_by_time_params(fq_time, parent)
+  end
+
+  def build_reminders_by_day(fq_day, parent=nil)
+    return Reminder.create reminder_by_day_params(fq_day, parent)
+  end
+
+  def build_reminders_by_month(fq_month, parent=nil)
+    return Reminder.create reminder_by_month_params(fq_month, parent)
+  end
+
+  def reminder_by_time_params(fq_time, parent=nil)
+    return {:fq_type     => params[:fq_type],
+            :interval    => params[:interval],
+            :fq_day      => params[:fq_day].try(:first),
+            :fq_month    => params[:fq_month].try(:first),
+            :fq_time     => fq_time,
+            :start_time  => params[:start_time],
+            :parent_id   => parent.try(:id),
+            :consumer_id => current_consumer.id,
+            :consumer_medication_id => params[:consumer_medication_id] }
+
+  end
+
+  def reminder_by_day_params(fq_day, parent=nil)
+    return {:fq_type     => params[:fq_type],
+            :interval    => params[:interval],
+            :fq_day      => fq_day,
+            :fq_month    => params[:fq_month],
+            :fq_time     => params[:fq_time][0],
+            :start_time  => params[:start_time],
+            :parent_id   => parent.try(:id),
+            :consumer_id => current_consumer.id,
+            :consumer_medication_id => params[:consumer_medication_id] }
+
+  end
+
+  def reminder_by_month_params(fq_month, parent=nil)
+    return {:fq_type     => params[:fq_type],
+            :interval    => params[:interval],
+            :fq_day      => params[:fq_day][0],
+            :fq_month    => fq_month,
+            :fq_time     => params[:fq_time][0],
+            :start_time  => params[:start_time],
+            :parent_id   => parent.try(:id),
+            :consumer_id => current_consumer.id,
+            :consumer_medication_id => params[:consumer_medication_id] }
+
+  end
+
+end

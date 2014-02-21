@@ -1,0 +1,12 @@
+if @consumer
+json.response_code "200"
+  json.response_message "Signed Up Successfully"
+  json.auth_token @consumer.api_key.access_token
+  json.email @consumer.email
+else
+json.response_code "400"
+        json.response_message "Invalid User"
+        json.body {
+                json.result "Login Fail, Try Again"
+        }
+end

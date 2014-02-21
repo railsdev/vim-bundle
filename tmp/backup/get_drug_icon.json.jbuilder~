@@ -1,0 +1,16 @@
+if @drug_image
+  json.response_code "200"
+  json.response_message ""
+  json.body do
+    json.result "success"
+      json.drug_id @drug_image.drug_id
+      json.name @drug_image.image_name
+      json.is_active  @drug_image.is_active
+      json.file_stream @drug_image.image_file_name
+      json.drug_image_url @drug_image.drug_image.path
+  end
+else
+  json.response_code "400"
+  json.response_message "failure"
+  json.result "drug image not found"
+end

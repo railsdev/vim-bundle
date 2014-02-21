@@ -1,0 +1,15 @@
+
+if @reminder.present? 
+	json.response_code response.status
+	json.response_message "New reminder created successfully!"
+	json.body {
+		json.result "Success"
+		json.reminders @reminder.as_json(request: request)
+	}
+else
+	json.response_code "400"
+	json.response_message "no-record"
+	json.body {
+		json.result "No reminder found" 
+	}
+end

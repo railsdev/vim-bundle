@@ -1,0 +1,245 @@
+# == Schema Information
+#
+# Table name: reminders
+#
+#  id                     :integer          not null, primary key
+#  consumer_id            :integer
+#  consumer_medication_id :integer
+#  fq_type                :string(255)
+#  fq_time                :datetime
+#  fq_day                 :integer
+#  fq_month               :integer
+#  start_time             :datetime
+#  interval               :integer
+#  last_schedule_on       :datetime
+#  parent_id              :integer
+#  is_scheduled           :boolean          default(TRUE)
+#  created_at             :datetime
+#  updated_at             :datetime
+#  is_active              :boolean          default(TRUE)
+#  ancestry               :string(255)
+#  queued_schedules_count :integer
+#
+
+class Reminder < ActiveRecord::Base
+
+  # Ice Cube for creating list of occurrences based on schedule rules
+  include IceCube
+
+  # Ancestry for adding parent-child logic.
+  has_ancestry 
+
+  # Some virtual attributes
+  attr_accessor :schedule, :schedule_occurrences
+
+  ########## RELATIONS ##########
+  has_many :scheduled_reminders, -> { where(is_active: true).order('run_at')}, dependent: :destroy
+  has_one  :consumer_as_needed_medication
+  belongs_to :consumer_medication
+  belongs_to :consumer
+  has_and_belongs_to_many :consumer_compliances, :foreign_key => "consumer_medication_id"
+
+  ########## SCOPES ##########
+  scope :active, -> { where(is_active: true) }
+  scope :inactive, -> { where(is_active: false) }
+  scope :daily, -> { where(fq_type: REMINDER_FREQUENCY_DAILY) }
+  scope :weekly, -> { where(fq_type: REMINDER_FREQUENCY_WEEKLY) }
+  scope :monthly, -> { where(fq_type: REMINDER_FREQUENCY_MONTHLY) }
+  scope :yearly, -> { where(fq_type: REMINDER_FREQUENCY_YEARLY) }
+  scope :x_hours, -> { where(fq_type: REMINDER_FREQUENCY_EVERY_X_HOURS) }
+  scope :x_days, -> { where(fq_type: REMINDER_FREQUENCY_EVERY_X_DAYS) }
+  scope :x_weeks, -> { where(fq_type: REMINDER_FREQUENCY_EVERY_X_WEEKS) }
+  scope :x_months, -> { where(fq_type: REMINDER_FREQUENCY_EVERY_X_MONTHS) }
+  scope :x_years, -> { where(fq_type: REMINDER_FREQUENCY_EVERY_X_YEARS) }
+  scope :as_needed, -> { where(fq_type: REMINDER_FREQUENCY_AS_NEEDED) }
+
+  ########## VALIDATIONS ##########
+  validates :fq_day,   inclusion: { in: (1..31).to_a, message: "Invalid day selected", allow_nil: true }
+  validates :fq_month, inclusion: { in: (1..12).to_a, message: "Month should be between 1 to 12", allow_nil: true }
+  validates :interval, presence:  { message: "Month should be between 1 to 12", if: :is_every_x_interval } 
+  validates :consumer_medication_id, uniqueness:  { message: "Duplicate Reminders", if: lambda {|reminder| reminder.ancestry.nil? }, scope: :is_active, only: :create }, :on => :create
+
+#  validates :fq_time,  presence:  true #, time: true
+
+
+  # validates_with ScheduleValidator #validate that no other schedules are conflicting
+
+  validates :consumer_id, presence: true
+  after_commit :set_up_new_reminder_schedules, :on => :create
+  after_save {
+    if fq_type == "As Needed" 
+      create_consumer_as_needed_medication(start_time: start_time)
+    else
+      if !is_active
+        disable_all_scheduled_reminders
+      else
+        clean_all_scheduled_reminders
+        #set_up_new_reminder_schedules
+      end 
+    end 
+  }
+
+  def as_json(options={})
+    {
+      id: id,
+      consumer_medication_id: consumer_medication_id,
+      product_long_name: consumer_medication.consumer_product.try(:product_name_long),
+      short_product_name: consumer_medication.consumer_product.product_name_short,
+      product_id: consumer_medication.consumer_product.id,
+      fq_type: frequency,
+      fq_day: reminder_fq_days, 
+      fq_month: reminder_fq_months, 
+      fq_time: reminder_fq_times, 
+      interval: interval,
+      start_time: start_time.try(:in_time_zone, consumer.consumer_setting.time_zone).try(:strftime, "%a %b %d %Y %H:%M:%S GMT%z"),
+      dose_quantity: consumer_medication.dose_quantity.to_s,
+      dose_unit: consumer_medication.dose_unit,
+      product_image: options[:request].present? ? "http://"+ options[:request].host + ":" + options[:request].port.to_s + consumer_medication.product_image : '',
+      strength: consumer_medication.consumer_product.try(:strength)
+    }#.merge(options)
+  end
+
+  def reminder_fq_times
+    ([fq_time] + children.collect(&:fq_time)).compact.uniq.map{|x| x.try(:in_time_zone, consumer.consumer_setting.time_zone).try(:strftime, "%a %b %d %Y %H:%M:%S GMT%z")}
+  end
+
+  def reminder_fq_days
+    ([fq_day] + children.collect(&:fq_day)).compact.uniq
+  end
+
+  def reminder_fq_months
+    ([fq_month] + children.collect(&:fq_month)).compact.uniq
+  end
+
+  def is_every_x_interval
+    intervals.values.include? fq_type
+  end
+
+  def frequency 
+    #if interval.nil?
+      fq_type
+    #else
+    #  intervals[fq_type]
+    #end
+  end
+
+  def destroy_me(destroy_all=false)
+    update_attribute(:is_active, false)
+    if destroy_all
+      children.update_all(:is_active=> false) if has_children?
+    end
+  end
+
+  def notify(sr=nil)
+    log_it
+    # template = 'https://pillphone1.iwsinc.com/tenant/Imageware/template/MissingDoseAlert'
+    RestClient.post "https://gmi.iwsinc.com/message/device/8e72bb65b993c549", 
+                    {"template"=> "https://pillphone1.iwsinc.com/tenant/Imageware/template/MissingDoseAlert", 
+                     "metadata"=> "{'patient_name' : '#{consumer.first_name}', 'dose_time' : '15.10' }"}.to_json,
+                    content_type: 'application/json' 
+    update_column('queued_schedules_count', queued_schedules_count - 1)
+    init_consumer_compliance(sr)
+  end
+
+  private
+
+  def log_it
+    $reminder_logger.info ("Reminder-ID: #{id}; Message: Take #{consumer_medication.consumer_product.product_name_short} #{consumer_medication.dose_quantity} #{consumer_medication.dose_unit}!" )
+  end
+
+  def init_consumer_compliance(sr=nil)
+    ConsumerCompliance.create(consumer_id: consumer_id, 
+                              consumer_medication_id: consumer_medication_id, 
+                              reminder_triggered_at: Time.now, 
+                              status: 'pending', 
+                              scheduled_reminder_id: sr.try(:id))
+  end
+
+  def clean_all_scheduled_reminders
+    disable_all_scheduled_reminders unless scheduled_reminders.count.zero?
+  end 
+
+  def disable_all_scheduled_reminders
+    scheduled_reminders.update_all('is_active = 0')
+  end 
+
+  def set_up_new_reminder_schedules
+
+    initialize_reminders
+    if @schedule_occurrences.size > 0
+      # Create scheduled occurrences
+      #
+      ScheduledRemindersWorker.perform_async(id, @schedule_occurrences)
+    end
+  end
+
+  def occurrunce_rule
+    rule = interval.nil? ? Rule.send(fq_type.downcase.to_sym) : Rule.send(fq_type.downcase.to_sym, interval)
+
+    # Add day of week in case of weekly
+    rule = rule.day(fq_day) if fq_type == 'Weekly'
+
+    # Add day of month in case of monthly
+    rule = rule.day_of_month(fq_day) if fq_type == 'Monthly' && fq_day != 31 && fq_day != 30
+    rule = rule.day_of_month(-1) if fq_type == 'Monthly' && fq_day == 31
+    rule = rule if fq_type == 'Monthly' && fq_day == 30
+
+    # Add month of year and day of month in case of yearly
+    rule = rule.month_of_year(fq_month).day_of_month(fq_day) if fq_type == 'Yearly' && fq_day != 31 && fq_day != 30
+    rule = rule.month_of_year(fq_month).day_of_month(-1) if fq_type == 'Yearly' && fq_day == 31
+    rule = rule.month_of_year(fq_month) if fq_type == 'Yearly' && fq_day == 30
+
+    # Add time to the final rule
+    rule.hour_of_day(fq_time.hour).minute_of_hour(fq_time.min) unless fq_type == 'Hourly' # Because time in hourly case, is handled by start_time
+
+    return rule
+  end
+
+  def initialize_reminders
+    if having_natural_interval
+      # Generate IceCube Schedule      
+      #
+
+      self.start_time = Time.now
+    else
+      set_type_for_manual_interval
+    end
+
+    # check if day is 30, and set start time accordingly
+    if ['Monthly', 'Yearly'].include?(self.fq_type) && fq_day == 30
+      self.start_time = self.start_time.change(day: 30)
+    end
+    @schedule = Schedule.new(self.start_time) do |s|
+      s.add_recurrence_rule(occurrunce_rule) 
+    end 
+    @schedule_occurrences = schedule.occurrences( start_time + 1.month )  if ['Hourly', 'Daily', 'Weekly'].include? self.fq_type
+    @schedule_occurrences = schedule.occurrences( start_time + 24.month ) if self.fq_type == 'Monthly'
+    @schedule_occurrences = schedule.occurrences( start_time + 10.year)   if self.fq_type == 'Yearly'
+  end
+
+  def line_up_all_reminders
+    scheduled_reminders_array = []
+    @schedule_occurrences.each do |o_dtime| 
+       scheduled_reminders_array << {run_at: o_dtime, is_active: 1}
+    end
+    scheduled_reminders.create(scheduled_reminders_array)
+  end
+
+  def having_natural_interval
+    intervals.keys.include?(fq_type)
+  end
+
+  def set_type_for_manual_interval
+    self.fq_type = intervals.key(self.fq_type)
+  end
+
+  def intervals
+    {'Hourly'  => 'Every X hours', 
+     'Daily'   => 'Every X days', 
+     'Weekly'  => 'Every X weeks', 
+     'Monthly' => 'Every X months', 
+     'Yearly'  => 'Every X years'}
+  end
+
+
+end

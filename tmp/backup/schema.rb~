@@ -1,0 +1,371 @@
+# encoding: UTF-8
+# This file is auto-generated from the current state of the database. Instead
+# of editing this file, please use the migrations feature of Active Record to
+# incrementally modify your database, and then regenerate this schema definition.
+#
+# Note that this schema.rb definition is the authoritative source for your
+# database schema. If you need to create the application database on another
+# system, you should be using db:schema:load, not running all the migrations
+# from scratch. The latter is a flawed and unsustainable approach (the more migrations
+# you'll amass, the slower it'll run and the greater likelihood for issues).
+#
+# It's strongly recommended that you check this file into your version control system.
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+ActiveRecord::Schema.define(version: 20140110101605) do
+=======
+ActiveRecord::Schema.define(version: 20140109111512) do
+>>>>>>> a33384c3e14df581b32cb2e739f1fa28667c73d4
+=======
+ActiveRecord::Schema.define(version: 20140115113145) do
+>>>>>>> admin_pradeep
+
+  create_table "admin_user_content_managements", force: true do |t|
+    t.text     "terms_and_conditions"
+    t.text     "credits"
+    t.text     "about_us"
+    t.text     "terms_and_services"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "admin_users", force: true do |t|
+    t.string   "username"
+    t.string   "email"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "brands", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "care_givers", force: true do |t|
+    t.integer  "consumer_id"
+    t.integer  "care_taker_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "care_givers", ["consumer_id"], name: "index_care_givers_on_consumer_id", using: :btree
+
+  create_table "configurable_parameters", force: true do |t|
+    t.integer  "reminder_duration"
+    t.integer  "medication_response_duration"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "consumer_as_needed_medications", force: true do |t|
+    t.integer  "reminder_id"
+    t.datetime "start_time"
+    t.integer  "taken_count", default: 0
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "consumer_compliances", force: true do |t|
+    t.integer  "consumer_id"
+    t.integer  "consumer_medication_id"
+    t.datetime "reminder_triggered_at"
+    t.string   "compliance_status"
+    t.datetime "reminder_responded_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "consumer_compliances", ["consumer_id"], name: "index_consumer_compliances_on_consumer_id", using: :btree
+  add_index "consumer_compliances", ["consumer_medication_id"], name: "index_consumer_compliances_on_consumer_medication_id", using: :btree
+
+  create_table "consumer_custom_drugs", force: true do |t|
+    t.string   "drug_name_long"
+    t.text     "description"
+    t.integer  "consumer_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "image"
+    t.integer  "provider_id"
+  end
+
+  add_index "consumer_custom_drugs", ["consumer_id"], name: "index_consumer_custom_drugs_on_consumer_id", using: :btree
+
+  create_table "consumer_medications", force: true do |t|
+    t.integer  "consumer_id"
+    t.integer  "consumer_drug_id"
+    t.string   "consumer_drug_type"
+    t.string   "dose_quantity"
+    t.string   "dose_unit"
+    t.boolean  "is_active"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "consumer_medication_image"
+  end
+
+  add_index "consumer_medications", ["consumer_id"], name: "index_consumer_medications_on_consumer_id", using: :btree
+
+  create_table "consumer_settings", force: true do |t|
+    t.string   "snooze_duration"
+    t.string   "language"
+    t.boolean  "reminder"
+    t.boolean  "message"
+    t.integer  "consumer_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "time_zone"
+  end
+
+  create_table "consumers", force: true do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "email"
+    t.string   "phone_number"
+    t.string   "consumer_image"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.boolean  "status"
+    t.string   "devices"
+    t.string   "device_type"
+    t.text     "device_id"
+  end
+
+  create_table "consumers_providers", force: true do |t|
+    t.integer "provider_id"
+    t.integer "consumer_id"
+  end
+
+  create_table "custom_medications", force: true do |t|
+    t.string   "drug_name_long"
+    t.string   "drug_name_short"
+    t.string   "generic_name"
+    t.string   "is_active"
+    t.boolean  "added_from"
+    t.string   "product_link"
+    t.integer  "fda_form_id"
+    t.string   "image"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "custom_medications", ["fda_form_id"], name: "index_custom_medications_on_fda_form_id", using: :btree
+
+  create_table "drug_attributes", force: true do |t|
+    t.integer  "drug_id"
+    t.integer  "brand_id"
+    t.integer  "fda_form_id"
+    t.string   "strength"
+    t.string   "strength_uom"
+    t.string   "route"
+    t.integer  "brand_generic_status_id"
+    t.string   "is_generic"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "drug_attributes", ["brand_id"], name: "index_drug_attributes_on_brand_id", using: :btree
+  add_index "drug_attributes", ["drug_id"], name: "index_drug_attributes_on_drug_id", using: :btree
+  add_index "drug_attributes", ["fda_form_id"], name: "index_drug_attributes_on_fda_form_id", using: :btree
+
+  create_table "drug_images", force: true do |t|
+    t.integer  "drug_id"
+    t.string   "image_name"
+    t.string   "is_active"
+    t.string   "image_file_name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "drug_images", ["drug_id"], name: "index_drug_images_on_drug_id", using: :btree
+
+  create_table "drugs", force: true do |t|
+    t.string   "drug_name_long"
+    t.string   "drug_name_short"
+    t.string   "generic_name"
+    t.string   "is_active"
+    t.boolean  "added_from"
+    t.string   "product_link"
+    t.integer  "fda_form_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "drugs", ["fda_form_id"], name: "index_drugs_on_fda_form_id", using: :btree
+
+  create_table "drugs_patient_educations", force: true do |t|
+    t.integer  "drug_id"
+    t.integer  "patient_education_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "drugs_patient_educations", ["drug_id"], name: "index_drugs_patient_educations_on_drug_id", using: :btree
+  add_index "drugs_patient_educations", ["patient_education_id"], name: "index_drugs_patient_educations_on_patient_education_id", using: :btree
+
+  create_table "fda_forms", force: true do |t|
+    t.string   "fda_form_name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "messages", force: true do |t|
+    t.integer  "sender_id"
+    t.string   "sender_type"
+    t.integer  "recipient_id"
+    t.string   "recipient_type"
+    t.boolean  "is_read",        default: false
+    t.integer  "template_id"
+    t.string   "status"
+    t.string   "title"
+    t.text     "body"
+    t.string   "name"
+    t.string   "email"
+    t.string   "phone_number"
+    t.text     "options"
+    t.string   "attachment"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "patient_educations", force: true do |t|
+    t.string   "description"
+    t.string   "contra"
+    t.string   "sheet_name"
+    t.string   "admin"
+    t.string   "missed"
+    t.string   "inter"
+    t.string   "monitor"
+    t.string   "side"
+    t.string   "store"
+    t.integer  "descr_header_id"
+    t.integer  "descr_footer_id"
+    t.integer  "contra_header_id"
+    t.integer  "contra_footer_id"
+    t.integer  "admin_header_id"
+    t.integer  "admin_footer_id"
+    t.integer  "misses_header_id"
+    t.integer  "missed_footer_id"
+    t.integer  "inter_header_id"
+    t.integer  "inter_footer_id"
+    t.integer  "monitor_header_id"
+    t.integer  "monitor_footer_id"
+    t.integer  "side_header_id"
+    t.integer  "side_footer_id"
+    t.integer  "store_header_id"
+    t.integer  "store_footer_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "privileges", force: true do |t|
+    t.string   "privilege_name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "providers", force: true do |t|
+    t.string   "email",                  default: "",        null: false
+    t.string   "encrypted_password",     default: "",        null: false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          default: 0,         null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "phone_number"
+    t.string   "status",                 default: "pending"
+    t.string   "profile_image"
+    t.integer  "privilege_id"
+    t.string   "provider_role"
+    t.integer  "parent_provider_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.boolean  "is_active"
+    t.boolean  "delta",                  default: true,      null: false
+  end
+
+  add_index "providers", ["email"], name: "index_providers_on_email", unique: true, using: :btree
+  add_index "providers", ["reset_password_token"], name: "index_providers_on_reset_password_token", unique: true, using: :btree
+
+  create_table "reminders", force: true do |t|
+    t.integer  "consumer_id"
+    t.integer  "consumer_medication_id"
+    t.string   "fq_type"
+    t.datetime "fq_time"
+    t.integer  "fq_day"
+    t.integer  "fq_month"
+    t.datetime "start_time"
+    t.integer  "interval"
+    t.datetime "last_schedule_on"
+    t.integer  "parent_id"
+    t.boolean  "is_scheduled",           default: true
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.boolean  "is_active",              default: true
+    t.string   "ancestry"
+<<<<<<< HEAD
+=======
+    t.integer  "queued_schedules_count"
+>>>>>>> a33384c3e14df581b32cb2e739f1fa28667c73d4
+  end
+
+  add_index "reminders", ["ancestry"], name: "index_reminders_on_ancestry", using: :btree
+
+  create_table "scheduled_reminders", force: true do |t|
+    t.integer  "reminder_id"
+    t.datetime "run_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.boolean  "is_active",   default: true
+  end
+
+  add_index "scheduled_reminders", ["reminder_id"], name: "index_scheduled_reminders_on_reminder_id", using: :btree
+
+  create_table "sessions", force: true do |t|
+    t.string   "session_id", null: false
+    t.text     "data"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "sessions", ["session_id"], name: "index_sessions_on_session_id", unique: true, using: :btree
+  add_index "sessions", ["updated_at"], name: "index_sessions_on_updated_at", using: :btree
+
+  create_table "templates", force: true do |t|
+    t.string   "name"
+    t.text     "content"
+    t.string   "status"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", force: true do |t|
+    t.string   "email",                  default: "", null: false
+    t.string   "encrypted_password",     default: "", null: false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          default: 0,  null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "name"
+    t.string   "profile_pic"
+    t.string   "phone"
+    t.string   "type"
+    t.integer  "privilege_id"
+    t.string   "status"
+  end
+
+  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
+  add_index "users", ["privilege_id"], name: "index_users_on_privilege_id", using: :btree
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
+
+end

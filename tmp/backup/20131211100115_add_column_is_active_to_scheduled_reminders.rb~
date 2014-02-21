@@ -1,0 +1,5 @@
+class AddColumnIsActiveToScheduledReminders < ActiveRecord::Migration
+  def change
+    add_column :scheduled_reminders, :is_active, :boolean
+  end
+end

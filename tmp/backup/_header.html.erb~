@@ -1,0 +1,36 @@
+<% if provider_signed_in? %>
+	<%= render "/providers/shared/header" %>
+<% elsif user_signed_in? %>
+		<%= link_to "Consumers", consumers_providers_path, :class => "header_top_links #{'active' if controller_name == 'consumers'}" %> 
+	<%= link_to "Compliance Summary", consumer_compliances_index_path, :class => "header_top_links #{'active' if controller_name == ''}" %>
+	<%= link_to "Messages", :class => "header_top_links #{'active' if controller_name == 'messages'}" %>
+	<%= link_to "Support Users", :class => "header_top_links #{'active' if controller_name == 'support_users'}" %>
+	Logged in as <strong><%= current_user.email %></strong> | 
+	<%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+<% else %>
+	<span class="float-right" style="position:absolute;top:20px;right:10px;">
+		<%= link_to "Admin Login", new_user_session_path, :class => "header_top_links" %> | <%= link_to "Provider Login", new_provider_session_path, :class => "header_top_links" %> 
+	</span>
+<% end %>
+
+
+<script>  
+    (function($){  
+        //cache nav  
+        var nav = $("#topNav");
+        //add indicators and hovers to submenu parents
+        nav.find("li").each(function() {
+            if ($(this).find("ul").length > 0) {
+                $("<span>").text("^").appendTo($(this).children(":first"));
+                //show subnav on hover
+                $(this).mouseenter(function() {
+                    $(this).find("ul").stop(true, true).slideDown();
+                });
+                //hide submenus on exit
+                $(this).mouseleave(function() {
+                    $(this).find("ul").stop(true, true).slideUp();
+                });
+            }
+        });
+    })(jQuery);
+</script>

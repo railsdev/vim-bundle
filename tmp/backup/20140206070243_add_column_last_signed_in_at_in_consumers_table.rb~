@@ -1,0 +1,4 @@
+class AddColumnLastSignedInAtInConsumersTable < ActiveRecord::Migration
+  def change
+  end
+end

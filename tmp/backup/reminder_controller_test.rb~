@@ -1,0 +1,46 @@
+require "test_helper"
+
+describe Api::RemindersController do
+
+  before :each do 
+    Reminder.destroy_all
+    @consumer = Consumer.create first_name: "test user"
+    drug = Drug.create(drug_name_long: 'Desprine', is_active: true )
+    consumer_medication = ConsumerMedication.create(consumer_drug: drug, consumer_id: @consumer.id)
+    Reminder.create(fq_type: 'Daily', 
+                    fq_time: Time.now - 1.day, 
+                    consumer_id: @consumer.id, 
+                    consumer_medication_id: consumer_medication.id)
+  end 
+
+  describe 'GET get_todays_reminders' do
+    it 'populates array of today\'s reminders' do
+      reminders = ScheduledReminder.pending_for(@controller.send(:today), @consumer.id)
+      get :get_todays_reminders, {:format => :json, :consumer_id => @consumer.id}
+      assigns(:reminders) == reminders
+    end
+
+    it 'renders the :get_todays_reminders' do
+      get :get_todays_reminders, {:format => :json, :consumer_id => @consumer.id }
+      must_respond_with :success
+      must_render_template :get_todays_reminders
+    end
+  end
+
+  describe 'GET index' do
+    it 'renders the :index' do
+      get :index, {:format => :json, :consumer_id => @consumer.id}
+      must_respond_with :success
+      must_render_template :index
+      assigns(:reminders).wont_be_nil
+    end
+  end
+
+<<<<<<< HEAD
+=======
+  after :each do 
+    Consumer.destroy_all;Drug.destroy_all;ConsumerMedication.destroy_all;
+  end
+
+>>>>>>> b95df6bc635035114b47b0ccc278249410731804
+end

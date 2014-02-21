@@ -1,0 +1,13 @@
+##get_dosage_diary.json.jbuilder
+if @consumer_medications.present?
+  json.response_code "200"
+  json.response_message ""
+  json.body {
+    json.result "success"
+    json.dosage_diary_result @consumer_medications
+  }
+else
+  json.response_code "400"
+  json.response_message "failure"
+  json.result "user not found"
+end

@@ -1,0 +1,63 @@
+# == Schema Information
+#
+# Table name: consumer_medications
+#
+#  id                        :integer          not null, primary key
+#  consumer_id               :integer
+#  consumer_drug_id          :integer
+#  consumer_drug_type        :string(255)
+#  dose_quantity             :string(255)
+#  dose_unit                 :string(255)
+#  is_active                 :boolean
+#  created_at                :datetime
+#  updated_at                :datetime
+#  consumer_medication_image :string(255)
+#
+
+class ConsumerMedication < ActiveRecord::Base
+  include Calculations
+  belongs_to :consumer
+  belongs_to :consumer_drug, polymorphic: true
+  has_many :consumer_compliances, :inverse_of => :consumer_medication
+  has_many :reminders
+  has_many :scheduled_reminders, through: :reminders
+  mount_uploader :consumer_medication_image, ConsumerMedicationImageUploader
+
+  attr_accessor :compliances, :avg_compliance
+
+  scope :with_avg_compliance, -> { joins(:consumer_compliances).select("(sum(case when consumer_compliances.status = 'taken' then 1 else 0 end)/count(consumer_compliances.id) * 100 ) as avg_count, `consumer_medications`.id").group("consumer_medications.consumer_drug_id, consumer_medications.consumer_drug_type").order("avg_count desc") }
+
+  after_update{
+    unless is_active
+      reminders.each{|x| x.update(is_active: false) }
+    end
+  }
+
+  def drug_image
+    if consumer_drug.class == Drug
+      if consumer_drug.drug_image.present? && consumer_drug.drug_image.image_name.present?
+        '/drug_image/' + consumer_drug.drug_image.image_name
+      else
+        "/assets/no_drug.jpg"
+      end
+    else
+      consumer_drug.image.url || "/assets/no_drug.jpg"
+    end
+  end
+
+  def as_json(options={})
+    if compliances
+      {
+        id: id,
+        drug_id: consumer_drug.id,
+        drug_name: consumer_drug.drug_name_short,
+        drug_image: drug_image,
+        avg_compliance: avg_compliance,
+        compliance: compliances.group_by{|x| x.created_at.strftime("%F")}.tap{|x| x.each{|k,v| x[k] = v.collect{|y| [y.status, y.reminder_responded_at ] }  } } 
+      }#.merge(options)    
+    else
+      super
+    end
+  end
+
+end
