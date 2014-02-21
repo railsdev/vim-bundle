@@ -1,8 +1,0 @@
-class ConsumerMailer < ActionMailer::Base
-  default from: "hardik.joshi@diaspark.com"
-
-  def testing_email(email)
-    mail(to: email, subject: 'Testing Email. EOM')
-  end
-
-end

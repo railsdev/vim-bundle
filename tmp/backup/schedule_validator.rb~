@@ -1,7 +1,0 @@
-class ScheduleValidator < ActiveModel::Validator
-
-  def validate(record)
-    puts reocrd.inspect
-  end
-
-end

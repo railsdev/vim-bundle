@@ -1,5 +1,0 @@
-class RenameColumnComplinaceStatusToStautsInConsumerCompliance < ActiveRecord::Migration
-  def change
-    rename_column :consumer_compliances, :complinace_status, :status
-  end
-end

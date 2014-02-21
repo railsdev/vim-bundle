@@ -1,4 +1,0 @@
-class RenameTableDrugsPatientEducationsToProductsPatientEducations < ActiveRecord::Migration
-  def change
-  end
-end

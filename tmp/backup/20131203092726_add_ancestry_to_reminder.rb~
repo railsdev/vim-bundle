@@ -1,5 +1,0 @@
-class AddAncestryToReminder < ActiveRecord::Migration
-  def change
-    add_column :reminders, :ancestry{index}, :string
-  end
-end

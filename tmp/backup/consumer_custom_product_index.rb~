@@ -1,5 +1,0 @@
-ThinkingSphinx::Index.define :consumer_custom_product, :with => :active_record do
-  indexes drug_name_short, :prefixes => true 
-  set_property :enable_star => true 
-  set_property :min_prefix_len => 3 
-end

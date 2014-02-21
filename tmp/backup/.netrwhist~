@@ -1,3 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =1
-let g:netrw_dirhist_1='/home/saurabh/.rvm/gems/ruby-2.0.0-p247@pillphone/gems/rest-client-1.6.7/lib'

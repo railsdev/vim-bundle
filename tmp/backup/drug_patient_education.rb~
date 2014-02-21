@@ -1,6 +1,0 @@
-class DrugPatientEducation
-
-  self.set_table_name 'drugs_patient_educations'
-  belongs_to :drug
-  belongs_to :patient_education
-end

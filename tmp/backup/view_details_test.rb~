@@ -1,8 +1,0 @@
-require "test_helper"
-
-class DrugTest < ActiveSupport::TestCase
-
-  def setup
-    @drug1 = drugs(:drug1)
-    @consumer_medication1=consumer_medications(:consumer_medication1)
-  end

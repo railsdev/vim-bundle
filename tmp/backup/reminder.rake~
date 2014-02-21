@@ -1,7 +1,0 @@
-namespace :db do
-  desc "Truncate all reminder and scheduled reminders"
-  task :clean_reminders => :environment do
-    Reminder.delete_all
-    ScheduledReminder.delete_all
-  end
-end

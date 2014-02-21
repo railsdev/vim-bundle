@@ -1,6 +1,0 @@
-if !@care_provider.blank?
-  json.care_provider @care_provider
-else
-  json.response_code "400"
-  json.response_message "Provider Not Found!"
-end

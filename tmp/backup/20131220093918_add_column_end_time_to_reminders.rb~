@@ -1,5 +1,0 @@
-class AddColumnEndTimeToReminders < ActiveRecord::Migration
-  def change
-    add_column :reminders, :end_time, :datetime
-  end
-end
